@@ -25,10 +25,10 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"57aef7bf-5c8f-4961-be0c-2f39cedd7e5c","path":"sprites/spr_weapon_assault_mk18_reload/spr_weapon_assault_mk18_reload.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"57aef7bf-5c8f-4961-be0c-2f39cedd7e5c","path":"sprites/spr_weapon_assault_mk18_reload/spr_weapon_assault_mk18_reload.yy",},"LayerId":{"name":"739a41d9-3f11-44b1-9a8e-de9ccae68ea5","path":"sprites/spr_weapon_assault_mk18_reload/spr_weapon_assault_mk18_reload.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"57aef7bf-5c8f-4961-be0c-2f39cedd7e5c","path":"sprites/spr_weapon_assault_mk18_reload/spr_weapon_assault_mk18_reload.yy",},"LayerId":{"name":"0575ad43-5352-469d-bc53-0712fb97b037","path":"sprites/spr_weapon_assault_mk18_reload/spr_weapon_assault_mk18_reload.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"57aef7bf-5c8f-4961-be0c-2f39cedd7e5c","path":"sprites/spr_weapon_assault_mk18_reload/spr_weapon_assault_mk18_reload.yy",},"LayerId":{"name":"25425243-b15e-4162-bee1-9499ebf8577e","path":"sprites/spr_weapon_assault_mk18_reload/spr_weapon_assault_mk18_reload.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"57aef7bf-5c8f-4961-be0c-2f39cedd7e5c","path":"sprites/spr_weapon_assault_mk18_reload/spr_weapon_assault_mk18_reload.yy",},"LayerId":{"name":"e35b3443-c08f-4c8e-93aa-238f5673b584","path":"sprites/spr_weapon_assault_mk18_reload/spr_weapon_assault_mk18_reload.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"57aef7bf-5c8f-4961-be0c-2f39cedd7e5c","path":"sprites/spr_weapon_assault_mk18_reload/spr_weapon_assault_mk18_reload.yy",},"LayerId":{"name":"739a41d9-3f11-44b1-9a8e-de9ccae68ea5","path":"sprites/spr_weapon_assault_mk18_reload/spr_weapon_assault_mk18_reload.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"spr_weapon_assault_mk18_reload","path":"sprites/spr_weapon_assault_mk18_reload/spr_weapon_assault_mk18_reload.yy",},"resourceVersion":"1.0","name":"57aef7bf-5c8f-4961-be0c-2f39cedd7e5c","tags":[],"resourceType":"GMSpriteFrame",},
     {"compositeImage":{"FrameId":{"name":"11d83221-96b5-49b9-a025-cabcf91c1b76","path":"sprites/spr_weapon_assault_mk18_reload/spr_weapon_assault_mk18_reload.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"11d83221-96b5-49b9-a025-cabcf91c1b76","path":"sprites/spr_weapon_assault_mk18_reload/spr_weapon_assault_mk18_reload.yy",},"LayerId":{"name":"739a41d9-3f11-44b1-9a8e-de9ccae68ea5","path":"sprites/spr_weapon_assault_mk18_reload/spr_weapon_assault_mk18_reload.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
@@ -103,8 +103,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "weapon sprite",
-    "path": "folders/Sprites/weapon sprite.yy",
+    "name": "player weapon sprites",
+    "path": "folders/Sprites/weapon sprites/player weapon sprites.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_weapon_assault_mk18_reload",

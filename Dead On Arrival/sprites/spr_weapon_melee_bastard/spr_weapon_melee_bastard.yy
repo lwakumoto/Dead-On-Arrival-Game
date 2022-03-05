@@ -7,10 +7,10 @@
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
-  "bbox_left": 0,
-  "bbox_right": 0,
-  "bbox_top": 7,
-  "bbox_bottom": 8,
+  "bbox_left": 10,
+  "bbox_right": 26,
+  "bbox_top": 0,
+  "bbox_bottom": 13,
   "HTile": false,
   "VTile": false,
   "For3D": false,
@@ -25,8 +25,8 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"8d842c55-f97b-4a7f-983c-e739b86063ca","path":"sprites/spr_weapon_melee_bastard/spr_weapon_melee_bastard.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"8d842c55-f97b-4a7f-983c-e739b86063ca","path":"sprites/spr_weapon_melee_bastard/spr_weapon_melee_bastard.yy",},"LayerId":{"name":"793c5af4-1b1d-486d-ad67-52530e98d6c1","path":"sprites/spr_weapon_melee_bastard/spr_weapon_melee_bastard.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"8d842c55-f97b-4a7f-983c-e739b86063ca","path":"sprites/spr_weapon_melee_bastard/spr_weapon_melee_bastard.yy",},"LayerId":{"name":"7190b6b6-4f75-49f8-bc49-cd003eb4f98e","path":"sprites/spr_weapon_melee_bastard/spr_weapon_melee_bastard.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"8d842c55-f97b-4a7f-983c-e739b86063ca","path":"sprites/spr_weapon_melee_bastard/spr_weapon_melee_bastard.yy",},"LayerId":{"name":"793c5af4-1b1d-486d-ad67-52530e98d6c1","path":"sprites/spr_weapon_melee_bastard/spr_weapon_melee_bastard.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"spr_weapon_melee_bastard","path":"sprites/spr_weapon_melee_bastard/spr_weapon_melee_bastard.yy",},"resourceVersion":"1.0","name":"8d842c55-f97b-4a7f-983c-e739b86063ca","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -66,13 +66,13 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":false,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 1","resourceVersion":"1.0","name":"7190b6b6-4f75-49f8-bc49-cd003eb4f98e","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 1","resourceVersion":"1.0","name":"7190b6b6-4f75-49f8-bc49-cd003eb4f98e","tags":[],"resourceType":"GMImageLayer",},
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"793c5af4-1b1d-486d-ad67-52530e98d6c1","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
-    "name": "weapon sprite",
-    "path": "folders/Sprites/weapon sprite.yy",
+    "name": "player weapon sprites",
+    "path": "folders/Sprites/weapon sprites/player weapon sprites.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_weapon_melee_bastard",

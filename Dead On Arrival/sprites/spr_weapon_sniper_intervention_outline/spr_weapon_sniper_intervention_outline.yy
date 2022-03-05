@@ -72,7 +72,7 @@
   "nineSlice": null,
   "parent": {
     "name": "outlines",
-    "path": "folders/Sprites/weapon icons/outlines.yy",
+    "path": "folders/Sprites/UI/weapon icons/outlines.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_weapon_sniper_intervention_outline",

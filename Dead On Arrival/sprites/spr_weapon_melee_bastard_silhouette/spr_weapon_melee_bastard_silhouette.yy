@@ -25,9 +25,9 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"a6e35013-665b-45ae-903d-179489169a20","path":"sprites/spr_weapon_melee_bastard_silhouette/spr_weapon_melee_bastard_silhouette.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a6e35013-665b-45ae-903d-179489169a20","path":"sprites/spr_weapon_melee_bastard_silhouette/spr_weapon_melee_bastard_silhouette.yy",},"LayerId":{"name":"a5e766b6-0e7b-4fa0-82d7-81b4ae794c03","path":"sprites/spr_weapon_melee_bastard_silhouette/spr_weapon_melee_bastard_silhouette.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"a6e35013-665b-45ae-903d-179489169a20","path":"sprites/spr_weapon_melee_bastard_silhouette/spr_weapon_melee_bastard_silhouette.yy",},"LayerId":{"name":"34e8e82a-9afc-4578-82fd-99f4b3d263dc","path":"sprites/spr_weapon_melee_bastard_silhouette/spr_weapon_melee_bastard_silhouette.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"a6e35013-665b-45ae-903d-179489169a20","path":"sprites/spr_weapon_melee_bastard_silhouette/spr_weapon_melee_bastard_silhouette.yy",},"LayerId":{"name":"cbeecad6-f85f-4fce-a536-f0e685cd8a78","path":"sprites/spr_weapon_melee_bastard_silhouette/spr_weapon_melee_bastard_silhouette.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"a6e35013-665b-45ae-903d-179489169a20","path":"sprites/spr_weapon_melee_bastard_silhouette/spr_weapon_melee_bastard_silhouette.yy",},"LayerId":{"name":"34e8e82a-9afc-4578-82fd-99f4b3d263dc","path":"sprites/spr_weapon_melee_bastard_silhouette/spr_weapon_melee_bastard_silhouette.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"a6e35013-665b-45ae-903d-179489169a20","path":"sprites/spr_weapon_melee_bastard_silhouette/spr_weapon_melee_bastard_silhouette.yy",},"LayerId":{"name":"a5e766b6-0e7b-4fa0-82d7-81b4ae794c03","path":"sprites/spr_weapon_melee_bastard_silhouette/spr_weapon_melee_bastard_silhouette.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"spr_weapon_melee_bastard_silhouette","path":"sprites/spr_weapon_melee_bastard_silhouette/spr_weapon_melee_bastard_silhouette.yy",},"resourceVersion":"1.0","name":"a6e35013-665b-45ae-903d-179489169a20","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -74,7 +74,7 @@
   "nineSlice": null,
   "parent": {
     "name": "silhouettes",
-    "path": "folders/Sprites/weapon icons/silhouettes.yy",
+    "path": "folders/Sprites/UI/weapon icons/silhouettes.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_weapon_melee_bastard_silhouette",

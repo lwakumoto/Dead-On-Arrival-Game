@@ -2,7 +2,7 @@
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
-  "origin": 0,
+  "origin": 4,
   "preMultiplyAlpha": false,
   "edgeFiltering": false,
   "collisionTolerance": 0,
@@ -25,8 +25,8 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"6a576605-ac4d-4c17-b10e-511003e4b65a","path":"sprites/spr_weapon_battle_g3_silhouette/spr_weapon_battle_g3_silhouette.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"6a576605-ac4d-4c17-b10e-511003e4b65a","path":"sprites/spr_weapon_battle_g3_silhouette/spr_weapon_battle_g3_silhouette.yy",},"LayerId":{"name":"7e280aea-478d-40ee-aa11-427d2d7f7cd7","path":"sprites/spr_weapon_battle_g3_silhouette/spr_weapon_battle_g3_silhouette.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"6a576605-ac4d-4c17-b10e-511003e4b65a","path":"sprites/spr_weapon_battle_g3_silhouette/spr_weapon_battle_g3_silhouette.yy",},"LayerId":{"name":"5d207395-458f-46ac-94ff-93dbfb8f256d","path":"sprites/spr_weapon_battle_g3_silhouette/spr_weapon_battle_g3_silhouette.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"6a576605-ac4d-4c17-b10e-511003e4b65a","path":"sprites/spr_weapon_battle_g3_silhouette/spr_weapon_battle_g3_silhouette.yy",},"LayerId":{"name":"7e280aea-478d-40ee-aa11-427d2d7f7cd7","path":"sprites/spr_weapon_battle_g3_silhouette/spr_weapon_battle_g3_silhouette.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"spr_weapon_battle_g3_silhouette","path":"sprites/spr_weapon_battle_g3_silhouette/spr_weapon_battle_g3_silhouette.yy",},"resourceVersion":"1.0","name":"6a576605-ac4d-4c17-b10e-511003e4b65a","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -55,8 +55,8 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 0,
-    "yorigin": 0,
+    "xorigin": 844,
+    "yorigin": 186,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_weapon_battle_g3_silhouette","path":"sprites/spr_weapon_battle_g3_silhouette/spr_weapon_battle_g3_silhouette.yy",},
@@ -72,7 +72,7 @@
   "nineSlice": null,
   "parent": {
     "name": "silhouettes",
-    "path": "folders/Sprites/weapon icons/silhouettes.yy",
+    "path": "folders/Sprites/UI/weapon icons/silhouettes.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_weapon_battle_g3_silhouette",

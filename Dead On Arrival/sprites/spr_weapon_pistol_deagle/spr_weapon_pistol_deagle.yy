@@ -2,7 +2,7 @@
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
-  "origin": 0,
+  "origin": 4,
   "preMultiplyAlpha": false,
   "edgeFiltering": false,
   "collisionTolerance": 0,
@@ -25,8 +25,8 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"637fddef-bc14-46f2-b59d-131c2848c149","path":"sprites/spr_weapon_pistol_deagle/spr_weapon_pistol_deagle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"637fddef-bc14-46f2-b59d-131c2848c149","path":"sprites/spr_weapon_pistol_deagle/spr_weapon_pistol_deagle.yy",},"LayerId":{"name":"afb81360-d005-44cf-9f54-f1a5c8c58eb9","path":"sprites/spr_weapon_pistol_deagle/spr_weapon_pistol_deagle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"637fddef-bc14-46f2-b59d-131c2848c149","path":"sprites/spr_weapon_pistol_deagle/spr_weapon_pistol_deagle.yy",},"LayerId":{"name":"6786f966-de30-4ec4-977f-3cf0bea72298","path":"sprites/spr_weapon_pistol_deagle/spr_weapon_pistol_deagle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"637fddef-bc14-46f2-b59d-131c2848c149","path":"sprites/spr_weapon_pistol_deagle/spr_weapon_pistol_deagle.yy",},"LayerId":{"name":"afb81360-d005-44cf-9f54-f1a5c8c58eb9","path":"sprites/spr_weapon_pistol_deagle/spr_weapon_pistol_deagle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"spr_weapon_pistol_deagle","path":"sprites/spr_weapon_pistol_deagle/spr_weapon_pistol_deagle.yy",},"resourceVersion":"1.0","name":"637fddef-bc14-46f2-b59d-131c2848c149","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -55,8 +55,8 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 0,
-    "yorigin": 0,
+    "xorigin": 16,
+    "yorigin": 16,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_weapon_pistol_deagle","path":"sprites/spr_weapon_pistol_deagle/spr_weapon_pistol_deagle.yy",},
@@ -71,8 +71,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "weapon sprite",
-    "path": "folders/Sprites/weapon sprite.yy",
+    "name": "player weapon sprites",
+    "path": "folders/Sprites/weapon sprites/player weapon sprites.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_weapon_pistol_deagle",

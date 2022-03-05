@@ -72,7 +72,7 @@
   "nineSlice": null,
   "parent": {
     "name": "silhouettes",
-    "path": "folders/Sprites/weapon icons/silhouettes.yy",
+    "path": "folders/Sprites/UI/weapon icons/silhouettes.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_weapon_sniper_intervention_silhouette33",
