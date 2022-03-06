@@ -13,5 +13,15 @@ function scr_change_weapon(wep_index){
 	reload_time = curr_weapon[? "reload_time"]
 	reload_type = curr_weapon[? "reload_type"]
 	caliber_index = curr_weapon[? "caliber"]
+	weapon_spread = curr_weapon[? "spread"]
+	
+	var curr_caliber = calibers[caliber_index]
+	caliber_name = curr_caliber[? "cal_name"]
+	caliber_sprite = curr_caliber[? "cal_sprite"]
+	casing_sprite = curr_caliber[? "casing_sprite"]
+	caliber_damage = curr_caliber[? "damage"]
+	caliber_speed = curr_caliber[? "speed"]
+	caliber_num_shot = curr_caliber[? "number_of_shot"]
+
 
 }

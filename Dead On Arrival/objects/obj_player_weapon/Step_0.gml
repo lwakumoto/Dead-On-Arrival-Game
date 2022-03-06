@@ -8,6 +8,7 @@ if (owner != noone){
 	image_angle = direction
 }
 
+
 // allow the player to fire if they click and they have ammunition
 
 if (fire_type == fireType.FULLAUTO){

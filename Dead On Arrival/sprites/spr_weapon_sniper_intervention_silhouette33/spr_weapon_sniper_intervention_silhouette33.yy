@@ -9,13 +9,13 @@
   "swfPrecision": 2.525,
   "bbox_left": 0,
   "bbox_right": 2213,
-  "bbox_top": 27,
-  "bbox_bottom": 607,
+  "bbox_top": 275,
+  "bbox_bottom": 855,
   "HTile": false,
   "VTile": false,
   "For3D": false,
   "width": 2215,
-  "height": 611,
+  "height": 1108,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -27,6 +27,7 @@
     {"compositeImage":{"FrameId":{"name":"b73a64ea-fbb7-4302-a51b-33f8db1e5708","path":"sprites/spr_weapon_sniper_intervention_silhouette33/spr_weapon_sniper_intervention_silhouette33.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"b73a64ea-fbb7-4302-a51b-33f8db1e5708","path":"sprites/spr_weapon_sniper_intervention_silhouette33/spr_weapon_sniper_intervention_silhouette33.yy",},"LayerId":{"name":"bfb86a30-674f-4884-a9c4-d934c7ec74f6","path":"sprites/spr_weapon_sniper_intervention_silhouette33/spr_weapon_sniper_intervention_silhouette33.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"b73a64ea-fbb7-4302-a51b-33f8db1e5708","path":"sprites/spr_weapon_sniper_intervention_silhouette33/spr_weapon_sniper_intervention_silhouette33.yy",},"LayerId":{"name":"b9fc996c-bbc5-48a9-b878-db5afa517485","path":"sprites/spr_weapon_sniper_intervention_silhouette33/spr_weapon_sniper_intervention_silhouette33.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"b73a64ea-fbb7-4302-a51b-33f8db1e5708","path":"sprites/spr_weapon_sniper_intervention_silhouette33/spr_weapon_sniper_intervention_silhouette33.yy",},"LayerId":{"name":"c0e27c62-71b1-4f89-80f8-282aa5a521fc","path":"sprites/spr_weapon_sniper_intervention_silhouette33/spr_weapon_sniper_intervention_silhouette33.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"spr_weapon_sniper_intervention_silhouette33","path":"sprites/spr_weapon_sniper_intervention_silhouette33/spr_weapon_sniper_intervention_silhouette33.yy",},"resourceVersion":"1.0","name":"b73a64ea-fbb7-4302-a51b-33f8db1e5708","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -56,7 +57,7 @@
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
     "xorigin": 1107,
-    "yorigin": 305,
+    "yorigin": 554,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_weapon_sniper_intervention_silhouette33","path":"sprites/spr_weapon_sniper_intervention_silhouette33/spr_weapon_sniper_intervention_silhouette33.yy",},
@@ -66,6 +67,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
+    {"visible":false,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 2","resourceVersion":"1.0","name":"c0e27c62-71b1-4f89-80f8-282aa5a521fc","tags":[],"resourceType":"GMImageLayer",},
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 1","resourceVersion":"1.0","name":"bfb86a30-674f-4884-a9c4-d934c7ec74f6","tags":[],"resourceType":"GMImageLayer",},
     {"visible":false,"isLocked":true,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"b9fc996c-bbc5-48a9-b878-db5afa517485","tags":[],"resourceType":"GMImageLayer",},
   ],
