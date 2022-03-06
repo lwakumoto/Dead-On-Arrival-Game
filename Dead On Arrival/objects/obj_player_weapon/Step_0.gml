@@ -18,17 +18,41 @@ else{
 	var fire = mouse_check_button_pressed(mb_left)	
 }
 
+if (fire && canShoot) { // make it impossible to fire while already bursting
+	if (fire_type == fireType.BURST){
+	if (bursting == false){
+		bursting = true
+		curr_burst = 3
+	}
+	else{
+		fire = false	
+	}
+}
+}
 
 
-if (fire && ammunition[weapon_id][0] > 0 && canShoot){
+if ((fire && ammunition[weapon_id][0] > 0 && canShoot) || (canShoot && bursting && curr_burst > 0 && ammunition[weapon_id][0] > 0)){
 	if (reloading){
 		reloading = false // firing cancels the reload
 	} else{
+		if (bursting){ 
+			curr_burst --	
+		} 
 		canShoot = false
-		alarm[0] = fire_delay * room_speed
+		if (bursting && curr_burst > 0){ // if burst fire, the delay will be shorter between shots
+			alarm[0] = fire_delay/3 * room_speed
+		}
+		else{
+			alarm[0] = fire_delay * room_speed
+		}
+		audio_play_sound(weapon_sound,1,false)
 		scr_fire_weapon(x + lengthdir_x(sprite_width/2,direction), y + lengthdir_y(sprite_width/2,direction),direction)	
 		ammunition[weapon_id][0] -- 
 	}
+}
+
+if (curr_burst <= 0 || ammunition[weapon_id][0] <= 0){
+	bursting = false	
 }
 
 

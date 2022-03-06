@@ -9,6 +9,9 @@ owner = noone // the "owner" of the weapon i.e. the object it will follow
 
 canShoot = true
 reloading = false
+bursting = false // if the player is currently using a burst weapon
+curr_burst = 0
+
 curr_crosshair = spr_crosshair
 cursor_sprite = curr_crosshair
 window_set_cursor(cr_none)
@@ -63,6 +66,7 @@ weapons[0][? "reload_time"] = 1 // the time it takes to reload, in seconds
 weapons[0][? "reload_type"] = 0 // the "type" of reload, 0 if reload magazine at once, otherwise load one at a time
 weapons[0][? "caliber"] = caliberType._r556 // the caliber the weapon uses
 weapons[0][? "spread"] = 0.5 // the spread of the weapon (in degrees)
+weapons[0][? "fire_sound"] = so_gunire
 
 weapons[1][? "wep_id"] = 1;
 weapons[1][? "wep_name"] = "G3A1"
@@ -76,6 +80,7 @@ weapons[1][? "reload_time"] = 2
 weapons[1][? "reload_type"] = 0
 weapons[1][? "caliber"] = caliberType._r762
 weapons[1][? "spread"] = 0.5 
+weapons[1][? "fire_sound"] = so_gunire
 
 weapons[2][? "wep_id"] = 2;
 weapons[2][? "wep_name"] = "Stoner 63"
@@ -89,6 +94,7 @@ weapons[2][? "reload_time"] = 1
 weapons[2][? "reload_type"] = 0
 weapons[2][? "caliber"] = caliberType._r556
 weapons[2][? "spread"] = 0.5 
+weapons[2][? "fire_sound"] = so_gunire
 
 weapons[3][? "wep_id"] = 3;
 weapons[3][? "wep_name"] = "Desert Eagle"
@@ -102,6 +108,7 @@ weapons[3][? "reload_time"] = 1
 weapons[3][? "reload_type"] = 0
 weapons[3][? "caliber"] = caliberType._r50AE
 weapons[3][? "spread"] = 0.5 
+weapons[3][? "fire_sound"] = so_deagle_fire
 
 weapons[4][? "wep_id"] = 4;
 weapons[4][? "wep_name"] = "Spas-12"
@@ -115,6 +122,7 @@ weapons[4][? "reload_time"] = 0.25
 weapons[4][? "reload_type"] = 1
 weapons[4][? "caliber"] = caliberType._r12GAUGE
 weapons[4][? "spread"] = 2.5
+weapons[4][? "fire_sound"] = so_shotgun_fire
 
 weapons[5][? "wep_id"] = 5;
 weapons[5][? "wep_name"] = "MP5k"
@@ -128,6 +136,7 @@ weapons[5][? "reload_time"] = 1
 weapons[5][? "reload_type"] = 0
 weapons[5][? "caliber"] = caliberType._r9x19
 weapons[5][? "spread"] = 0.5 
+weapons[5][? "fire_sound"] = so_gunire
 
 weapons[6][? "wep_id"] = 6
 weapons[6][? "wep_name"] = "M200 Intervention"
@@ -141,6 +150,7 @@ weapons[6][? "reload_time"] = 1
 weapons[6][? "reload_type"] = 0
 weapons[6][? "caliber"] = caliberType._r408
 weapons[6][? "spread"] = 0.5 
+weapons[6][? "fire_sound"] = so_shotgun_fire
 
 for (var i = 0; i < num_weapons; i ++){// initialize the magazines and reserve ammunition appropriately
 	ammunition[i][0] = weapons[i][? "mag_capacity"]

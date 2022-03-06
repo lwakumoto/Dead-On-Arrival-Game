@@ -27,7 +27,10 @@ if (change_weapon_forward || change_weapon_backward){
 	else if (change_weapon_backward) current_weapon = (current_weapon - 1 + array_length(weapon_inventory)) % array_length(weapon_inventory)
 	
 	with (obj_player_weapon){
-		scr_change_weapon(other.weapon_inventory[other.current_weapon])
-		reloading = false;
+		if (!bursting){
+			scr_change_weapon(other.weapon_inventory[other.current_weapon])
+			reloading = false;
+		}
+		
 	}
 }

@@ -14,6 +14,7 @@ function scr_change_weapon(wep_index){
 	reload_type = curr_weapon[? "reload_type"]
 	caliber_index = curr_weapon[? "caliber"]
 	weapon_spread = curr_weapon[? "spread"]
+	weapon_sound = curr_weapon[? "fire_sound"]
 	
 	var curr_caliber = calibers[caliber_index]
 	caliber_name = curr_caliber[? "cal_name"]

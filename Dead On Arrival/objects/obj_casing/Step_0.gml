@@ -2,9 +2,10 @@
 // You can write your code in this editor
 image_angle += rotational_velocity
 
-if (height <= 0){
+if (height <= 0 && speed != 0){
 	speed = 0	
 	rotational_velocity = 0
+	audio_play_sound(so_spent_casing,1,false)
 	
 	
 }
