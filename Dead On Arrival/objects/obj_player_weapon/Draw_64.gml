@@ -28,7 +28,12 @@ draw_sprite_ext(weapon_icon, 0,rec_width/2, room_height - y_offset, scale, scale
 
 
 var text_height = string_height("sample")
-var ammo_text = string(ammunition[weapon_id][0]) + "\\" + string(ammunition[weapon_id][1])
+if (weapon_type = weaponType.FIREARM){
+	var ammo_text = string(ammunition[weapon_id][0]) + "\\" + string(ammunition[weapon_id][1])
+}else{
+	var ammo_text = ""	
+}
+
 var weapon_name_text = weapon_name
 
 draw_text(0,room_height - text_height,ammo_text)

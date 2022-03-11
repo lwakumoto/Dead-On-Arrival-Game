@@ -3,7 +3,7 @@
 
 player_weapon = instance_create_layer(x,y,"Instances",obj_player_weapon)
 player_weapon.owner = id
-weapon_inventory = [0,1,2,3,4,5,6]
+weapon_inventory = [0,1,2,3,4,5,6,7]
 current_weapon = 0
 
 spd = 10

@@ -16,6 +16,9 @@ curr_crosshair = spr_crosshair
 cursor_sprite = curr_crosshair
 window_set_cursor(cr_none)
 
+image_speed = 0
+image_index = 0
+
 enum fireType {
 	FULLAUTO,
 	BURST,
@@ -30,7 +33,13 @@ enum caliberType {
 	_r50AE = 2,
 	_r12GAUGE = 3,
 	_r9x19 = 4,
-	_r408 = 5
+	_r408 = 5,
+	_mm = 6
+}
+
+enum weaponType {
+	FIREARM,
+	MELEE
 }
 
 
@@ -55,8 +64,10 @@ for (var i = 0; i < num_weapons; i ++){
 */
 
 weapons[0][? "wep_id"] = 0; 
+weapons[0][? "wep_type"] = weaponType.FIREARM
 weapons[0][? "wep_name"] = "Mk18 Mod 1" // the display name of the weapon
 weapons[0][? "wep_sprite"] = spr_weapon_assault_mk18 // the sprite of the weapon that the player holds
+weapons[0][? "wep_reload"] = spr_weapon_assault_mk18_reload
 weapons[0][? "wep_icon"] = spr_weapon_assault_mk18_silhouette46 // the sprite of the icon in the gui
 weapons[0][? "mag_capacity"] = 30 // the magazine capacity
 weapons[0][? "reserve_ammo"] = 300 // the amount of ammunition in reserve
@@ -65,10 +76,12 @@ weapons[0][? "fire_delay"] = 0.15 // the minimum time between firing, in seconds
 weapons[0][? "reload_time"] = 1 // the time it takes to reload, in seconds
 weapons[0][? "reload_type"] = 0 // the "type" of reload, 0 if reload magazine at once, otherwise load one at a time
 weapons[0][? "caliber"] = caliberType._r556 // the caliber the weapon uses
-weapons[0][? "spread"] = 0.5 // the spread of the weapon (in degrees)
+weapons[0][? "spread"] = 1.5 // the spread of the weapon (in degrees)
+weapons[0][? "range"] = 1000 // how far the bullet will go before despawning
 weapons[0][? "fire_sound"] = so_gunire
 
 weapons[1][? "wep_id"] = 1;
+weapons[1][? "wep_type"] = weaponType.FIREARM
 weapons[1][? "wep_name"] = "G3A1"
 weapons[1][? "wep_sprite"] = spr_weapon_battle_g3
 weapons[1][? "wep_icon"] = spr_weapon_battle_g3_silhouette
@@ -80,9 +93,11 @@ weapons[1][? "reload_time"] = 2
 weapons[1][? "reload_type"] = 0
 weapons[1][? "caliber"] = caliberType._r762
 weapons[1][? "spread"] = 0.5 
+weapons[1][? "range"] = 1000 
 weapons[1][? "fire_sound"] = so_gunire
 
 weapons[2][? "wep_id"] = 2;
+weapons[2][? "wep_type"] = weaponType.FIREARM
 weapons[2][? "wep_name"] = "Stoner 63"
 weapons[2][? "wep_sprite"] = spr_weapon_lmg_stoner
 weapons[2][? "wep_icon"] = spr_weapon_lmg_stoner_silhouette
@@ -93,10 +108,12 @@ weapons[2][? "fire_delay"] = 0.05
 weapons[2][? "reload_time"] = 1 
 weapons[2][? "reload_type"] = 0
 weapons[2][? "caliber"] = caliberType._r556
-weapons[2][? "spread"] = 0.5 
+weapons[2][? "spread"] = 2
+weapons[2][? "range"] = 1000 
 weapons[2][? "fire_sound"] = so_gunire
 
 weapons[3][? "wep_id"] = 3;
+weapons[3][? "wep_type"] = weaponType.FIREARM
 weapons[3][? "wep_name"] = "Desert Eagle"
 weapons[3][? "wep_sprite"] = spr_weapon_pistol_deagle
 weapons[3][? "wep_icon"] = spr_weapon_pistol_deagle_silhouette
@@ -108,9 +125,11 @@ weapons[3][? "reload_time"] = 1
 weapons[3][? "reload_type"] = 0
 weapons[3][? "caliber"] = caliberType._r50AE
 weapons[3][? "spread"] = 0.5 
+weapons[3][? "range"] = 1000
 weapons[3][? "fire_sound"] = so_deagle_fire
 
 weapons[4][? "wep_id"] = 4;
+weapons[4][? "wep_type"] = weaponType.FIREARM
 weapons[4][? "wep_name"] = "Spas-12"
 weapons[4][? "wep_sprite"] = spr_weapon_shotgun_spas
 weapons[4][? "wep_icon"] = spr_weapon_shotgun_spas_silhouette
@@ -122,9 +141,11 @@ weapons[4][? "reload_time"] = 0.25
 weapons[4][? "reload_type"] = 1
 weapons[4][? "caliber"] = caliberType._r12GAUGE
 weapons[4][? "spread"] = 2.5
+weapons[4][? "range"] = 555
 weapons[4][? "fire_sound"] = so_shotgun_fire
 
 weapons[5][? "wep_id"] = 5;
+weapons[5][? "wep_type"] = weaponType.FIREARM
 weapons[5][? "wep_name"] = "MP5k"
 weapons[5][? "wep_sprite"] = spr_weapon_smg_mp5k
 weapons[5][? "wep_icon"] = spr_weapon_smg_mp5k_silhouette
@@ -136,9 +157,11 @@ weapons[5][? "reload_time"] = 1
 weapons[5][? "reload_type"] = 0
 weapons[5][? "caliber"] = caliberType._r9x19
 weapons[5][? "spread"] = 0.5 
+weapons[5][? "range"] = 1000
 weapons[5][? "fire_sound"] = so_gunire
 
 weapons[6][? "wep_id"] = 6
+weapons[6][? "wep_type"] = weaponType.FIREARM
 weapons[6][? "wep_name"] = "M200 Intervention"
 weapons[6][? "wep_sprite"] = spr_weapon_sniper_intervention
 weapons[6][? "wep_icon"] = spr_weapon_sniper_intervention_silhouette33
@@ -149,8 +172,25 @@ weapons[6][? "fire_delay"] = 0.5
 weapons[6][? "reload_time"] = 1 
 weapons[6][? "reload_type"] = 0
 weapons[6][? "caliber"] = caliberType._r408
-weapons[6][? "spread"] = 0.5 
+weapons[6][? "spread"] = 0.1
+weapons[6][? "range"] = 1000
 weapons[6][? "fire_sound"] = so_shotgun_fire
+
+weapons[7][? "wep_id"] = 7
+weapons[7][? "wep_type"] = weaponType.MELEE
+weapons[7][? "wep_name"] = "Bastard Sword"
+weapons[7][? "wep_sprite"] = spr_weapon_melee_bastard
+weapons[7][? "wep_icon"] = spr_weapon_melee_bastard_silhouette
+weapons[7][? "mag_capacity"] = 999999
+weapons[7][? "reserve_ammo"] = 0
+weapons[7][? "fire_type"] = fireType.BOLT
+weapons[7][? "fire_delay"] = 0.5 
+weapons[7][? "reload_time"] = 1 
+weapons[7][? "reload_type"] = 0
+weapons[7][? "caliber"] = caliberType._mm
+weapons[7][? "spread"] = 50
+weapons[7][? "range"] = 75
+weapons[7][? "fire_sound"] = so_sword
 
 for (var i = 0; i < num_weapons; i ++){// initialize the magazines and reserve ammunition appropriately
 	ammunition[i][0] = weapons[i][? "mag_capacity"]
@@ -171,7 +211,7 @@ for (var i = 0; i < num_weapons; i ++){// initialize the magazines and reserve a
 /*
 	*---------------* INITIALIZE CALIBER STATISTICS *---------------*
 */
-var num_calibers = 6; // the number of unique calibers
+var num_calibers = 7; // the number of unique calibers
 calibers[num_calibers - 1] = noone
 
 for (var i = 0; i < num_calibers; i ++){
@@ -219,5 +259,12 @@ calibers[caliberType._r408][? "casing_sprite"] = spr_player_casing_anti_materiel
 calibers[caliberType._r408][? "damage"] = 0
 calibers[caliberType._r408][? "speed"] = 25
 calibers[caliberType._r408][? "number_of_shot"] = 1
+
+calibers[caliberType._mm][? "cal_name"] = ""
+calibers[caliberType._mm][? "cal_sprite"] = spr_player_bullet_magical_melee_ammo
+calibers[caliberType._mm][? "casing_sprite"] = pointer_null
+calibers[caliberType._mm][? "damage"] = 0
+calibers[caliberType._mm][? "speed"] = 25
+calibers[caliberType._mm][? "number_of_shot"] = 10
 
 scr_change_weapon(0)

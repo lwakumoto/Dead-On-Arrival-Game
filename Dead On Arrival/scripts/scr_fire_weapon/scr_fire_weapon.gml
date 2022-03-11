@@ -18,10 +18,20 @@ function scr_fire_weapon(x,y, dir){
 		new_bullet.direction = dir + irandom_range(-weapon_spread, weapon_spread) // add random spread to the weapon
 		new_bullet.image_angle = dir
 		new_bullet.sprite_index = caliber_sprite
+		new_bullet.range = weapon_range
 		
 	}
 	
+	// create muzzle flash if it's a firearm
+	if (weapon_type != weaponType.MELEE){
+		scr_create_muzzle_flash(x,y,dir)	
+	}
+
+	
 	// create shell casing
+	if (casing_sprite != pointer_null){
+		
+	
 	var new_casing = instance_create_layer(x - lengthdir_x(sprite_get_width(weapon_sprite)/2,dir),y - lengthdir_y(sprite_get_width(weapon_sprite)/2,dir),"Instances", obj_casing)
 	new_casing.sprite_index = casing_sprite
 	new_casing.direction = dir - 90 + random_range(-15,15)
@@ -38,6 +48,7 @@ function scr_fire_weapon(x,y, dir){
 		new_casing.max_height = 100 + irandom_range(-25,25)
 		new_casing.height = new_casing.max_height
 		new_casing.rotational_velocity = irandom_range(-7,7)
+	}
 	}
 	
 	

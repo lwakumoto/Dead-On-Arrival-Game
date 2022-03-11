@@ -32,6 +32,7 @@ if (fire && canShoot) { // make it impossible to fire while already bursting
 
 
 if ((fire && ammunition[weapon_id][0] > 0 && canShoot) || (canShoot && bursting && curr_burst > 0 && ammunition[weapon_id][0] > 0)){
+	image_speed = 1
 	if (reloading){
 		reloading = false // firing cancels the reload
 	} else{
@@ -40,7 +41,7 @@ if ((fire && ammunition[weapon_id][0] > 0 && canShoot) || (canShoot && bursting 
 		} 
 		canShoot = false
 		if (bursting && curr_burst > 0){ // if burst fire, the delay will be shorter between shots
-			alarm[0] = fire_delay/3 * room_speed
+			alarm[0] = 0.1 * room_speed
 		}
 		else{
 			alarm[0] = fire_delay * room_speed
@@ -49,6 +50,8 @@ if ((fire && ammunition[weapon_id][0] > 0 && canShoot) || (canShoot && bursting 
 		scr_fire_weapon(x + lengthdir_x(sprite_width/2,direction), y + lengthdir_y(sprite_width/2,direction),direction)	
 		ammunition[weapon_id][0] -- 
 	}
+	
+	
 }
 
 if (curr_burst <= 0 || ammunition[weapon_id][0] <= 0){
@@ -63,6 +66,7 @@ if (curr_burst <= 0 || ammunition[weapon_id][0] <= 0){
 var reload = keyboard_check_pressed(ord("R"))
 if (reload && !reloading && ammunition[weapon_id][0] < magazine_capacity + 1){
 	reloading = true
+	
 	
 	scr_create_reload_wheel()
 	
