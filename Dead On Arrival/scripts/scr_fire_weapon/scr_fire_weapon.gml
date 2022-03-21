@@ -19,6 +19,8 @@ function scr_fire_weapon(x,y, dir){
 		new_bullet.image_angle = dir
 		new_bullet.sprite_index = caliber_sprite
 		new_bullet.range = weapon_range
+		new_bullet.penetration = caliber_penetration
+		new_bullet.damage = caliber_damage
 		
 	}
 	

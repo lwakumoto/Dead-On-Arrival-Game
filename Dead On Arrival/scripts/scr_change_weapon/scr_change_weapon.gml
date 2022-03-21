@@ -24,6 +24,7 @@ function scr_change_weapon(wep_index){
 	caliber_sprite = curr_caliber[? "cal_sprite"]
 	casing_sprite = curr_caliber[? "casing_sprite"]
 	caliber_damage = curr_caliber[? "damage"]
+	caliber_penetration = curr_caliber[? "penetration"]
 	caliber_speed = curr_caliber[? "speed"]
 	caliber_num_shot = curr_caliber[? "number_of_shot"]
 

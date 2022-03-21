@@ -1,6 +1,6 @@
 /// @description Destroy the lists to avoid memory leaks
 
-var num_weapons = 7;
+var num_weapons = 8;
 var num_calibers = 7; 
 
 for (var i = 0; i < num_weapons; i ++){
