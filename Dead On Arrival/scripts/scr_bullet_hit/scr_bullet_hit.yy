@@ -2,8 +2,8 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Scripts",
-    "path": "folders/Scripts.yy",
+    "name": "damage functions",
+    "path": "folders/Scripts/damage functions.yy",
   },
   "resourceVersion": "1.0",
   "name": "scr_bullet_hit",

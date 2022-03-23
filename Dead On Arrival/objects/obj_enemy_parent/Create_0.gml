@@ -5,7 +5,7 @@
 alert = false; 
 
 // how close the player needs to be before the enemy becomes alert
-alert_dist = 250; 
+alert_dist = 500; 
 
 // distance to stop from the player
 attack_dis = 1;
@@ -13,12 +13,15 @@ attack_dis = 1;
 path = path_add();
 
 // speed to move
-move_spd = 5;
+move_spd = random_range(4,6);
 
 // SET DELAY FOR CALCULATING path
 calc_path_delay = 30;
 // set a time for when to calculate the path
 calc_path_timer = irandom(60)
+
+// bias for pathfinding
+bias = random_range(-20,20)
 
 hp = 100
 

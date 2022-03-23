@@ -8,8 +8,13 @@ function scr_check_for_player(){
 			alert = true // set enemy to alert when they enter the radius
 			if (calc_path_timer-- <= 0){
 				calc_path_timer = calc_path_delay;
-			
-				var found_player = mp_grid_path(global.mp_grid,path,x,y,obj_player.x,obj_player.y,choose(0,1))
+				if (dis > 100){
+					var found_player = mp_grid_path(global.mp_grid,path,x,y,obj_player.x + bias,obj_player.y + bias,choose(0,1))
+				}
+				else{
+					var found_player = mp_grid_path(global.mp_grid,path,x,y,obj_player.x,obj_player.y,choose(0,1))
+				}
+				
 		
 				// start path if we can reach the player
 				if (found_player){

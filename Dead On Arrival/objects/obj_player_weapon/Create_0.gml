@@ -48,6 +48,8 @@ enum caliberType {
 	_mm = 6
 }
 
+var num_calibers = 6
+
 enum weaponType {
 	FIREARM,
 	MELEE
@@ -75,7 +77,7 @@ for (var i = 0; i < num_weapons; i ++){
 /*
 	*---------------* INITIALIZE WEAPON STATISTICS *---------------*
 */
-
+#region // initialize weapon variables
 weapons[weapon.MK18][? "wep_id"] = 0; 
 weapons[weapon.MK18][? "wep_type"] = weaponType.FIREARM
 weapons[weapon.MK18][? "wep_name"] = "Mk18 Mod 1" // the display name of the weapon
@@ -117,7 +119,7 @@ weapons[weapon.STONER][? "wep_icon"] = spr_weapon_lmg_stoner_silhouette
 weapons[weapon.STONER][? "mag_capacity"] = 200
 weapons[weapon.STONER][? "reserve_ammo"] = 300
 weapons[weapon.STONER][? "fire_type"] = fireType.FULLAUTO
-weapons[weapon.STONER][? "fire_delay"] = 0.05 
+weapons[weapon.STONER][? "fire_delay"] = 0.06
 weapons[weapon.STONER][? "reload_time"] = 3.5 
 weapons[weapon.STONER][? "reload_type"] = 0
 weapons[weapon.STONER][? "caliber"] = caliberType._r556
@@ -153,7 +155,7 @@ weapons[weapon.SPAS][? "fire_delay"] = 0.2
 weapons[weapon.SPAS][? "reload_time"] = 0.25 
 weapons[weapon.SPAS][? "reload_type"] = 1
 weapons[weapon.SPAS][? "caliber"] = caliberType._r12GAUGE
-weapons[weapon.SPAS][? "spread"] = 2.5
+weapons[weapon.SPAS][? "spread"] = 15
 weapons[weapon.SPAS][? "range"] = 555
 weapons[weapon.SPAS][? "fire_sound"] = so_shotgun_fire
 
@@ -201,18 +203,15 @@ weapons[weapon.BASTARD][? "fire_delay"] = 0.5
 weapons[weapon.BASTARD][? "reload_time"] = 1 
 weapons[weapon.BASTARD][? "reload_type"] = 0
 weapons[weapon.BASTARD][? "caliber"] = caliberType._mm
-weapons[weapon.BASTARD][? "spread"] = 50
-weapons[weapon.BASTARD][? "range"] = 50
+weapons[weapon.BASTARD][? "spread"] = 0
+weapons[weapon.BASTARD][? "range"] = 1
 weapons[weapon.BASTARD][? "fire_sound"] = so_sword
+#endregion
 
 for (var i = 0; i < num_weapons; i ++){// initialize the magazines and reserve ammunition appropriately
-	ammunition[i][0] = weapons[i][? "mag_capacity"]
-	ammunition[i][1] = weapons[i][? "reserve_ammo"]
+	ammunition[i][0] = weapons[i][? "mag_capacity"] // the current magazine for any weapon
+	ammunition[i][1] = weapons[i][? "reserve_ammo"] // the reserve ammunition for any weapon
 }
-
-
-
-
 
 
 
@@ -231,11 +230,14 @@ for (var i = 0; i < num_calibers; i ++){
 	calibers[i] = ds_map_create()
 }
 
+
+
+#region // intialize caliber variables
 calibers[caliberType._r556][? "cal_name"] = "5.56x45mm NATO" // display name of the caliber
 calibers[caliberType._r556][? "cal_sprite"] = spr_player_bullet_intermediate // the sprite for the bullet
 calibers[caliberType._r556][? "casing_sprite"] = spr_player_casing_intermediate // the sprite for the casing
 calibers[caliberType._r556][? "damage"] = 10 // the damage of the bullet
-calibers[caliberType._r556][? "penetration"] = 1 // how many enemies the bullet can penetrate before being destroyed
+calibers[caliberType._r556][? "penetration"] = 2 // how many enemies the bullet can penetrate before being destroyed
 calibers[caliberType._r556][? "speed"] = 25 // speed of the bullet
 calibers[caliberType._r556][? "number_of_shot"] = 1 // the number of bullets that are fired each shot
 
@@ -274,17 +276,28 @@ calibers[caliberType._r9x19][? "number_of_shot"] = 1
 calibers[caliberType._r408][? "cal_name"] = ".408 Cheyenne"
 calibers[caliberType._r408][? "cal_sprite"] = spr_player_bullet_anti_materiel
 calibers[caliberType._r408][? "casing_sprite"] = spr_player_casing_anti_materiel
-calibers[caliberType._r408][? "damage"] = 25
-calibers[caliberType._r408][? "penetration"] = 6
+calibers[caliberType._r408][? "damage"] = 125
+calibers[caliberType._r408][? "penetration"] = 9
 calibers[caliberType._r408][? "speed"] = 25
 calibers[caliberType._r408][? "number_of_shot"] = 1
 
 calibers[caliberType._mm][? "cal_name"] = ""
 calibers[caliberType._mm][? "cal_sprite"] = spr_player_bullet_magical_melee_ammo
-calibers[caliberType._mm][? "casing_sprite"] = pointer_null
-calibers[caliberType._mm][? "damage"] = 1
+calibers[caliberType._mm][? "casing_sprite"] = 0
+calibers[caliberType._mm][? "damage"] = 50
 calibers[caliberType._mm][? "penetration"] = 999
 calibers[caliberType._mm][? "speed"] = 25
-calibers[caliberType._mm][? "number_of_shot"] = 10
+calibers[caliberType._mm][? "number_of_shot"] = 1
+#endregion
+casings_particles[num_calibers - 1] = noone
+
+/*
+	*---------------* INITIALIZE CASING PARTICLE SYSTEMS *---------------*
+*/
+for (var i = 0; i < num_calibers; i ++){
+	casings_particles[i] = scr_create_casings_system(calibers[i][? "casing_sprite"])
+}
+
+
 
 scr_change_weapon(0)

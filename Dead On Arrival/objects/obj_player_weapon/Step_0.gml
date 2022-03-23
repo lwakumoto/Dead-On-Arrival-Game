@@ -30,7 +30,6 @@ if (fire && canShoot) { // make it impossible to fire while already bursting
 }
 }
 
-
 if ((fire && ammunition[weapon_id][0] > 0 && canShoot) || (canShoot && bursting && curr_burst > 0 && ammunition[weapon_id][0] > 0)){
 	image_speed = 1
 	if (reloading){
@@ -48,6 +47,7 @@ if ((fire && ammunition[weapon_id][0] > 0 && canShoot) || (canShoot && bursting 
 		}
 		audio_play_sound(weapon_sound,1,false)
 		scr_fire_weapon(x + lengthdir_x(sprite_width/2,direction), y + lengthdir_y(sprite_width/2,direction),direction)	
+		//scr_fire_weapon(x,y,direction)
 		ammunition[weapon_id][0] -- 
 	}
 	
@@ -64,13 +64,13 @@ if (curr_burst <= 0 || ammunition[weapon_id][0] <= 0){
 
 // allow the player to reload
 var reload = keyboard_check_pressed(ord("R"))
-if (reload && !reloading && ammunition[weapon_id][0] < magazine_capacity + 1){
+if (reload && !reloading && ammunition[weapon_id][0] < magazine_capacity + 1 && ammunition[weapon_id][1] > 0){
 	reloading = true
 	
 	
 	scr_create_reload_wheel()
 	
-	
+
 	if (reload_type == 0){
 		alarm[1] = reload_time * room_speed
 	}
