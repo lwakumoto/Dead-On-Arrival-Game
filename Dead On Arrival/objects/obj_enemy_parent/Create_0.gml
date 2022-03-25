@@ -13,7 +13,7 @@ attack_dis = 1;
 path = path_add();
 
 // speed to move
-move_spd = random_range(4,6);
+move_spd = random_range(2,4);
 
 // SET DELAY FOR CALCULATING path
 calc_path_delay = 30;
@@ -23,5 +23,8 @@ calc_path_timer = irandom(60)
 // bias for pathfinding
 bias = random_range(-20,20)
 
-hp = 100
+max_hp = 100
+hp = max_hp
+
+corpse_sprite = noone
 

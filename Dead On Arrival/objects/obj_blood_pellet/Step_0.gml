@@ -5,4 +5,3 @@ if (speed <= 0.01 || place_meeting(x,y,obj_obstacle)){
 	part_particles_create(global.particle_system,x,y,global.blood_particle,1)
 }
 
-part_particles_create(global.particle_system,x,y,global.blood_particle,1)

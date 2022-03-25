@@ -4,7 +4,7 @@
     "path": "sprites/spr_grid/spr_grid.yy",
   },
   "solid": false,
-  "visible": false,
+  "visible": true,
   "spriteMaskId": null,
   "persistent": true,
   "parentObjectId": null,

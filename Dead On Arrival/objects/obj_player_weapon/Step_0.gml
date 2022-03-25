@@ -46,7 +46,9 @@ if ((fire && ammunition[weapon_id][0] > 0 && canShoot) || (canShoot && bursting 
 			alarm[0] = fire_delay * room_speed
 		}
 		audio_play_sound(weapon_sound,1,false)
+
 		scr_fire_weapon(x + lengthdir_x(sprite_width/2,direction), y + lengthdir_y(sprite_width/2,direction),direction)	
+		
 		//scr_fire_weapon(x,y,direction)
 		ammunition[weapon_id][0] -- 
 	}

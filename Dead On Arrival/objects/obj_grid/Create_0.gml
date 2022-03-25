@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-#macro TileSize 4
+#macro TileSize 16
 
 var width = ceil(room_width / TileSize)
 var height = ceil(room_height / TileSize)
