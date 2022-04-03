@@ -6,9 +6,11 @@ function scr_fire_weapon(x,y, dir){
 	repeat(caliber_num_shot){
 		
 		var new_bullet = instance_create_layer(x,y,"Bullets",obj_player_bullet);
-
+		
 		new_bullet.speed = caliber_speed
-		new_bullet.direction = dir + irandom_range(-weapon_spread, weapon_spread) // add random spread to the weapon
+		new_bullet.bullet_spread = irandom_range(-weapon_spread, weapon_spread) // add random spread to the weapon
+		new_bullet.direction = dir
+		new_bullet.dist_to_visible = sqrt(power( lengthdir_x(sprite_width,dir),2) + power( lengthdir_y(sprite_width,dir),2))
 		new_bullet.image_angle = dir
 		new_bullet.sprite_index = caliber_sprite
 		new_bullet.range = weapon_range
@@ -19,7 +21,7 @@ function scr_fire_weapon(x,y, dir){
 	
 	// create muzzle flash if it's a firearm
 	if (weapon_type != weaponType.MELEE){
-		scr_create_muzzle_flash(x,y,dir)	
+		scr_create_muzzle_flash(x + lengthdir_x(sprite_width,dir),y + lengthdir_y(sprite_width,dir),dir)	
 	}
 
 	
@@ -27,7 +29,7 @@ function scr_fire_weapon(x,y, dir){
 	if (casing_sprite != 0){
 		
 	
-		var new_casing = instance_create_layer(x - lengthdir_x(sprite_get_width(weapon_sprite)/2,dir),y - lengthdir_y(sprite_get_width(weapon_sprite)/2,dir),"Instances", obj_casing)
+		var new_casing = instance_create_layer(x + lengthdir_x(sprite_get_width(weapon_sprite)/2,dir),y + lengthdir_y(sprite_get_width(weapon_sprite)/2,dir),"Instances", obj_casing)
 		new_casing.sprite_index = casing_sprite
 		new_casing.image_angle = dir
 		new_casing.max_height = 100 + irandom_range(-25,25)

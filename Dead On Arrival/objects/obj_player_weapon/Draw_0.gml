@@ -1,6 +1,4 @@
-/// @description Insert description here
-// You can write your code in this editor
-
+/// @description Draw the weapon
 if (!reloading){
 	sprite_index = weapon_sprite
 } else{ // if the player is reloading, play the reloading animation
@@ -12,4 +10,22 @@ if (!reloading){
 }
 
 
+draw_set_alpha(0.6)
+scr_draw_laser(x ,y,image_angle,5000,c_green)
+draw_set_alpha(1.0)
+
+
+
+// Draw crosshair
+if (!reloading){
+	//cursor_sprite = curr_crosshair	
+	var offset =  15
+	draw_sprite(spr_crosshair,0,mouse_x + lengthdir_x(offset,owner.direction - 90), mouse_y + lengthdir_y(offset,owner.direction - 90))
+	if (instance_exists(obj_reload_wheel)){
+		instance_destroy(obj_reload_wheel)	
+	}
+}
+
+
+//draw_line(x,y,x + lengthdir_x(500,image_angle),y + lengthdir_y(500,image_angle))
 draw_self()

@@ -2,7 +2,7 @@
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
-  "origin": 4,
+  "origin": 3,
   "preMultiplyAlpha": false,
   "edgeFiltering": false,
   "collisionTolerance": 0,
@@ -10,7 +10,7 @@
   "bbox_left": 0,
   "bbox_right": 119,
   "bbox_top": 8,
-  "bbox_bottom": 18,
+  "bbox_bottom": 20,
   "HTile": false,
   "VTile": false,
   "For3D": false,
@@ -27,6 +27,7 @@
     {"compositeImage":{"FrameId":{"name":"cd274e7b-83b1-4a98-9276-bc39fc253a16","path":"sprites/spr_weapon_battle_g3/spr_weapon_battle_g3.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"cd274e7b-83b1-4a98-9276-bc39fc253a16","path":"sprites/spr_weapon_battle_g3/spr_weapon_battle_g3.yy",},"LayerId":{"name":"3425e9f5-61fc-4488-85fa-bf62b5b6b007","path":"sprites/spr_weapon_battle_g3/spr_weapon_battle_g3.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"cd274e7b-83b1-4a98-9276-bc39fc253a16","path":"sprites/spr_weapon_battle_g3/spr_weapon_battle_g3.yy",},"LayerId":{"name":"b8f00c70-2be8-4872-8ad0-bb98df50eee5","path":"sprites/spr_weapon_battle_g3/spr_weapon_battle_g3.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"cd274e7b-83b1-4a98-9276-bc39fc253a16","path":"sprites/spr_weapon_battle_g3/spr_weapon_battle_g3.yy",},"LayerId":{"name":"221514e1-a0ad-491d-aee9-3efffec3bbc6","path":"sprites/spr_weapon_battle_g3/spr_weapon_battle_g3.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"spr_weapon_battle_g3","path":"sprites/spr_weapon_battle_g3/spr_weapon_battle_g3.yy",},"resourceVersion":"1.0","name":"cd274e7b-83b1-4a98-9276-bc39fc253a16","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -55,7 +56,7 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 60,
+    "xorigin": 0,
     "yorigin": 15,
     "eventToFunction": {},
     "eventStubScript": null,
@@ -67,6 +68,7 @@
   },
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"3425e9f5-61fc-4488-85fa-bf62b5b6b007","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 2","resourceVersion":"1.0","name":"221514e1-a0ad-491d-aee9-3efffec3bbc6","tags":[],"resourceType":"GMImageLayer",},
     {"visible":false,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 1","resourceVersion":"1.0","name":"b8f00c70-2be8-4872-8ad0-bb98df50eee5","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,

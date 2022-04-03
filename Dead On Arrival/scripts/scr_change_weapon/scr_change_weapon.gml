@@ -5,10 +5,12 @@ function scr_change_weapon(wep_index){
 	
 	weapon_id = curr_weapon[? "wep_id"]
 	weapon_type = curr_weapon[? "wep_type"]
+	weapon_category = curr_weapon[? "wep_category"]
 	weapon_name = curr_weapon[? "wep_name"]
 	weapon_sprite = curr_weapon[? "wep_sprite"]
 	weapon_reload = curr_weapon[? "wep_reload"]
 	weapon_icon = curr_weapon[? "wep_icon"]
+	weapon_offset = curr_weapon[? "wep_offset"]
 	magazine_capacity = curr_weapon[? "mag_capacity"]
 	fire_type = curr_weapon[? "fire_type"]
 	fire_delay = curr_weapon[? "fire_delay"]

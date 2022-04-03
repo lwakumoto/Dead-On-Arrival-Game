@@ -26,5 +26,14 @@ bias = random_range(-20,20)
 max_hp = 100
 hp = max_hp
 
+
 corpse_sprite = noone
+// variables dicating how the enemy will attack
+attack_delay = 1
+can_attack = true
+idle_sprite = noone
+attack_animation = noone
+attack_func = noone
+
+
 

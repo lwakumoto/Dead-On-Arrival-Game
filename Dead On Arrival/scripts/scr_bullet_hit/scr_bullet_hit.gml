@@ -23,5 +23,6 @@ function scr_bullet_hit(bullet, target){
 
 	}
 	
-	target.hp -= damage
+	// hurt the enemy
+	scr_enemy_hurt(target,bullet.damage)
 }

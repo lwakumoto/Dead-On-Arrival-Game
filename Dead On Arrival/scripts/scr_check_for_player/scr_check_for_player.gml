@@ -4,7 +4,7 @@ function scr_check_for_player(){
 	if (instance_exists(obj_player)){
 		var dis = distance_to_object(obj_player);
 		
-		if ((dis < alert_dist || alert) && (dis > attack_dis)){
+		if ((dis < alert_dist || alert) && (dis > attack_dis) && can_attack){
 			alert = true // set enemy to alert when they enter the radius
 			if (calc_path_timer-- <= 0){
 				calc_path_timer = calc_path_delay;
@@ -23,7 +23,16 @@ function scr_check_for_player(){
 			}
 		} else{
 			if (dis <= attack_dis){
-				path_end()	
+				if (can_attack){ // play the attack function if they're in range
+					sprite_index = attack_animation
+					image_speed = 1
+					path_end()
+					can_attack = false
+					alarm[0] = attack_delay * room_speed
+					alarm[1] = attack_delay * room_speed / 2
+						
+					
+				}
 			}
 		}
 	}

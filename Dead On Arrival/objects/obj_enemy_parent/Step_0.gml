@@ -7,5 +7,7 @@ var _diff = angle_difference(direction, image_angle);
 image_angle += _diff * 0.1;
 
 if (hp <= 0){
-	scr_enemy_die()	
+	scr_enemy_die(id)	
 }
+
+

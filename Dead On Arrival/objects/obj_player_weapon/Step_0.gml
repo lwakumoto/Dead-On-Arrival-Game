@@ -2,10 +2,15 @@
 
 // correctly position the firearm
 if (owner != noone){
-	x = owner.x + lengthdir_x(50,owner.direction)
-	y = owner.y + lengthdir_y(50, owner.direction)
+	var offset = 15
+	
+	x = owner.x + lengthdir_x(offset,owner.direction - 90) + lengthdir_x(weapon_offset,owner.direction)
+	y = owner.y + lengthdir_y(offset,owner.direction - 90) + lengthdir_y(weapon_offset,owner.direction)
 	direction = owner.direction
 	image_angle = direction
+
+
+
 }
 
 
@@ -47,7 +52,7 @@ if ((fire && ammunition[weapon_id][0] > 0 && canShoot) || (canShoot && bursting 
 		}
 		audio_play_sound(weapon_sound,1,false)
 
-		scr_fire_weapon(x + lengthdir_x(sprite_width/2,direction), y + lengthdir_y(sprite_width/2,direction),direction)	
+		scr_fire_weapon(x, y,direction)	
 		
 		//scr_fire_weapon(x,y,direction)
 		ammunition[weapon_id][0] -- 
@@ -70,8 +75,8 @@ if (reload && !reloading && ammunition[weapon_id][0] < magazine_capacity + 1 && 
 	reloading = true
 	
 	
-	scr_create_reload_wheel()
-	
+	//scr_create_reload_wheel(mouse_x + lengthdir_x(offset,owner.direction - 90), mouse_y + lengthdir_y(offset,owner.direction - 90))
+	scr_create_reload_wheel(mouse_x,mouse_y)
 
 	if (reload_type == 0){
 		alarm[1] = reload_time * room_speed
@@ -83,13 +88,3 @@ if (reload && !reloading && ammunition[weapon_id][0] < magazine_capacity + 1 && 
 }
 
 
-// if we're reloading we want to replace the sprite with a reload wheel, otherwise, use the crosshair
-if (reloading){
-	cursor_sprite = noone	
-}
-else{
-	cursor_sprite = curr_crosshair	
-	if (instance_exists(obj_reload_wheel)){
-		instance_destroy(obj_reload_wheel)	
-	}
-}
