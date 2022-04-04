@@ -3,8 +3,9 @@
 
 // return the appropriate
 function scr_enemy_attack(){
+	// the attack function the regular enemy will use
 	attack_function_normal = function(dmg){
-		image_speed = 1/attack_delay
+
 		var attack_radius = 100
 		if ((point_distance(x,y,obj_player.x,obj_player.y) < attack_radius 
 		&& abs(angle_difference(image_angle,point_direction(x,y,obj_player.x,obj_player.y))) < 100)
@@ -13,8 +14,9 @@ function scr_enemy_attack(){
 		}
 	}
 	
+	// the attack function the boomer will use
 	attack_function_boomer = function(dmg){
-		image_speed = 3
+		scr_enemy_die(id)
 	}
 	
 	switch (object_index){ // return the appropriate function

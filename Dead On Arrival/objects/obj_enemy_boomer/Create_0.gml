@@ -11,9 +11,9 @@ corpse_sprite = spr_enemy_corpse
 
 alert_dist = 500
 attack_dis = 10
-attack_delay = 1
+attack_delay = 1.5
 idle_sprite = spr_enemy_boomer
-attack_animation = spr_enemy_boomer
+attack_animation = spr_enemy_boomer_attack
 attack_func = scr_enemy_attack()
 image_speed = random_range(0.8,1.2)
 

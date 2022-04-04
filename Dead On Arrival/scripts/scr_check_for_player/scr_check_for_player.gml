@@ -28,8 +28,8 @@ function scr_check_for_player(){
 					sprite_index = attack_animation
 					path_end()
 					can_attack = false
-					alarm[0] = attack_delay * room_speed
-					alarm[1] = attack_delay * room_speed / 2
+					alarm[0] = attack_delay * room_speed // set the can_attack to true
+					alarm[1] = attack_delay * room_speed // actually make the attack 
 						
 					
 				}

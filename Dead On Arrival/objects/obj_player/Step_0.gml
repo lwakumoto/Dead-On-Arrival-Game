@@ -23,12 +23,12 @@ var change_weapon_forward = keyboard_check_pressed(ord("E"))
 var change_weapon_backward = keyboard_check_pressed(ord("Q"))
 
 if (change_weapon_forward || change_weapon_backward){
-	if (change_weapon_forward) current_weapon = (current_weapon + 1) % array_length(weapon_inventory)
-	else if (change_weapon_backward) current_weapon = (current_weapon - 1 + array_length(weapon_inventory)) % array_length(weapon_inventory)
+	if (change_weapon_forward) current_weapon = (current_weapon + 1) % ds_list_size(weapon_inventory)
+	else if (change_weapon_backward) current_weapon = (current_weapon - 1 + ds_list_size(weapon_inventory)) % ds_list_size(weapon_inventory)
 	
 	with (obj_player_weapon){
 		if (!bursting){
-			scr_change_weapon(other.weapon_inventory[other.current_weapon])
+			scr_change_weapon(other.weapon_inventory[| other.current_weapon])
 			reloading = false;
 		}
 		
