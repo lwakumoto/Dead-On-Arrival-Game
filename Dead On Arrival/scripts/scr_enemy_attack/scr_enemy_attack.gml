@@ -3,12 +3,28 @@
 
 // return the appropriate
 function scr_enemy_attack(){
-	attack_function = function(){
-		if (point_distance(x,y,obj_player.x,obj_player.y) < 100){
-			obj_player.curr_hp -= 10	
+	attack_function_normal = function(dmg){
+		image_speed = 1/attack_delay
+		var attack_radius = 100
+		if ((point_distance(x,y,obj_player.x,obj_player.y) < attack_radius 
+		&& abs(angle_difference(image_angle,point_direction(x,y,obj_player.x,obj_player.y))) < 100)
+		|| place_meeting(x,y,obj_player)){
+			obj_player.curr_hp -= dmg	
 		}
 	}
-	return attack_function
+	
+	attack_function_boomer = function(dmg){
+		image_speed = 3
+	}
+	
+	switch (object_index){ // return the appropriate function
+		case obj_enemy:
+			return attack_function_normal
+			break;
+		case obj_enemy_boomer:
+			return attack_function_boomer
+			break;
+	}
 }
 
 

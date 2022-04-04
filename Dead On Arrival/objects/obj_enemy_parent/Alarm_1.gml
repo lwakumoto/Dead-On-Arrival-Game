@@ -1,3 +1,3 @@
 /// @description Play attack function
 
-attack_func()
+attack_func(damage)

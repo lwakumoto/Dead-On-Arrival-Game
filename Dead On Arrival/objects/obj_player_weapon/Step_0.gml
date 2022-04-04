@@ -15,7 +15,7 @@ if (owner != noone){
 
 
 // allow the player to fire if they click and they have ammunition
-
+#region // firing
 if (fire_type == fireType.FULLAUTO){
 	var fire = mouse_check_button(mb_left)
 }
@@ -39,6 +39,8 @@ if ((fire && ammunition[weapon_id][0] > 0 && canShoot) || (canShoot && bursting 
 	image_speed = 1
 	if (reloading){
 		reloading = false // firing cancels the reload
+		image_index = 0
+		image_speed = 0
 	} else{
 		if (bursting){ 
 			curr_burst --	
@@ -53,6 +55,7 @@ if ((fire && ammunition[weapon_id][0] > 0 && canShoot) || (canShoot && bursting 
 		audio_play_sound(weapon_sound,1,false)
 
 		scr_fire_weapon(x, y,direction)	
+		alarm[3] =  image_number
 		
 		//scr_fire_weapon(x,y,direction)
 		ammunition[weapon_id][0] -- 
@@ -64,7 +67,7 @@ if ((fire && ammunition[weapon_id][0] > 0 && canShoot) || (canShoot && bursting 
 if (curr_burst <= 0 || ammunition[weapon_id][0] <= 0){
 	bursting = false	
 }
-
+#endregion
 
 
 
@@ -74,6 +77,9 @@ var reload = keyboard_check_pressed(ord("R"))
 if (reload && !reloading && ammunition[weapon_id][0] < magazine_capacity + 1 && ammunition[weapon_id][1] > 0){
 	reloading = true
 	
+	if (weapon_reload_sound != undefined){
+		audio_play_sound(weapon_reload_sound,1,false)
+	}
 	
 	//scr_create_reload_wheel(mouse_x + lengthdir_x(offset,owner.direction - 90), mouse_y + lengthdir_y(offset,owner.direction - 90))
 	scr_create_reload_wheel(mouse_x,mouse_y)

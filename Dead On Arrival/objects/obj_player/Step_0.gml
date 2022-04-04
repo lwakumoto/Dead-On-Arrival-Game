@@ -10,8 +10,8 @@ var move_right = keyboard_check(ord("D"))
 var vert_move = move_down - move_up
 var horiz_move = move_right - move_left
 
-y += vert_move * spd
-x += horiz_move * spd
+y += vert_move * player_spd
+x += horiz_move * player_spd
 
 direction = point_direction(x,y, mouse_x, mouse_y) // make the player face the mouse
 image_angle = direction

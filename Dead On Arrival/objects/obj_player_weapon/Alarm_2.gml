@@ -7,9 +7,15 @@ if (reloading){
 	ammunition[weapon_id][0] += bullets_to_add
 
 
+	
 	if (ammunition[weapon_id][0] < magazine_capacity ){
+		
+		if (weapon_reload_sound != undefined){
+			audio_play_sound(weapon_reload_sound,1,false)
+		}
+		
 		alarm[2] = reload_time * room_speed
-		scr_create_reload_wheel()
+		scr_create_reload_wheel(mouse_x,mouse_y)
 	}
 	else{
 		reloading = false	

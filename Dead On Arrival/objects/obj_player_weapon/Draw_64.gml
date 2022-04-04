@@ -10,7 +10,7 @@ var icon_biggest_height = sprite_get_height(spr_weapon_sniper_intervention_silho
 
 draw_sprite_ext(weapon_icon,0,0 + icon_biggest_width/8,room_height - icon_biggest_height/8,0.25,0.25,0, c_white,1)
 */
-/*
+
 // draw the weapon icon
 var max_height = 150
 var max_width = 300

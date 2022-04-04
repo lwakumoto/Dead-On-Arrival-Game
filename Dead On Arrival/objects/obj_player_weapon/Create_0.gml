@@ -115,6 +115,7 @@ weapons[weapon.G3A1][? "wep_type"] = weaponType.FIREARM
 weapons[weapon.G3A1][? "wep_category"] = weaponCategory.BATTLE_RIFLE
 weapons[weapon.G3A1][? "wep_name"] = "G3A1"
 weapons[weapon.G3A1][? "wep_sprite"] = spr_weapon_battle_g3
+weapons[weapon.G3A1][? "wep_reload"] = spr_weapon_battle_g3_reload
 weapons[weapon.G3A1][? "wep_icon"] = spr_weapon_battle_g3_silhouette
 weapons[weapon.G3A1][? "wep_offset"] = 0
 weapons[weapon.G3A1][? "mag_capacity"] = 20
@@ -133,6 +134,7 @@ weapons[weapon.STONER][? "wep_type"] = weaponType.FIREARM
 weapons[weapon.STONER][? "wep_category"] = weaponCategory.LMG
 weapons[weapon.STONER][? "wep_name"] = "Stoner 63"
 weapons[weapon.STONER][? "wep_sprite"] = spr_weapon_lmg_stoner
+weapons[weapon.STONER][? "wep_reload"] = spr_weapon_lmg_stoner_reload
 weapons[weapon.STONER][? "wep_icon"] = spr_weapon_lmg_stoner_silhouette
 weapons[weapon.STONER][? "wep_offset"] = 0
 weapons[weapon.STONER][? "mag_capacity"] = 75
@@ -152,11 +154,12 @@ weapons[weapon.DEAGLE][? "wep_category"] = weaponCategory.PISTOL
 weapons[weapon.DEAGLE][? "wep_name"] = "Desert Eagle"
 weapons[weapon.DEAGLE][? "wep_sprite"] = spr_weapon_pistol_deagle
 weapons[weapon.DEAGLE][? "wep_icon"] = spr_weapon_pistol_deagle_colored
+weapons[weapon.DEAGLE][? "wep_reload"] = spr_weapon_pistol_deagle_reload
 weapons[weapon.DEAGLE][? "wep_offset"] = 25
 weapons[weapon.DEAGLE][? "mag_capacity"] = 7
 weapons[weapon.DEAGLE][? "reserve_ammo"] = 300
 weapons[weapon.DEAGLE][? "fire_type"] = fireType.SEMIAUTO
-weapons[weapon.DEAGLE][? "fire_delay"] = 0.5 
+weapons[weapon.DEAGLE][? "fire_delay"] = 0.1 
 weapons[weapon.DEAGLE][? "reload_time"] = 1 
 weapons[weapon.DEAGLE][? "reload_type"] = 0
 weapons[weapon.DEAGLE][? "caliber"] = caliberType._r50AE
@@ -169,6 +172,7 @@ weapons[weapon.SPAS][? "wep_type"] = weaponType.FIREARM
 weapons[weapon.SPAS][? "wep_category"] = weaponCategory.SHOTGUN
 weapons[weapon.SPAS][? "wep_name"] = "Spas-12"
 weapons[weapon.SPAS][? "wep_sprite"] = spr_weapon_shotgun_spas
+weapons[weapon.SPAS][? "wep_reload"] = spr_weapon_shotgun_spas_reload
 weapons[weapon.SPAS][? "wep_icon"] = spr_weapon_shotgun_spas_silhouette
 weapons[weapon.SPAS][? "wep_offset"] = 0
 weapons[weapon.SPAS][? "mag_capacity"] = 8
@@ -181,12 +185,14 @@ weapons[weapon.SPAS][? "caliber"] = caliberType._r12GAUGE
 weapons[weapon.SPAS][? "spread"] = 15
 weapons[weapon.SPAS][? "range"] = 555
 weapons[weapon.SPAS][? "fire_sound"] = so_shotgun_fire
+weapons[weapon.SPAS][? "reload_sound"] = so_shotgun_reload
 
 weapons[weapon.MP5K][? "wep_id"] = 5;
 weapons[weapon.MP5K][? "wep_type"] = weaponType.FIREARM
 weapons[weapon.MP5K][? "wep_category"] = weaponCategory.SMG
 weapons[weapon.MP5K][? "wep_name"] = "MP5k"
 weapons[weapon.MP5K][? "wep_sprite"] = spr_weapon_smg_mp5k
+weapons[weapon.MP5K][? "wep_reload"] = spr_weapon_smg_mp5k_reload
 weapons[weapon.MP5K][? "wep_icon"] = spr_weapon_smg_mp5k_silhouette
 weapons[weapon.MP5K][? "wep_offset"] = 20
 weapons[weapon.MP5K][? "mag_capacity"] = 25
@@ -205,13 +211,14 @@ weapons[weapon.INTERVENTION][? "wep_type"] = weaponType.FIREARM
 weapons[weapon.INTERVENTION][? "wep_category"] = weaponCategory.SNIPER
 weapons[weapon.INTERVENTION][? "wep_name"] = "M200 Intervention"
 weapons[weapon.INTERVENTION][? "wep_sprite"] = spr_weapon_sniper_intervention
+weapons[weapon.INTERVENTION][? "wep_reload"] = spr_weapon_sniper_intervention_reload
 weapons[weapon.INTERVENTION][? "wep_icon"] = spr_weapon_sniper_intervention_silhouette33
 weapons[weapon.INTERVENTION][? "wep_offset"] = 0
 weapons[weapon.INTERVENTION][? "mag_capacity"] = 5
 weapons[weapon.INTERVENTION][? "reserve_ammo"] = 300
 weapons[weapon.INTERVENTION][? "fire_type"] = fireType.BOLT
 weapons[weapon.INTERVENTION][? "fire_delay"] = 0.5 
-weapons[weapon.INTERVENTION][? "reload_time"] = 1 
+weapons[weapon.INTERVENTION][? "reload_time"] = 2.5 
 weapons[weapon.INTERVENTION][? "reload_type"] = 0
 weapons[weapon.INTERVENTION][? "caliber"] = caliberType._r408
 weapons[weapon.INTERVENTION][? "spread"] = 0.1
@@ -233,7 +240,7 @@ weapons[weapon.BASTARD][? "reload_time"] = 1
 weapons[weapon.BASTARD][? "reload_type"] = 0
 weapons[weapon.BASTARD][? "caliber"] = caliberType._mm
 weapons[weapon.BASTARD][? "spread"] = 0
-weapons[weapon.BASTARD][? "range"] = 1
+weapons[weapon.BASTARD][? "range"] = 10
 weapons[weapon.BASTARD][? "fire_sound"] = so_sword
 #endregion
 
@@ -266,7 +273,7 @@ calibers[caliberType._r556][? "cal_name"] = "5.56x45mm NATO" // display name of 
 calibers[caliberType._r556][? "cal_sprite"] = spr_player_bullet_intermediate // the sprite for the bullet
 calibers[caliberType._r556][? "casing_sprite"] = spr_player_casing_intermediate // the sprite for the casing
 calibers[caliberType._r556][? "damage"] = 10 // the damage of the bullet
-calibers[caliberType._r556][? "penetration"] = 2 // how many enemies the bullet can penetrate before being destroyed
+calibers[caliberType._r556][? "penetration"] = 1 // how many enemies the bullet can penetrate before being destroyed
 calibers[caliberType._r556][? "speed"] = 25 // speed of the bullet
 calibers[caliberType._r556][? "number_of_shot"] = 1 // the number of bullets that are fired each shot
 
@@ -281,8 +288,8 @@ calibers[caliberType._r762][? "number_of_shot"] = 1
 calibers[caliberType._r50AE][? "cal_name"] = ".50 Action Express"
 calibers[caliberType._r50AE][? "cal_sprite"] = spr_player_bullet_pistol_big
 calibers[caliberType._r50AE][? "casing_sprite"] = spr_player_casing_pistol_big
-calibers[caliberType._r50AE][? "damage"] = 8
-calibers[caliberType._r50AE][? "penetration"] = 2
+calibers[caliberType._r50AE][? "damage"] = 30
+calibers[caliberType._r50AE][? "penetration"] = 0
 calibers[caliberType._r50AE][? "speed"] = 25
 calibers[caliberType._r50AE][? "number_of_shot"] = 1
 
@@ -329,4 +336,4 @@ for (var i = 0; i < num_calibers; i ++){
 
 
 
-scr_change_weapon(0)
+

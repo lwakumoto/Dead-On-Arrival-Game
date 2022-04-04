@@ -13,7 +13,7 @@ attack_dis = 1;
 path = path_add();
 
 // speed to move
-move_spd = random_range(2,4);
+move_spd = random_range(2.8,3.2);
 
 // SET DELAY FOR CALCULATING path
 calc_path_delay = 30;
@@ -34,6 +34,7 @@ can_attack = true
 idle_sprite = noone
 attack_animation = noone
 attack_func = noone
+damage = 0
 
 
 

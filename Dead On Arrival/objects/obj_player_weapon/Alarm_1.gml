@@ -14,5 +14,6 @@ if (reloading){
 	reloading = false
 	
 	image_speed = 0 // make sure the weapon doesn't animate at the end of reloading
+	image_index = 0
 	
 }

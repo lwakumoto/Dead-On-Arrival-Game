@@ -1,5 +1,5 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+// NOTE: THIS FUNCTION MUST BE CALLED BY OBJ_PLAYER_WEAPON AND BY NOTHING ELSE
+
 function scr_fire_weapon(x,y, dir){
 	
 	//spawn bullet(s)
@@ -25,7 +25,8 @@ function scr_fire_weapon(x,y, dir){
 	}
 
 	
-	// create shell casing
+	/*
+		// create shell casing
 	if (casing_sprite != 0){
 		
 	
@@ -40,8 +41,7 @@ function scr_fire_weapon(x,y, dir){
 		
 	
 	}
-	
-	
+	*/
 	
 
 	

@@ -26,8 +26,8 @@
   "frames": [
     {"compositeImage":{"FrameId":{"name":"cfbeb250-3238-4d76-950a-98611d43240b","path":"sprites/spr_weapon_lmg_stoner/spr_weapon_lmg_stoner.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"cfbeb250-3238-4d76-950a-98611d43240b","path":"sprites/spr_weapon_lmg_stoner/spr_weapon_lmg_stoner.yy",},"LayerId":{"name":"4b49d110-3d29-4dc6-988c-2db8e26e5603","path":"sprites/spr_weapon_lmg_stoner/spr_weapon_lmg_stoner.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"cfbeb250-3238-4d76-950a-98611d43240b","path":"sprites/spr_weapon_lmg_stoner/spr_weapon_lmg_stoner.yy",},"LayerId":{"name":"d9bfece8-21d9-46e4-aaf5-b6d255fc1f60","path":"sprites/spr_weapon_lmg_stoner/spr_weapon_lmg_stoner.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"cfbeb250-3238-4d76-950a-98611d43240b","path":"sprites/spr_weapon_lmg_stoner/spr_weapon_lmg_stoner.yy",},"LayerId":{"name":"d5bdac79-fb53-48c0-ac22-8f5104eb4db2","path":"sprites/spr_weapon_lmg_stoner/spr_weapon_lmg_stoner.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"cfbeb250-3238-4d76-950a-98611d43240b","path":"sprites/spr_weapon_lmg_stoner/spr_weapon_lmg_stoner.yy",},"LayerId":{"name":"d9bfece8-21d9-46e4-aaf5-b6d255fc1f60","path":"sprites/spr_weapon_lmg_stoner/spr_weapon_lmg_stoner.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"spr_weapon_lmg_stoner","path":"sprites/spr_weapon_lmg_stoner/spr_weapon_lmg_stoner.yy",},"resourceVersion":"1.0","name":"cfbeb250-3238-4d76-950a-98611d43240b","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -43,7 +43,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"acb8e92a-dd28-4b40-88e2-a79d12bb0d33","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"cfbeb250-3238-4d76-950a-98611d43240b","path":"sprites/spr_weapon_lmg_stoner/spr_weapon_lmg_stoner.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"fb8497fd-63ec-4560-9c57-3b1ce30b3a73","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"cfbeb250-3238-4d76-950a-98611d43240b","path":"sprites/spr_weapon_lmg_stoner/spr_weapon_lmg_stoner.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
