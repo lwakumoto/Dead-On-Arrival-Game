@@ -7,10 +7,7 @@ player_weapon = instance_create_layer(x,y,"Instances",obj_player_weapon)
 player_weapon.owner = id
 weapon_inventory = ds_list_create()
 
-#region // add weapons to list
-ds_list_add(weapon_inventory, weapon.DEAGLE)
-ds_list_add(weapon_inventory, weapon.MK18)
-#endregion
+ds_list_add(weapon_inventory,weapon.DEAGLE,weapon.STONER,weapon.G3A1,weapon.INTERVENTION,weapon.MK18,weapon.MP5K,weapon.SPAS)
 
 //weapon_inventory = [weapon.DEAGLE, weapon.MK18, weapon.G3A1, weapon.SPAS, weapon.MP5K,weapon.INTERVENTION, weapon.STONER]
 current_weapon = 0
@@ -22,5 +19,6 @@ with (player_weapon){
 
 max_hp = 100
 curr_hp = max_hp
+regen_health_rate = 1.5 // health regenerated per second
 
 player_spd = 4

@@ -2,7 +2,13 @@
 
 // correctly position the firearm
 if (owner != noone){
-	var offset = 15
+	if (right_side){
+		var offset = 15
+	}
+	else{
+		var offset = -15	
+	}
+	
 	
 	x = owner.x + lengthdir_x(offset,owner.direction - 90) + lengthdir_x(weapon_offset,owner.direction)
 	y = owner.y + lengthdir_y(offset,owner.direction - 90) + lengthdir_y(weapon_offset,owner.direction)
@@ -23,6 +29,17 @@ else{
 	var fire = mouse_check_button_pressed(mb_left)	
 }
 
+// if the barrel is sticking into the wall, the player cannot fire
+
+if (collision_line(x + lengthdir_x(sprite_width,direction)/2,y + lengthdir_y(sprite_width,direction)/2,
+		x + lengthdir_x(sprite_width,direction),
+		y + lengthdir_y(sprite_width,direction),obj_obstacle,false,true)){
+		gun_obstructed = true
+}
+else{
+	gun_obstructed = false	
+}
+		
 if (fire && canShoot) { // make it impossible to fire while already bursting
 	if (fire_type == fireType.BURST){
 	if (bursting == false){
@@ -35,7 +52,9 @@ if (fire && canShoot) { // make it impossible to fire while already bursting
 }
 }
 
-if ((fire && ammunition[weapon_id][0] > 0 && canShoot) || (canShoot && bursting && curr_burst > 0 && ammunition[weapon_id][0] > 0)){
+if (((fire && ammunition[weapon_id][0] > 0 && canShoot)
+	|| (canShoot && bursting && curr_burst > 0 && ammunition[weapon_id][0] > 0))
+	&& !gun_obstructed){
 	image_speed = 1
 	if (reloading){
 		reloading = false // firing cancels the reload
@@ -73,6 +92,7 @@ if (curr_burst <= 0 || ammunition[weapon_id][0] <= 0){
 
 
 // allow the player to reload
+#region // reloading
 var reload = keyboard_check_pressed(ord("R"))
 if (reload && !reloading && ammunition[weapon_id][0] < magazine_capacity + 1 && ammunition[weapon_id][1] > 0){
 	reloading = true
@@ -91,6 +111,13 @@ if (reload && !reloading && ammunition[weapon_id][0] < magazine_capacity + 1 && 
 		alarm[2] = reload_time * room_speed
 	}
 	
+}
+#endregion
+
+// allow the player to flip gun sides
+var flip_gun = keyboard_check_pressed(ord("T"))
+if (flip_gun){
+	right_side = !right_side	
 }
 
 

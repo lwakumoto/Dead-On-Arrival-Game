@@ -62,7 +62,7 @@
     "eventStubScript": null,
     "parent": {"name":"spr_weapon_sniper_intervention_silhouette33","path":"sprites/spr_weapon_sniper_intervention_silhouette33/spr_weapon_sniper_intervention_silhouette33.yy",},
     "resourceVersion": "1.4",
-    "name": "spr_weapon_sniper_intervention_silhouette",
+    "name": "spr_weapon_sniper_intervention_silhouette33",
     "tags": [],
     "resourceType": "GMSequence",
   },

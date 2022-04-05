@@ -2,16 +2,28 @@
 // You can write your code in this editor
 
 // Player Movement (to be worked on)
-var move_up = keyboard_check(ord("W"))
-var move_down = keyboard_check(ord("S"))
-var move_left = keyboard_check(ord("A"))
-var move_right = keyboard_check(ord("D"))
 
-var vert_move = move_down - move_up
-var horiz_move = move_right - move_left
+var right_pressed = keyboard_check(ord("D"));
+var left_pressed = keyboard_check(ord("A"));
+var up_pressed = keyboard_check(ord("W"));
+var down_pressed = keyboard_check(ord("S"));
 
-y += vert_move * player_spd
-x += horiz_move * player_spd
+
+
+var horiz_vel = (right_pressed - left_pressed)*player_spd
+var vertic_vel = (down_pressed - up_pressed)*player_spd
+if (position_meeting(x,y+vertic_vel,obj_obstacle)){
+	vertic_vel = 0;	
+}
+if (position_meeting(x + horiz_vel,y,obj_obstacle)){
+	horiz_vel = 0;	
+}
+
+
+x += horiz_vel;
+y += vertic_vel;
+
+
 
 direction = point_direction(x,y, mouse_x, mouse_y) // make the player face the mouse
 image_angle = direction
@@ -33,4 +45,13 @@ if (change_weapon_forward || change_weapon_backward){
 		}
 		
 	}
+}
+
+if (curr_hp < max_hp){
+	curr_hp += regen_health_rate / room_speed
+	curr_hp = min(curr_hp,max_hp)
+}
+
+if (keyboard_check_pressed(vk_enter)){
+	scr_player_hurt(id,irandom_range(20,50))
 }

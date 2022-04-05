@@ -8,7 +8,7 @@ alert = false;
 alert_dist = 500; 
 
 // distance to stop from the player
-attack_dis = 1;
+attack_dis = 2;
 
 path = path_add();
 

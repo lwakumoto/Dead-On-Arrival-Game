@@ -4,6 +4,7 @@ image_angle += rotational_velocity
 x += casing_vel[0]* spd
 y -= casing_vel[1] * spd
 
+// at the end of its lifetime, destroy the object and create a particle
 if (height <= 0 && spd != 0){
 	spd = 0	
 	rotational_velocity = 0
@@ -17,6 +18,8 @@ if (height <= 0 && spd != 0){
 	part_particles_create(global.particle_system, x,y,part_effect,1);	
 	instance_destroy();
 }
+
+
 else{
 	height -= 10
 	height = max(height,0)

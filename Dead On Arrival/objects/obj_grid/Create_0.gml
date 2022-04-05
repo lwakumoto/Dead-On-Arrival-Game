@@ -6,7 +6,7 @@ var width = ceil(room_width / TileSize)
 var height = ceil(room_height / TileSize)
 
 global.mp_grid = mp_grid_create(0,0,width,height,TileSize,TileSize)
-mp_grid_add_instances(global.mp_grid,obj_obstacle, false)
+mp_grid_add_instances(global.mp_grid,obj_obstacle, true)
 /*
 global.cell_width = room_width/40
 global.cell_height = room_height / 40

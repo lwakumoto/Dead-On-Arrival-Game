@@ -3,11 +3,10 @@
 scr_check_for_player();
 
 
-var _diff = angle_difference(direction, image_angle);
-image_angle += _diff * 0.1;
+
 
 if (hp <= 0){
-	scr_enemy_die(id)	
+	scr_enemy_die(x,y,id,false)	
 }
 
 

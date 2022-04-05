@@ -5,12 +5,13 @@ event_inherited()
 max_hp = 25
 hp = max_hp
 
-corpse_sprite = spr_enemy_corpse
+corpse_sprite = spr_enemy_regular_corpse
 
-alert_dist = 500
+alert_dist = 1000
 attack_dis = 10
 attack_delay = 0.25
 idle_sprite = spr_enemy_regular
 attack_animation = spr_enemy_regular_attack
 attack_func = scr_enemy_attack()
-damage = 10
+damage = irandom_range(1,3)
+move_spd = random_range(3.2,3.8)
