@@ -1,7 +1,7 @@
 /// @description Draw Weapon icon, ammo display, etc.
 
 // draw the weapon icon
-scr_draw_weapon_icon(0,room_height - 175,175)
+scr_draw_weapon_icon(0,global.camera_height - 175,175)
 
 /*
 var scale_factor = 0.25

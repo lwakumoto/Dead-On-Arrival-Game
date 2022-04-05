@@ -4,4 +4,11 @@ function scr_player_hurt(player_id, damage){
 	if (instance_exists(player_id)){
 		player_id.curr_hp -= ceil(damage)	
 	}
+	
+	// spawn blood
+	repeat(max(min(ceil(damage)/5,10),1)){
+		var pellet = instance_create_layer(x,y,"Instances",obj_blood_pellet);
+		pellet.direction = random_range(0,359)
+		pellet.image_angle = pellet.direction
+	}
 }
