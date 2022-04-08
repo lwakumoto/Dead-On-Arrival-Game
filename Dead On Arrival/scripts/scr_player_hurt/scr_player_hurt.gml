@@ -3,6 +3,7 @@
 function scr_player_hurt(player_id, damage){
 	if (instance_exists(player_id)){
 		player_id.curr_hp -= ceil(damage)	
+		audio_play_sound(so_player_hit, 1, false);
 	}
 	
 	// spawn blood
