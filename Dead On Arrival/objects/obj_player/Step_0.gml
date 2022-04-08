@@ -19,9 +19,10 @@ if (position_meeting(x + horiz_vel,y,obj_obstacle)){
 	horiz_vel = 0;	
 }
 
+var speed_modifier = player_weapon.weapon_weight
 
-x += horiz_vel;
-y += vertic_vel;
+x += horiz_vel * speed_modifier;
+y += vertic_vel * speed_modifier;
 
 
 
@@ -34,10 +35,12 @@ image_angle = direction
 var change_weapon_forward = keyboard_check_pressed(ord("E"))
 var change_weapon_backward = keyboard_check_pressed(ord("Q"))
 
-if (change_weapon_forward || change_weapon_backward){
+if ((change_weapon_forward || change_weapon_backward) && player_weapon.canShoot){
 	if (change_weapon_forward) current_weapon = (current_weapon + 1) % ds_list_size(weapon_inventory)
 	else if (change_weapon_backward) current_weapon = (current_weapon - 1 + ds_list_size(weapon_inventory)) % ds_list_size(weapon_inventory)
 	
+	player_weapon.image_index = 0
+	player_weapon.image_speed = 0
 	with (obj_player_weapon){
 		if (!bursting){
 			scr_change_weapon(other.weapon_inventory[| other.current_weapon])

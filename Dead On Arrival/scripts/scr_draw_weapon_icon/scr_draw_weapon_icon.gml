@@ -17,15 +17,7 @@ function scr_draw_weapon_icon(xx, yy, height){
 
 
 
-		// draw the weapon icon
-
-		var scale = min(max_height/sprite_get_height(weapon_icon), max_width/sprite_get_width(weapon_icon))
-		var y_offset = 80
-
-
-		draw_sprite_ext(weapon_icon, 0,xx + rect_width/2,yy + y_offset, scale, scale, 0, c_white, 1)
-
-
+		scr_draw_icon(xx,yy,height,weapon_icon)
 
 
 

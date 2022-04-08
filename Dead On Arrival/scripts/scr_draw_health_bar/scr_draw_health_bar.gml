@@ -13,11 +13,25 @@ function scr_draw_health_bar(xx, yy, current, maximum){
 	
 	// shake the text if the player is low on health (< 20%)
 	
-	var text_shake = 0
+	var text_shake_x = 0
+	var text_shake_y = 0
 	if (((current/maximum)*100) < 20){
 		draw_set_color(c_red)
-		text_shake = random_range(-1,1)
+		text_shake_x = random_range(-3,3)
+		text_shake_y = random_range(-3,3)
 	}
+	else if (((current/maximum)*100) < 40){
+		draw_set_color(c_orange)
+		text_shake_x = random_range(-2,2)
+		text_shake_y = random_range(-2,2)
+	}
+	else if (((current/maximum)*100) < 50){
+		draw_set_color(c_yellow)
+		text_shake_x = random_range(-1,1)
+		text_shake_y = random_range(-1,1)
+	}
+	
+	
 	else{
 		draw_set_color(c_white)	
 	}
@@ -27,6 +41,6 @@ function scr_draw_health_bar(xx, yy, current, maximum){
 	if (current == maximum){
 		draw_set_color(c_lime)	
 	}
-	draw_text(xx + 25 + text_shake, yy + 12.5 + text_shake,current)
+	draw_text(xx + 25 + text_shake_x, yy + 12.5 + text_shake_y,current)
 	draw_set_color(c_white)
 }

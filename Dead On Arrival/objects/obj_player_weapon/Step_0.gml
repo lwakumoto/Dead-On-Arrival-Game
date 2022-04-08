@@ -56,6 +56,7 @@ if (((fire && ammunition[weapon_id][0] > 0 && canShoot)
 	|| (canShoot && bursting && curr_burst > 0 && ammunition[weapon_id][0] > 0))
 	&& !gun_obstructed){
 	image_speed = 1
+	sprite_set_speed(sprite_index, (sprite_get_number(sprite_index))/fire_delay, spritespeed_framespersecond);
 	if (reloading){
 		reloading = false // firing cancels the reload
 		image_index = 0
@@ -94,8 +95,9 @@ if (curr_burst <= 0 || ammunition[weapon_id][0] <= 0){
 // allow the player to reload
 #region // reloading
 var reload = keyboard_check_pressed(ord("R"))
-if (reload && !reloading && ammunition[weapon_id][0] < magazine_capacity + 1 && ammunition[weapon_id][1] > 0){
+if (reload && !reloading && ammunition[weapon_id][0] < magazine_capacity + 1 && ammunition[weapon_id][1] > 0 && canShoot){
 	reloading = true
+	image_index = 0
 	
 	if (weapon_reload_sound != undefined){
 		audio_play_sound(weapon_reload_sound,1,false)

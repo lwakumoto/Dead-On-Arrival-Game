@@ -27,4 +27,4 @@ y = clamp(y, global.camera_height/2, room_height-(global.camera_height/2));
 
 var vm = matrix_build_lookat(x,y,-10,x,y,0,0,1,0);
 camera_set_view_mat(global.camera,vm);
-show_debug_message(global.camera_width);
+
