@@ -7,14 +7,14 @@
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
-  "bbox_left": 10,
-  "bbox_right": 49,
-  "bbox_top": 4,
-  "bbox_bottom": 56,
+  "bbox_left": 1,
+  "bbox_right": 30,
+  "bbox_top": 0,
+  "bbox_bottom": 60,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 64,
+  "width": 32,
   "height": 64,
   "textureGroupId": {
     "name": "Default",
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"5ebc2a7c-8f94-471b-abfc-ef0f5e0518d6","path":"sprites/spr_enemy_car_corpse/spr_enemy_car_corpse.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"5ebc2a7c-8f94-471b-abfc-ef0f5e0518d6","path":"sprites/spr_enemy_car_corpse/spr_enemy_car_corpse.yy",},"LayerId":{"name":"5214df54-90a8-4abf-8583-a2ee69ef13d6","path":"sprites/spr_enemy_car_corpse/spr_enemy_car_corpse.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_enemy_car_corpse","path":"sprites/spr_enemy_car_corpse/spr_enemy_car_corpse.yy",},"resourceVersion":"1.0","name":"5ebc2a7c-8f94-471b-abfc-ef0f5e0518d6","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"6a85dbd8-7762-4c85-873e-5f368f0da070","path":"sprites/spr_player_corpse/spr_player_corpse.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"6a85dbd8-7762-4c85-873e-5f368f0da070","path":"sprites/spr_player_corpse/spr_player_corpse.yy",},"LayerId":{"name":"c7363484-6cc6-499e-95dd-22856824af79","path":"sprites/spr_player_corpse/spr_player_corpse.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_player_corpse","path":"sprites/spr_player_corpse/spr_player_corpse.yy",},"resourceVersion":"1.0","name":"6a85dbd8-7762-4c85-873e-5f368f0da070","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_enemy_car_corpse","path":"sprites/spr_enemy_car_corpse/spr_enemy_car_corpse.yy",},
+    "spriteId": {"name":"spr_player_corpse","path":"sprites/spr_player_corpse/spr_player_corpse.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"c82f8ea5-edd9-4037-9839-76cb34518554","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5ebc2a7c-8f94-471b-abfc-ef0f5e0518d6","path":"sprites/spr_enemy_car_corpse/spr_enemy_car_corpse.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"9bd9d70d-505c-4cd0-b2c4-a04c93bb8d88","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6a85dbd8-7762-4c85-873e-5f368f0da070","path":"sprites/spr_player_corpse/spr_player_corpse.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -58,14 +58,14 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_enemy_car_corpse","path":"sprites/spr_enemy_car_corpse/spr_enemy_car_corpse.yy",},
+    "parent": {"name":"spr_player_corpse","path":"sprites/spr_player_corpse/spr_player_corpse.yy",},
     "resourceVersion": "1.4",
-    "name": "spr_enemy_car_corpse",
+    "name": "spr_player_corpse",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"5214df54-90a8-4abf-8583-a2ee69ef13d6","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"c7363484-6cc6-499e-95dd-22856824af79","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -73,7 +73,7 @@
     "path": "folders/Sprites/enemy sprites/corpses.yy",
   },
   "resourceVersion": "1.0",
-  "name": "spr_enemy_car_corpse",
+  "name": "spr_player_corpse",
   "tags": [],
   "resourceType": "GMSprite",
 }
