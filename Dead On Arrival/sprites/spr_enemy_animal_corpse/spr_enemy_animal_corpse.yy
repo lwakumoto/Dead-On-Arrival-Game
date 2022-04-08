@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "enemy sprites",
-    "path": "folders/Sprites/enemy sprites.yy",
+    "name": "corpses",
+    "path": "folders/Sprites/enemy sprites/corpses.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_enemy_animal_corpse",
