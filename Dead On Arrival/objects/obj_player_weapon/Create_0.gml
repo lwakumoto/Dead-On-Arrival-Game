@@ -76,12 +76,12 @@ enum weaponType {
 
 // Create weapon array that will store the stats of each weapon, each weapon is represented as an array of maps
 // Each map corresponds to a stat of that weapon.
-var num_weapons = 8;
-weapons[num_weapons - 1] = noone // the weapons array that will store the stats for each weapon
+global.num_weapons = 8;
+weapons[global.num_weapons - 1] = noone // the weapons array that will store the stats for each weapon
 
 
 
-for (var i = 0; i < num_weapons; i ++){
+for (var i = 0; i < global.num_weapons; i ++){
 	weapons[i] = ds_map_create()
 }
 
@@ -101,6 +101,7 @@ weapons[weapon.MK18][? "wep_sprite"] = spr_weapon_assault_mk18 // the sprite of 
 weapons[weapon.MK18][? "wep_reload"] = spr_weapon_assault_mk18_reload
 weapons[weapon.MK18][? "wep_icon"] = spr_weapon_assault_mk18_colored // the sprite of the icon in the gui
 weapons[weapon.MK18][? "wep_offset"] = 5 // the offset of the weapon
+weapons[weapon.MK18][? "wep_weight"] = 0.9 // the weight of the weapon will affect the movement speed of the player
 weapons[weapon.MK18][? "mag_capacity"] = 30 // the magazine capacity
 weapons[weapon.MK18][? "reserve_ammo"] = 300 // the amount of ammunition in reserve
 weapons[weapon.MK18][? "fire_type"] = fireType.FULLAUTO // the fire type of the weapon, determines how it fires
@@ -121,9 +122,10 @@ weapons[weapon.G3A1][? "wep_reload"] = spr_weapon_battle_g3_reload
 weapons[weapon.G3A1][? "wep_icon"] = spr_weapon_battle_g3_colored
 weapons[weapon.G3A1][? "wep_offset"] = 0
 weapons[weapon.G3A1][? "mag_capacity"] = 20
+weapons[weapon.G3A1][? "wep_weight"] = 0.85
 weapons[weapon.G3A1][? "reserve_ammo"] = 300
 weapons[weapon.G3A1][? "fire_type"] = fireType.SEMIAUTO
-weapons[weapon.G3A1][? "fire_delay"] = 0.5 
+weapons[weapon.G3A1][? "fire_delay"] = 0.25
 weapons[weapon.G3A1][? "reload_time"] = 2 
 weapons[weapon.G3A1][? "reload_type"] = 0
 weapons[weapon.G3A1][? "caliber"] = caliberType._r762
@@ -140,6 +142,7 @@ weapons[weapon.STONER][? "wep_reload"] = spr_weapon_lmg_stoner_reload
 weapons[weapon.STONER][? "wep_icon"] = spr_weapon_lmg_stoner_colored
 weapons[weapon.STONER][? "wep_offset"] = 0
 weapons[weapon.STONER][? "mag_capacity"] = 75
+weapons[weapon.STONER][? "wep_weight"] = 0.75 
 weapons[weapon.STONER][? "reserve_ammo"] = 300
 weapons[weapon.STONER][? "fire_type"] = fireType.FULLAUTO
 weapons[weapon.STONER][? "fire_delay"] = 0.09
@@ -158,6 +161,7 @@ weapons[weapon.DEAGLE][? "wep_sprite"] = spr_weapon_pistol_deagle
 weapons[weapon.DEAGLE][? "wep_icon"] = spr_weapon_pistol_deagle_colored
 weapons[weapon.DEAGLE][? "wep_reload"] = spr_weapon_pistol_deagle_reload
 weapons[weapon.DEAGLE][? "wep_offset"] = 25
+weapons[weapon.DEAGLE][? "wep_weight"] = 1.05
 weapons[weapon.DEAGLE][? "mag_capacity"] = 7
 weapons[weapon.DEAGLE][? "reserve_ammo"] = 300
 weapons[weapon.DEAGLE][? "fire_type"] = fireType.SEMIAUTO
@@ -178,6 +182,7 @@ weapons[weapon.SPAS][? "wep_reload"] = spr_weapon_shotgun_spas_reload
 weapons[weapon.SPAS][? "wep_icon"] = spr_weapon_shotgun_spas_colored
 weapons[weapon.SPAS][? "wep_offset"] = 0
 weapons[weapon.SPAS][? "mag_capacity"] = 8
+weapons[weapon.SPAS][? "wep_weight"] = 0.9
 weapons[weapon.SPAS][? "reserve_ammo"] = 300
 weapons[weapon.SPAS][? "fire_type"] = fireType.SEMIAUTO
 weapons[weapon.SPAS][? "fire_delay"] = 0.2 
@@ -197,10 +202,11 @@ weapons[weapon.MP5K][? "wep_sprite"] = spr_weapon_smg_mp5k
 weapons[weapon.MP5K][? "wep_reload"] = spr_weapon_smg_mp5k_reload
 weapons[weapon.MP5K][? "wep_icon"] = spr_weapon_smg_mp5k_colored
 weapons[weapon.MP5K][? "wep_offset"] = 20
+weapons[weapon.MP5K][? "wep_weight"] = 0.95
 weapons[weapon.MP5K][? "mag_capacity"] = 25
 weapons[weapon.MP5K][? "reserve_ammo"] = 300
 weapons[weapon.MP5K][? "fire_type"] = fireType.BURST
-weapons[weapon.MP5K][? "fire_delay"] = 0.5 
+weapons[weapon.MP5K][? "fire_delay"] = 0.1
 weapons[weapon.MP5K][? "reload_time"] = 1 
 weapons[weapon.MP5K][? "reload_type"] = 0
 weapons[weapon.MP5K][? "caliber"] = caliberType._r9x19
@@ -216,10 +222,11 @@ weapons[weapon.INTERVENTION][? "wep_sprite"] = spr_weapon_sniper_intervention
 weapons[weapon.INTERVENTION][? "wep_reload"] = spr_weapon_sniper_intervention_reload
 weapons[weapon.INTERVENTION][? "wep_icon"] = spr_weapon_sniper_intervention_colored
 weapons[weapon.INTERVENTION][? "wep_offset"] = 0
+weapons[weapon.INTERVENTION][? "wep_weight"] = .8
 weapons[weapon.INTERVENTION][? "mag_capacity"] = 5
 weapons[weapon.INTERVENTION][? "reserve_ammo"] = 300
 weapons[weapon.INTERVENTION][? "fire_type"] = fireType.BOLT
-weapons[weapon.INTERVENTION][? "fire_delay"] = 0.5 
+weapons[weapon.INTERVENTION][? "fire_delay"] = 1
 weapons[weapon.INTERVENTION][? "reload_time"] = 2.5 
 weapons[weapon.INTERVENTION][? "reload_type"] = 0
 weapons[weapon.INTERVENTION][? "caliber"] = caliberType._r408
@@ -235,6 +242,7 @@ weapons[weapon.BASTARD][? "wep_sprite"] = spr_weapon_melee_bastard
 weapons[weapon.BASTARD][? "wep_icon"] = spr_weapon_melee_bastard_silhouette
 weapons[weapon.BASTARD][? "wep_offset"] = 20
 weapons[weapon.BASTARD][? "mag_capacity"] = 999999
+weapons[weapon.BASTARD][? "wep_weight"] = 1.1
 weapons[weapon.BASTARD][? "reserve_ammo"] = 0
 weapons[weapon.BASTARD][? "fire_type"] = fireType.BOLT
 weapons[weapon.BASTARD][? "fire_delay"] = 0.5 
@@ -246,7 +254,7 @@ weapons[weapon.BASTARD][? "range"] = 10
 weapons[weapon.BASTARD][? "fire_sound"] = so_sword
 #endregion
 
-for (var i = 0; i < num_weapons; i ++){// initialize the magazines and reserve ammunition appropriately
+for (var i = 0; i < global.num_weapons; i ++){// initialize the magazines and reserve ammunition appropriately
 	ammunition[i][0] = weapons[i][? "mag_capacity"] // the current magazine for any weapon
 	ammunition[i][1] = weapons[i][? "reserve_ammo"] // the reserve ammunition for any weapon
 }
@@ -282,7 +290,7 @@ calibers[caliberType._r556][? "number_of_shot"] = 1 // the number of bullets tha
 calibers[caliberType._r762][? "cal_name"] = "7.62x51mm NATO"
 calibers[caliberType._r762][? "cal_sprite"] = spr_player_bullet_full_powered
 calibers[caliberType._r762][? "casing_sprite"] = spr_player_casing_full_powered
-calibers[caliberType._r762][? "damage"] = 15
+calibers[caliberType._r762][? "damage"] = 25
 calibers[caliberType._r762][? "penetration"] = 2 
 calibers[caliberType._r762][? "speed"] = 25
 calibers[caliberType._r762][? "number_of_shot"] = 1
@@ -306,7 +314,7 @@ calibers[caliberType._r12GAUGE][? "number_of_shot"] = 9
 calibers[caliberType._r9x19][? "cal_name"] = "9x19mm Parabellum"
 calibers[caliberType._r9x19][? "cal_sprite"] = spr_player_bullet_pistol_small
 calibers[caliberType._r9x19][? "casing_sprite"] = spr_player_casing_pistol_small
-calibers[caliberType._r9x19][? "damage"] = 5
+calibers[caliberType._r9x19][? "damage"] = 8
 calibers[caliberType._r9x19][? "penetration"] = 0
 calibers[caliberType._r9x19][? "speed"] = 25
 calibers[caliberType._r9x19][? "number_of_shot"] = 1

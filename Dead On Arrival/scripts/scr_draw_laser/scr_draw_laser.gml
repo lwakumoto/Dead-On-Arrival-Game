@@ -3,7 +3,7 @@
 function scr_draw_laser(xx,yy,dir,maxRange,color){
 	//draw_line(x,y,x + lengthdir_x(500,image_angle),y + lengthdir_y(500,image_angle))
 	//draw_line(xx,yy,xx + lengthdir_x(500,dir),yy + lengthdir_y(500,dir))
-	
+	gpu_set_blendmode(bm_add)
 	var las_x = xx + lengthdir_x(maxRange,dir)
 	var las_y = yy + lengthdir_y(maxRange,dir)
 	
@@ -40,6 +40,6 @@ function scr_draw_laser(xx,yy,dir,maxRange,color){
 		draw_circle_color(contact_x,contact_y,4,color,color,false)
 		draw_line_color(xx,yy,contact_x,contact_y,color,color)
 	}
-	
+	gpu_set_blendmode(bm_normal)
 	
 }

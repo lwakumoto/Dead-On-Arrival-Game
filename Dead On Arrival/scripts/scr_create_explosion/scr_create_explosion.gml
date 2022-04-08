@@ -5,7 +5,7 @@
 function scr_create_explosion(xx,yy,explosion_radius,explosion_damage, damage_fallof){
 	
 	var _damage_done = 0
-	scr_create_explosion_particle(xx,yy)
+	scr_create_explosion_particle(xx,yy,explosion_radius)
 	// we get the list of all enemies and calculate how much damage each take
 	var _list = ds_list_create()
 	var _num  = collision_circle_list(xx,yy,explosion_radius,obj_enemy_parent,true,false,_list,false)
