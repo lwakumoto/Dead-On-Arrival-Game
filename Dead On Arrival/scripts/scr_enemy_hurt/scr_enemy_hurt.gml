@@ -3,5 +3,6 @@
 function scr_enemy_hurt(enemy, damage){
 	if (instance_exists(enemy)){
 		enemy.hp -= ceil(damage);
+		audio_play_sound(so_zombie_hit, 1, false);
 	}
 }

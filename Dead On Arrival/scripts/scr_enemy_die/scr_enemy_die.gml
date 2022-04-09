@@ -6,6 +6,7 @@ function scr_enemy_die(x_origin,y_origin,enemy,by_explosion){
 		corpse.sprite_index = enemy.corpse_sprite
 		corpse.image_angle = image_angle
 		instance_destroy(enemy)
+		audio_play_sound(so_zombie_death, 1, false);
 	}
 	else{
 		var _direction = point_direction(enemy.x,enemy.y,x_origin,y_origin)
