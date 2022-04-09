@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "so_player_hit.wav",
-  "duration": 0.0,
+  "duration": 4.621111,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",

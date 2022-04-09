@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "so_zombie_hit.wav",
-  "duration": 0.0,
+  "duration": 2.222971,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",

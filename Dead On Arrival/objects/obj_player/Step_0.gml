@@ -3,6 +3,9 @@
 
 // Player Movement (to be worked on)
 
+if (global.currGameState == gameState.RUNNING){
+
+#region // movement
 var right_pressed = keyboard_check(ord("D"));
 var left_pressed = keyboard_check(ord("A"));
 var up_pressed = keyboard_check(ord("W"));
@@ -29,9 +32,10 @@ y += vertic_vel * speed_modifier;
 direction = point_direction(x,y, mouse_x, mouse_y) // make the player face the mouse
 image_angle = direction
 
-
+#endregion
 
 // Handle weapon changing
+#region // changing weapons
 var change_weapon_forward = keyboard_check_pressed(ord("E"))
 var change_weapon_backward = keyboard_check_pressed(ord("Q"))
 
@@ -49,6 +53,7 @@ if ((change_weapon_forward || change_weapon_backward) && player_weapon.canShoot)
 		
 	}
 }
+#endregion
 
 if (curr_hp < max_hp){
 	curr_hp += regen_health_rate / room_speed
@@ -58,3 +63,7 @@ if (curr_hp < max_hp){
 if (keyboard_check_pressed(vk_enter)){
 	scr_player_hurt(id,irandom_range(20,50))
 }
+
+}
+
+

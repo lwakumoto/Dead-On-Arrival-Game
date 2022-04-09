@@ -5,12 +5,27 @@ var toggle = keyboard_check_pressed(vk_space)
 if (toggle){
 	menu_active = !menu_active	
 	selected_item = noone // reset selection
+	
+	if (menu_active){
+		global.currGameState = gameState.PAUSED
+		instance_deactivate_all(true)
+		instance_activate_object(obj_player)
+		instance_activate_object(obj_player_weapon)
+	}
+	else{
+		global.currGameState = gameState.RUNNING	
+		instance_activate_all()
+	}
+	
+
+	
 }
 
 
 // check if the player clicked on an item
 if (mouse_check_button_pressed(mb_left)){
 	if (hovering != -1){
+		
 		selected_item = hovering	
 	}
 }

@@ -1,6 +1,7 @@
 /// @description Allow the player to fire and reload their weapons
 
 // correctly position the firearm
+if (global.currGameState == gameState.RUNNING){
 if (owner != noone){
 	if (right_side){
 		var offset = 15
@@ -120,6 +121,7 @@ if (reload && !reloading && ammunition[weapon_id][0] < magazine_capacity + 1 && 
 var flip_gun = keyboard_check_pressed(ord("T"))
 if (flip_gun){
 	right_side = !right_side	
+}
 }
 
 

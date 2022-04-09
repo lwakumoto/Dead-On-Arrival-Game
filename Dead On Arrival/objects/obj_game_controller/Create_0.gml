@@ -5,3 +5,5 @@ enum gameState {
 	PAUSED,
 	RUNNING
 }
+
+global.currGameState = gameState.RUNNING
