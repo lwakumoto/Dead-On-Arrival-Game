@@ -25,9 +25,9 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"0a8e04b3-2d91-44a9-aec2-6bd3b09983da","path":"sprites/spr_game_controller/spr_game_controller.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"0a8e04b3-2d91-44a9-aec2-6bd3b09983da","path":"sprites/spr_game_controller/spr_game_controller.yy",},"LayerId":{"name":"c16888be-e86e-409e-a7e9-104204371140","path":"sprites/spr_game_controller/spr_game_controller.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"0a8e04b3-2d91-44a9-aec2-6bd3b09983da","path":"sprites/spr_game_controller/spr_game_controller.yy",},"LayerId":{"name":"a82fa8cc-08df-4182-af8b-6ef7df813c17","path":"sprites/spr_game_controller/spr_game_controller.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"0a8e04b3-2d91-44a9-aec2-6bd3b09983da","path":"sprites/spr_game_controller/spr_game_controller.yy",},"LayerId":{"name":"7e9e8fed-37b1-4187-84c4-d53130b31c6b","path":"sprites/spr_game_controller/spr_game_controller.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"0a8e04b3-2d91-44a9-aec2-6bd3b09983da","path":"sprites/spr_game_controller/spr_game_controller.yy",},"LayerId":{"name":"c16888be-e86e-409e-a7e9-104204371140","path":"sprites/spr_game_controller/spr_game_controller.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"spr_game_controller","path":"sprites/spr_game_controller/spr_game_controller.yy",},"resourceVersion":"1.0","name":"0a8e04b3-2d91-44a9-aec2-6bd3b09983da","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {

@@ -7,14 +7,14 @@
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
-  "bbox_left": 1,
-  "bbox_right": 58,
+  "bbox_left": 0,
+  "bbox_right": 30,
   "bbox_top": 1,
-  "bbox_bottom": 30,
+  "bbox_bottom": 29,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 64,
+  "width": 32,
   "height": 32,
   "textureGroupId": {
     "name": "Default",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"24dbdfa1-507f-4a21-853a-2b789c527812","path":"sprites/spr_enemy_boomer_corpse/spr_enemy_boomer_corpse.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"24dbdfa1-507f-4a21-853a-2b789c527812","path":"sprites/spr_enemy_boomer_corpse/spr_enemy_boomer_corpse.yy",},"LayerId":{"name":"9ba84030-5e41-49b0-ae29-8e45f91b844b","path":"sprites/spr_enemy_boomer_corpse/spr_enemy_boomer_corpse.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_enemy_boomer_corpse","path":"sprites/spr_enemy_boomer_corpse/spr_enemy_boomer_corpse.yy",},"resourceVersion":"1.0","name":"24dbdfa1-507f-4a21-853a-2b789c527812","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"f1b4bd98-d19d-46f9-9557-4cbd09120766","path":"sprites/spr_enemy_boomer_corpse/spr_enemy_boomer_corpse.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"f1b4bd98-d19d-46f9-9557-4cbd09120766","path":"sprites/spr_enemy_boomer_corpse/spr_enemy_boomer_corpse.yy",},"LayerId":{"name":"a45ee55b-0b30-43c4-921e-a5ea88be86ef","path":"sprites/spr_enemy_boomer_corpse/spr_enemy_boomer_corpse.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_enemy_boomer_corpse","path":"sprites/spr_enemy_boomer_corpse/spr_enemy_boomer_corpse.yy",},"resourceVersion":"1.0","name":"f1b4bd98-d19d-46f9-9557-4cbd09120766","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_enemy_boomer_corpse","path":"sprites/spr_enemy_boomer_corpse/spr_enemy_boomer_corpse.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"fa7f39dd-8373-4888-84a8-9b787b687aed","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"24dbdfa1-507f-4a21-853a-2b789c527812","path":"sprites/spr_enemy_boomer_corpse/spr_enemy_boomer_corpse.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"3af252e1-fc1b-4d8e-b955-99c723577259","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f1b4bd98-d19d-46f9-9557-4cbd09120766","path":"sprites/spr_enemy_boomer_corpse/spr_enemy_boomer_corpse.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -54,7 +54,7 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 32,
+    "xorigin": 16,
     "yorigin": 16,
     "eventToFunction": {},
     "eventStubScript": null,
@@ -65,12 +65,12 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"9ba84030-5e41-49b0-ae29-8e45f91b844b","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"a45ee55b-0b30-43c4-921e-a5ea88be86ef","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
-    "name": "corpses",
-    "path": "folders/Sprites/enemy sprites/corpses.yy",
+    "name": "enemy sprites",
+    "path": "folders/Sprites/enemy sprites.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_enemy_boomer_corpse",

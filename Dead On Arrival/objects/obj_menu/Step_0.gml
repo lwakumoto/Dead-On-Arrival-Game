@@ -12,7 +12,6 @@ if (toggle){
 if (mouse_check_button_pressed(mb_left)){
 	if (hovering != -1){
 		selected_item = hovering	
-		scr_buy_weapon(selected_item)
 	}
 }
 

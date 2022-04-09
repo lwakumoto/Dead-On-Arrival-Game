@@ -112,6 +112,8 @@ weapons[weapon.MK18][? "caliber"] = caliberType._r556 // the caliber the weapon 
 weapons[weapon.MK18][? "spread"] = 1.5 // the spread of the weapon (in degrees)
 weapons[weapon.MK18][? "range"] = 1000 // how far the bullet will go before despawning
 weapons[weapon.MK18][? "fire_sound"] = so_gunire
+weapons[weapon.MK18][? "wep_cost"] = 1000 // the cost of purchase
+weapons[weapon.MK18][? "wep_silhouette"] = spr_weapon_assault_mk18_silhouette
 
 weapons[weapon.G3A1][? "wep_id"] = 1;
 weapons[weapon.G3A1][? "wep_type"] = weaponType.FIREARM
@@ -132,6 +134,8 @@ weapons[weapon.G3A1][? "caliber"] = caliberType._r762
 weapons[weapon.G3A1][? "spread"] = 0.5 
 weapons[weapon.G3A1][? "range"] = 1000 
 weapons[weapon.G3A1][? "fire_sound"] = so_gunire
+weapons[weapon.G3A1][? "wep_cost"] = 2500
+weapons[weapon.G3A1][? "wep_silhouette"] = spr_weapon_battle_g3_silhouette
 
 weapons[weapon.STONER][? "wep_id"] = 2;
 weapons[weapon.STONER][? "wep_type"] = weaponType.FIREARM
@@ -152,6 +156,8 @@ weapons[weapon.STONER][? "caliber"] = caliberType._r556
 weapons[weapon.STONER][? "spread"] = 2
 weapons[weapon.STONER][? "range"] = 1000 
 weapons[weapon.STONER][? "fire_sound"] = so_gunire
+weapons[weapon.STONER][? "wep_cost"] = 10000
+weapons[weapon.STONER][? "wep_silhouette"] = spr_weapon_lmg_stoner_silhouette
 
 weapons[weapon.DEAGLE][? "wep_id"] = 3;
 weapons[weapon.DEAGLE][? "wep_type"] = weaponType.FIREARM
@@ -172,6 +178,8 @@ weapons[weapon.DEAGLE][? "caliber"] = caliberType._r50AE
 weapons[weapon.DEAGLE][? "spread"] = 0.5 
 weapons[weapon.DEAGLE][? "range"] = 1000
 weapons[weapon.DEAGLE][? "fire_sound"] = so_deagle_fire
+weapons[weapon.DEAGLE][? "wep_cost"] = 500
+weapons[weapon.DEAGLE][? "wep_silhouette"] = spr_weapon_pistol_deagle_silhouette
 
 weapons[weapon.SPAS][? "wep_id"] = 4;
 weapons[weapon.SPAS][? "wep_type"] = weaponType.FIREARM
@@ -193,6 +201,8 @@ weapons[weapon.SPAS][? "spread"] = 15
 weapons[weapon.SPAS][? "range"] = 555
 weapons[weapon.SPAS][? "fire_sound"] = so_shotgun_fire
 weapons[weapon.SPAS][? "reload_sound"] = so_shotgun_reload
+weapons[weapon.SPAS][? "wep_cost"] = 1500
+weapons[weapon.SPAS][? "wep_silhouette"] = spr_weapon_shotgun_spas_silhouette
 
 weapons[weapon.MP5K][? "wep_id"] = 5;
 weapons[weapon.MP5K][? "wep_type"] = weaponType.FIREARM
@@ -213,6 +223,8 @@ weapons[weapon.MP5K][? "caliber"] = caliberType._r9x19
 weapons[weapon.MP5K][? "spread"] = 0.5 
 weapons[weapon.MP5K][? "range"] = 1000
 weapons[weapon.MP5K][? "fire_sound"] = so_gunire
+weapons[weapon.MP5K][? "wep_cost"] = 1000
+weapons[weapon.MP5K][? "wep_silhouette"] = spr_weapon_smg_mp5k_silhouette
 
 weapons[weapon.INTERVENTION][? "wep_id"] = 6
 weapons[weapon.INTERVENTION][? "wep_type"] = weaponType.FIREARM
@@ -233,6 +245,8 @@ weapons[weapon.INTERVENTION][? "caliber"] = caliberType._r408
 weapons[weapon.INTERVENTION][? "spread"] = 0.1
 weapons[weapon.INTERVENTION][? "range"] = 1000
 weapons[weapon.INTERVENTION][? "fire_sound"] = so_shotgun_fire
+weapons[weapon.INTERVENTION][? "wep_cost"] = 7000
+weapons[weapon.INTERVENTION][? "wep_silhouette"] = spr_weapon_sniper_intervention_silhouette33
 
 weapons[weapon.BASTARD][? "wep_id"] = 7
 weapons[weapon.BASTARD][? "wep_type"] = weaponType.MELEE
@@ -252,6 +266,9 @@ weapons[weapon.BASTARD][? "caliber"] = caliberType._mm
 weapons[weapon.BASTARD][? "spread"] = 0
 weapons[weapon.BASTARD][? "range"] = 10
 weapons[weapon.BASTARD][? "fire_sound"] = so_sword
+weapons[weapon.BASTARD][? "wep_cost"] = 99999999
+weapons[weapon.BASTARD][? "wep_silhouette"] = spr_weapon_melee_bastard_silhouette
+
 #endregion
 
 for (var i = 0; i < global.num_weapons; i ++){// initialize the magazines and reserve ammunition appropriately

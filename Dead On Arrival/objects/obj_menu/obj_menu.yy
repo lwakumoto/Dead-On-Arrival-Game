@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_buy_menu",
-    "path": "sprites/spr_buy_menu/spr_buy_menu.yy",
+    "name": "spr_buy_menu_big",
+    "path": "sprites/spr_buy_menu_big/spr_buy_menu_big.yy",
   },
   "solid": false,
   "visible": true,
