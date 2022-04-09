@@ -16,7 +16,7 @@ function scr_create_explosion(xx,yy,explosion_radius,explosion_damage, damage_fa
 				var _distance_from_explosion = point_distance(_entity.x,_entity.y,xx,yy)
 				_damage_done = abs(-damage_fallof * power(_distance_from_explosion,2) + explosion_damage) // damage is subject to damage fallof
 				if (_entity.hp <= _damage_done){
-					scr_enemy_die(xx,yy,_entity,true)
+					scr_enemy_die(xx,yy,_entity,true)	
 				}
 				else{
 					scr_enemy_hurt(_entity,_damage_done)
