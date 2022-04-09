@@ -59,14 +59,17 @@ if (menu_active){
 		window_set_cursor(cr_arrow)	
 	}
 	
+	var offset = 50
+	
+	// draw the icon of the selected item
 	if (selected_item != noone){
 
 		if (!scr_player_has_weapon(menu_item[selected_item][? "wep_id"])){
-			scr_draw_icon(10,10,global.camera_width/4,menu_item[selected_item][? "wep_silhouette"])
+			scr_draw_icon(10,offset,global.camera_width/4,menu_item[selected_item][? "wep_silhouette"])
 		} else{
-			scr_draw_icon(10,10,global.camera_width/4,menu_item[selected_item][? "wep_icon"])
+			scr_draw_icon(10,offset,global.camera_width/4,menu_item[selected_item][? "wep_icon"])
 		}
-		draw_text(0,0,menu_item[selected_item][? "wep_name"])
+		draw_text(offset,offset,menu_item[selected_item][? "wep_name"])
 
 		
 	}
@@ -79,16 +82,16 @@ if (menu_active){
 		
 		if (!scr_player_has_weapon(menu_item[selected_item][? "wep_id"])){ // If the player already has the weapon, sell ammo instead
 			
-			draw_set_color(c_green)
-			draw_text_transformed(10,global.camera_height/2, "Cost: " + scr_money_format(menu_item[selected_item][? "wep_cost"]), 1.5,1.5,0)
+
+			draw_text_transformed(10,global.camera_height*(3/4), "Cost: " + scr_money_format(menu_item[selected_item][? "wep_cost"]), 1.5,1.5,0)
+
 			draw_set_color(c_white)
 			
-			
-			scr_draw_clickable_button(global.camera_width/3,global.camera_height/2,"BUY", fnt_menu, 32, 16, function(){
-				scr_buy_weapon(menu_item[selected_item])})
+			scr_draw_clickable_button(global.camera_width/3,global.camera_height*(3/4),"BUY", fnt_menu, 32, 16, function(){
+				scr_buy_weapon(menu_item[selected_item], menu_item[selected_item][? "wep_cost"])})
 				
 		} else{
-			scr_draw_clickable_button(global.camera_width/3,global.camera_height/2,"BUY AMMO", fnt_menu, 32, 16, function(){})
+			scr_draw_clickable_button(global.camera_width/3,global.camera_height*(3/4),"BUY AMMO", fnt_menu, 32, 16, function(){})
 		}
 	}
 }

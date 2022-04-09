@@ -1,3 +1,5 @@
+// Draw the menu
+
 draw_sprite_ext(spr_pause_menu, 0, 0,0, global.camera_width/sprite_width,global.camera_height/sprite_height,0,c_white,1)
 
 

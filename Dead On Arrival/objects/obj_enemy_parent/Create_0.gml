@@ -36,5 +36,7 @@ attack_animation = noone
 attack_func = noone
 damage = 0
 
+value = 100 // how much money they drop when killed
+
 
 

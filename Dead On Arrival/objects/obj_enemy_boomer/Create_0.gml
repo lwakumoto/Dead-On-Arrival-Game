@@ -17,4 +17,5 @@ attack_animation = spr_enemy_boomer_attack
 attack_func = scr_enemy_attack()
 damage = 100
 image_speed = random_range(0.8,1.2)
+value = 250
 

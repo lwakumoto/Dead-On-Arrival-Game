@@ -6,11 +6,12 @@ if (toggle){
 	menu_active = !menu_active	
 	selected_item = noone // reset selection
 	
-	if (menu_active){
+	if (menu_active){ // deactivate all objects except the controller, the player, and the player weapon
 		global.currGameState = gameState.PAUSED
 		instance_deactivate_all(true)
 		instance_activate_object(obj_player)
 		instance_activate_object(obj_player_weapon)
+		instance_activate_object(obj_game_controller)
 	}
 	else{
 		global.currGameState = gameState.RUNNING	

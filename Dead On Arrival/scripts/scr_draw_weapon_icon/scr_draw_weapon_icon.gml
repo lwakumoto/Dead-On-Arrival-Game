@@ -2,6 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function scr_draw_weapon_icon(xx, yy, height){
 	// draw the weapon icon
+	draw_set_color(c_white)
 	draw_set_font(fnt_weapon)
 	var text_height = string_height("sample")
 
