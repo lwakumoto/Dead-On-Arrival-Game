@@ -505,8 +505,8 @@
     "resourceType": "GMNineSliceData",
   },
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "menus",
+    "path": "folders/Sprites/UI/menus.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_buy_menu",
