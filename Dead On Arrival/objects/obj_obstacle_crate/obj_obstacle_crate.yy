@@ -1,15 +1,15 @@
 {
   "spriteId": {
-    "name": "spr_obstacle",
-    "path": "sprites/spr_obstacle/spr_obstacle.yy",
+    "name": "spr_crate_small",
+    "path": "sprites/spr_crate_small/spr_crate_small.yy",
   },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "obj_hittable_parent",
-    "path": "objects/obj_hittable_parent/obj_hittable_parent.yy",
+    "name": "obj_obstacle",
+    "path": "objects/obj_obstacle/obj_obstacle.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -31,7 +31,7 @@
     "path": "folders/Objects/Obstacles.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_obstacle",
+  "name": "obj_obstacle_crate",
   "tags": [],
   "resourceType": "GMObject",
 }
