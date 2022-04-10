@@ -7,7 +7,7 @@ draw_text(10,10,"Funds: " + scr_money_format(global.displayed_money ))
 
 
 // create effect that makes the money counter "go up" or "go down" incrementally
-money_increment = ceil( abs(global.displayed_money  - global.playerMoney)/10)
+money_increment = ceil( abs(global.displayed_money  - global.playerMoney)/25)
 if (abs(global.displayed_money - global.playerMoney) <= money_increment){
 	global.displayed_money = global.playerMoney	
 }

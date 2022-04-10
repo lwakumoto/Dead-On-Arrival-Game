@@ -15,6 +15,7 @@
     {"id":{"name":"scr_create_blood_system","path":"scripts/scr_create_blood_system/scr_create_blood_system.yy",},"order":1,},
     {"id":{"name":"spr_weapon_lmg_stoner_reload","path":"sprites/spr_weapon_lmg_stoner_reload/spr_weapon_lmg_stoner_reload.yy",},"order":27,},
     {"id":{"name":"spr_buy_menu_button","path":"sprites/spr_buy_menu_button/spr_buy_menu_button.yy",},"order":2,},
+    {"id":{"name":"obj_enemy_animal","path":"objects/obj_enemy_animal/obj_enemy_animal.yy",},"order":6,},
     {"id":{"name":"spr_weapon_smg_mp5k_colored","path":"sprites/spr_weapon_smg_mp5k_colored/spr_weapon_smg_mp5k_colored.yy",},"order":5,},
     {"id":{"name":"spr_weapon_melee_bastard","path":"sprites/spr_weapon_melee_bastard/spr_weapon_melee_bastard.yy",},"order":15,},
     {"id":{"name":"scr_check_for_player","path":"scripts/scr_check_for_player/scr_check_for_player.yy",},"order":0,},

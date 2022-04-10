@@ -178,6 +178,7 @@ weapons[weapon.DEAGLE][? "caliber"] = caliberType._r50AE
 weapons[weapon.DEAGLE][? "spread"] = 0.5 
 weapons[weapon.DEAGLE][? "range"] = 1000
 weapons[weapon.DEAGLE][? "fire_sound"] = so_deagle_fire
+weapons[weapon.DEAGLE][? "reload_sound"] = so_pistol_reload
 weapons[weapon.DEAGLE][? "wep_cost"] = 500
 weapons[weapon.DEAGLE][? "wep_silhouette"] = spr_weapon_pistol_deagle_silhouette
 
