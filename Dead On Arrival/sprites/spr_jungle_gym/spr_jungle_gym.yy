@@ -8,14 +8,14 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 127,
+  "bbox_right": 131,
   "bbox_top": 0,
-  "bbox_bottom": 63,
+  "bbox_bottom": 131,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 128,
-  "height": 64,
+  "width": 132,
+  "height": 132,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"028ea7cd-013e-42c6-ba08-4dab1d33dd78","path":"sprites/spr_crate_large/spr_crate_large.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"028ea7cd-013e-42c6-ba08-4dab1d33dd78","path":"sprites/spr_crate_large/spr_crate_large.yy",},"LayerId":{"name":"619d7a94-e007-47c2-b5d2-fff9c5ba8195","path":"sprites/spr_crate_large/spr_crate_large.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_crate_large","path":"sprites/spr_crate_large/spr_crate_large.yy",},"resourceVersion":"1.0","name":"028ea7cd-013e-42c6-ba08-4dab1d33dd78","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"ce078cb9-1ad6-4925-8a0a-8d6e7762ab22","path":"sprites/spr_jungle_gym/spr_jungle_gym.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"ce078cb9-1ad6-4925-8a0a-8d6e7762ab22","path":"sprites/spr_jungle_gym/spr_jungle_gym.yy",},"LayerId":{"name":"dd520937-c212-4a28-9544-a59c2d418cc0","path":"sprites/spr_jungle_gym/spr_jungle_gym.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_jungle_gym","path":"sprites/spr_jungle_gym/spr_jungle_gym.yy",},"resourceVersion":"1.0","name":"ce078cb9-1ad6-4925-8a0a-8d6e7762ab22","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_crate_large","path":"sprites/spr_crate_large/spr_crate_large.yy",},
+    "spriteId": {"name":"spr_jungle_gym","path":"sprites/spr_jungle_gym/spr_jungle_gym.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"b827d263-73b4-448e-b2ca-0b8bda2ca911","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"028ea7cd-013e-42c6-ba08-4dab1d33dd78","path":"sprites/spr_crate_large/spr_crate_large.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"4a6d92df-1bbb-4cb5-87e3-739c57b0641c","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ce078cb9-1ad6-4925-8a0a-8d6e7762ab22","path":"sprites/spr_jungle_gym/spr_jungle_gym.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -58,14 +58,14 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_crate_large","path":"sprites/spr_crate_large/spr_crate_large.yy",},
+    "parent": {"name":"spr_jungle_gym","path":"sprites/spr_jungle_gym/spr_jungle_gym.yy",},
     "resourceVersion": "1.4",
-    "name": "spr_crate_large",
+    "name": "spr_jungle_gym",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"619d7a94-e007-47c2-b5d2-fff9c5ba8195","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"dd520937-c212-4a28-9544-a59c2d418cc0","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -73,7 +73,7 @@
     "path": "folders/Sprites/Obstacles.yy",
   },
   "resourceVersion": "1.0",
-  "name": "spr_crate_large",
+  "name": "spr_jungle_gym",
   "tags": [],
   "resourceType": "GMSprite",
 }
