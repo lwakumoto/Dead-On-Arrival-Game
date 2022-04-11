@@ -4,7 +4,7 @@ var toggle = keyboard_check_pressed(vk_space)
 
 if (toggle){
 	menu_active = !menu_active	
-	selected_item = noone // reset selection
+	selected_item = 0 // reset selection
 	
 	if (menu_active){ // deactivate all objects except the controller, the player, and the player weapon
 		global.currGameState = gameState.PAUSED

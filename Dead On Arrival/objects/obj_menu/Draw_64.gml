@@ -12,6 +12,7 @@ if (menu_active){
 
 	hovering = -1
 	// draw the text, check if its selected by the mouse
+	#region // draw weapon buttons
 	for (var i = 0; i < array_length(menu_item); i ++){
 		
 		var weapon_name = menu_item[i][? "wep_name"]
@@ -51,6 +52,7 @@ if (menu_active){
 		draw_set_color(c_white)
 		
 	}
+	#endregion
 		
 
 	if (hovering != -1){
@@ -73,31 +75,62 @@ if (menu_active){
 
 		
 	}
-
+	
+	offset += global.camera_width/4 + 25;
+	var bar_offset_x = 180;
+	var bar_offset_y = 20;
+	var damage = obj_player_weapon.calibers[menu_item[selected_item][? "caliber"]][? "damage"];
+	if (obj_player_weapon.calibers[menu_item[selected_item][? "caliber"]][? "number_of_shot"] > 1){
+		damage *= obj_player_weapon.calibers[menu_item[selected_item][? "caliber"]][? "number_of_shot"]/2 
+	}
+	
+	var penetration = obj_player_weapon.calibers[menu_item[selected_item][? "caliber"]][? "penetration"];
+	
+	var text_height = string_height("test");
+	
+	draw_text(10, offset, "Damage: ");
+	draw_healthbar(bar_offset_x,offset + bar_offset_y,bar_offset_x + 120,offset+text_height-bar_offset_y, (damage/30)*100,c_black,c_red,c_lime,0,true,true );
+	
+	draw_text(10, offset + text_height, "Penetration: ");
+	draw_healthbar(bar_offset_x,offset+text_height+bar_offset_y,bar_offset_x + 120,offset+text_height*2-bar_offset_y, (penetration/4)*100,c_black,c_red,c_lime,0,true,true );
+	
+	draw_text(10, offset + text_height*2, "Fire Rate: ");
+	draw_healthbar(bar_offset_x,offset+text_height*2+bar_offset_y,bar_offset_x + 120,offset+text_height*3-bar_offset_y, (1/menu_item[selected_item][? "fire_delay"]/15)*100,c_black,c_red,c_lime,0,true,true );
+	
+	draw_text(10, offset + text_height*3, "Accuracy: "  );
+	draw_healthbar(bar_offset_x,offset+text_height*3+bar_offset_y,bar_offset_x + 120,offset + text_height*4-bar_offset_y, (1/menu_item[selected_item][? "spread"]/3.5)*100,c_black,c_red,c_lime,0,true,true );
+	
+	draw_text(10, offset + text_height*4, "Reload Time: ");
+	draw_healthbar(bar_offset_x,offset+text_height*4+bar_offset_y,bar_offset_x + 120,offset + text_height*5-bar_offset_y, (1/menu_item[selected_item][? "reload_time"]/1.5)*100,c_black,c_red,c_lime,0,true,true );
+	
+	draw_text(10, offset + text_height*5, "Magazine Size: ");
+	draw_healthbar(bar_offset_x,offset+text_height*5+bar_offset_y,bar_offset_x + 120,offset + text_height*6-bar_offset_y, (menu_item[selected_item][? "mag_capacity"]/50)*100,c_black,c_red,c_lime,0,true,true );
+	
+	draw_text(10, offset + text_height*6, "Maneuverability: ");
+	draw_healthbar(bar_offset_x,offset+text_height*6+bar_offset_y,bar_offset_x + 120,offset + text_height*7-bar_offset_y, ((menu_item[selected_item][? "wep_weight"] - .25)/1.00)*100,c_black,c_red,c_lime,0,true,true );
 	
 	// Draw the weapon statistics and the buy button
 
 	if (selected_item != noone){
-
-		
+		show_debug_message(selected_item)
 		if (!scr_player_has_weapon(menu_item[selected_item][? "wep_id"])){ // If the player already has the weapon, sell ammo instead
 			
-
-			draw_text_transformed(10,global.camera_height*(3/4), "Cost: " + scr_money_format(menu_item[selected_item][? "wep_cost"]), 1.5,1.5,0)
+			
+			draw_text_transformed(global.camera_width/3,offset, "Cost: " + scr_money_format(menu_item[selected_item][? "wep_cost"]) , 1.5,1.5,0)
 
 			draw_set_color(c_white)
 			
-			scr_draw_clickable_button(global.camera_width/3,global.camera_height*(3/4),"BUY", fnt_menu, 32, 16, function(){
+			scr_draw_clickable_button(global.camera_width*(2/5),global.camera_height*(3/5),"BUY", fnt_menu, 32, 16, function(){
 				scr_buy_weapon(menu_item[selected_item], menu_item[selected_item][? "wep_cost"])})
 				
 		} else{
-			scr_draw_clickable_button(global.camera_width/3,global.camera_height*(3/4),"BUY AMMO", fnt_menu, 32, 16, function(){})
+			scr_draw_clickable_button(global.camera_width*(2/5),global.camera_height*(3/5),"BUY AMMO", fnt_menu, 32, 16, function(){})
 		}
 	}
 }
 else{ 
 	window_set_cursor(cr_none)	
 	hovering = -1
-	selected_item = noone
+	selected_item = weapon.DEAGLE
 }
 

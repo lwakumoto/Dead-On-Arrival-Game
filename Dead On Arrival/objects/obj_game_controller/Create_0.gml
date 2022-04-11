@@ -7,6 +7,6 @@ enum gameState {
 }
 
 global.currGameState = gameState.RUNNING
-global.playerMoney = 0
+global.playerMoney = 99999
 global.displayed_money = 0
 money_increment = 10

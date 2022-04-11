@@ -31,5 +31,5 @@ for (var i = 0; i < array_length(menu_item); i ++){
 	menu_item[i] = scr_get_weapon_from_id(i)
 }*/
 
-selected_item = noone
+selected_item = weapon.DEAGLE
 hovering = -1

@@ -4,7 +4,7 @@
     "path": "sprites/spr_obstacle/spr_obstacle.yy",
   },
   "solid": false,
-  "visible": true,
+  "visible": false,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
