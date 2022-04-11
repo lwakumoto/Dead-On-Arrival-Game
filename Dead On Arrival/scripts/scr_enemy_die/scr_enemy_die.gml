@@ -5,9 +5,13 @@ function scr_enemy_die(x_origin,y_origin,enemy,by_explosion){
 		var corpse = instance_create_layer(enemy.x,enemy.y,"Corpses",obj_corpse);
 		corpse.sprite_index = enemy.corpse_sprite
 		corpse.image_angle = image_angle
+		corpse.image_xscale = image_xscale
+		corpse.image_yscale = image_yscale
 		instance_destroy(enemy)
 		audio_play_sound(so_zombie_death, 1, false);
-		scr_drop_money(x_origin,y_origin,enemy.value) // only drop money if they aren't killed by an explosion
+		if (!was_spawned){
+		scr_drop_money(x_origin,y_origin,enemy.value) // only drop money if they aren't killed by an explosion or if it wasn't spawned by a car
+		}
 	}
 	else{
 		var _direction = point_direction(enemy.x,enemy.y,x_origin,y_origin)

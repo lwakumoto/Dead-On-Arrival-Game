@@ -21,6 +21,6 @@ with (player_weapon){
 
 max_hp = 100
 curr_hp = max_hp
-regen_health_rate = 1.5 // health regenerated per second
+regen_health_rate = 1 // health regenerated per second
 
-player_spd = 4
+player_spd = 3

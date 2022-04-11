@@ -38,5 +38,7 @@ damage = 0
 
 value = 100 // how much money they drop when killed
 
+was_spawned = false // determines if it was spawned by the car, which determines if it can drop money
+
 
 

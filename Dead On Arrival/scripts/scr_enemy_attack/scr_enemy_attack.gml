@@ -42,6 +42,10 @@ function scr_enemy_attack(){
 		return attack_function_normal
 			break;
 			
+		case obj_enemy_animal:
+		return attack_function_normal
+			break;
+			
 		case obj_enemy_boomer:
 			return attack_function_boomer
 			break;

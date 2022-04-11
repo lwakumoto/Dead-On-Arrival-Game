@@ -4,7 +4,7 @@
 // You can write your code in this editor
 if (menu_active){
 
-	draw_sprite_ext(sprite_index,image_index,0,0,menu_width div sprite_width, menu_height div sprite_height,0,c_white,1)
+	draw_sprite_ext(sprite_index,image_index,0,0,menu_width div sprite_width + 1, menu_height div sprite_height,0,c_white,1)
 
 	draw_set_font(fnt_menu)
 	draw_set_valign(fa_top)

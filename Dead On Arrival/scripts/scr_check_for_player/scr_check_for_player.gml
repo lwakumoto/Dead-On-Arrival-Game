@@ -24,7 +24,7 @@ function scr_check_for_player(){
 		
 				// start path if we can reach the player
 				if (found_player){
-					path_start(path,move_spd, path_action_stop, false);
+					path_start(path,move_spd, path_action_continue, false);
 				}
 			}
 		} else{
