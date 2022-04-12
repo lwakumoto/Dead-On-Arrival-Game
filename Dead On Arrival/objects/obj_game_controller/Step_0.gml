@@ -14,13 +14,16 @@ if (keyboard_check_pressed(ord("L"))){
 
 var pause_key = keyboard_check_pressed(vk_escape)
 
-if (pause_key){
-	if (!instance_exists(obj_pause)){
-		instance_create_layer(0,0,"Game_Objects",obj_pause)	
-	} else{
-		instance_destroy(obj_pause)	
-	}
+if (instance_number(obj_enemy_parent) == 0){
+	alarm[0] = wave_delay = 10 * room_speed
+	curr_wave ++
 }
+
+
+if (pause_key){
+		instance_create_layer(0,0,"Game_Objects",obj_pause)	
+}
+
 
 /*
 if (mouse_check_button_pressed(mb_left)){

@@ -79,7 +79,7 @@ if (((fire && ammunition[weapon_id][0] > 0 && canShoot)
 		alarm[3] =  image_number
 		
 		//scr_fire_weapon(x,y,direction)
-		ammunition[weapon_id][0] -- 
+		ammunition[weapon_id][0] -- // remove ammo from magazine
 	}
 	
 	

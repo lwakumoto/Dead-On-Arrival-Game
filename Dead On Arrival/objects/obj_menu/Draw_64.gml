@@ -124,7 +124,20 @@ if (menu_active){
 				scr_buy_weapon(menu_item[selected_item], menu_item[selected_item][? "wep_cost"])})
 				
 		} else{
-			scr_draw_clickable_button(global.camera_width*(2/5),global.camera_height*(3/5),"BUY AMMO", fnt_menu, 32, 16, function(){})
+			var mag_size = menu_item[selected_item][? "mag_capacity"]
+			var mag_cost = obj_player_weapon.calibers[menu_item[selected_item][? "caliber"]][? "cost_per_shot"] * mag_size
+			
+			draw_text_transformed(global.camera_width/3,offset, "Cost for 1 magazine: " + scr_money_format(mag_cost) , 1.5,1.5,0)
+			
+			scr_draw_clickable_button(global.camera_width*(2/5),global.camera_height*(3/5),"BUY AMMO", fnt_menu, 32, 16, function(){
+				
+				
+				var mag_size = menu_item[selected_item][? "mag_capacity"]
+				var mag_cost = obj_player_weapon.calibers[menu_item[selected_item][? "caliber"]][? "cost_per_shot"] * mag_size
+			
+				scr_drain_money(mag_cost)
+				obj_player_weapon.ammunition[menu_item[selected_item]][1] += mag_size
+			})
 		}
 	}
 }

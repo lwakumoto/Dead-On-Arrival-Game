@@ -23,4 +23,4 @@ max_hp = 100
 curr_hp = max_hp
 regen_health_rate = 1 // health regenerated per second
 
-player_spd = 3
+player_spd = 5

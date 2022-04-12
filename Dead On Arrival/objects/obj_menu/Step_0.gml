@@ -11,7 +11,7 @@ if (toggle){
 		instance_deactivate_all(true)
 		instance_activate_object(obj_player)
 		instance_activate_object(obj_player_weapon)
-		instance_activate_object(obj_game_controller)
+		instance_activate_object(obj_gui)
 	}
 	else{
 		global.currGameState = gameState.RUNNING	
