@@ -2,15 +2,15 @@
 
 repeat(irandom_range(5,8)*curr_wave){
 	var rand_x = random_range(0,room_width)
-	var rand_y = random_range(0,room_height)
+	var rand_y = random_range(0,2000)
 	
-	while (place_meeting(rand_x,rand_y,obj_obstacle)){
+	while (collision_circle(rand_x,rand_y,50,obj_obstacle,true,true)){
 		var rand_x = random_range(0,room_width)
-		var rand_y = random_range(0,room_height)	
+		var rand_y = random_range(0,2000)	
 	}	
 
 	
-	var enemy_type = noone
+	var enemy_type = obj_enemy
 	var enemy_chooser = random_range(0,100)
 	if (enemy_chooser <= 35){
 		enemy_type = obj_enemy	

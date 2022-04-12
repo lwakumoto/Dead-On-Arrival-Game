@@ -112,7 +112,6 @@ if (menu_active){
 	// Draw the weapon statistics and the buy button
 
 	if (selected_item != noone){
-		show_debug_message(selected_item)
 		if (!scr_player_has_weapon(menu_item[selected_item][? "wep_id"])){ // If the player already has the weapon, sell ammo instead
 			
 			
@@ -134,9 +133,10 @@ if (menu_active){
 				
 				var mag_size = menu_item[selected_item][? "mag_capacity"]
 				var mag_cost = obj_player_weapon.calibers[menu_item[selected_item][? "caliber"]][? "cost_per_shot"] * mag_size
-			
-				scr_drain_money(mag_cost)
-				obj_player_weapon.ammunition[menu_item[selected_item]][1] += mag_size
+				if (mag_cost <= global.playerMoney){
+					scr_drain_money(mag_cost)
+					obj_player_weapon.ammunition[menu_item[selected_item]][1] += mag_size
+				}
 			})
 		}
 	}

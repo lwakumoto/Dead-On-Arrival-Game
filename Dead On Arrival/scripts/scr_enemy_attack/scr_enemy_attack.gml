@@ -20,7 +20,7 @@ function scr_enemy_attack(){
 	// the attack function the boomer will use
 	attack_function_boomer = function(dmg){
 		
-		scr_create_explosion(x,y,200,dmg,.009)
+		scr_create_explosion(x,y,125,dmg,.006)
 		
 	}
 	

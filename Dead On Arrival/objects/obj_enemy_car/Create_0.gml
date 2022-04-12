@@ -7,7 +7,7 @@ hp = max_hp
 spd = 2;
 turning_spd = .05
 
-value = 1000
+value = 250
 
 spawn_delay = 5.0 // the rate at which it spawns enemies, increases as it loses health
 alarm[0] = spawn_delay * room_speed

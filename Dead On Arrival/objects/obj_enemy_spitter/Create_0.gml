@@ -19,4 +19,4 @@ attack_delay = .5
 attack_func = scr_enemy_attack()
 damage = 20
 move_spd = random_range(4.5,5)
-value = 500
+value = 135

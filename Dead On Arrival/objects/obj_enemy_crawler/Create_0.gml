@@ -18,4 +18,4 @@ attack_animation = spr_enemy_crawler_attack
 attack_func = scr_enemy_attack()
 damage = irandom_range(1,2)
 move_spd = random_range(4.5,5)
-value = 300
+value = 110

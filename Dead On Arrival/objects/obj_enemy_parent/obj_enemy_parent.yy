@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_obstacle",
+    "path": "sprites/spr_obstacle/spr_obstacle.yy",
+  },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,

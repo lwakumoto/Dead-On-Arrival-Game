@@ -15,4 +15,4 @@ attack_animation = spr_enemy_regular_attack
 attack_func = scr_enemy_attack()
 damage = irandom_range(1,3)
 move_spd = random_range(3.2,3.8)
-value = 100
+value = 50

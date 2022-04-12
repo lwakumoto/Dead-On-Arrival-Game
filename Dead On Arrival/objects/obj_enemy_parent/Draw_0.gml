@@ -4,6 +4,6 @@ draw_self()
 draw_set_font(fnt_weapon)
 draw_text(x,y,hp)
 if (keyboard_check(vk_shift)){
-	draw_path(path, x, y, 0)
+//	draw_path(path, x, y, 0)
 	
 }
