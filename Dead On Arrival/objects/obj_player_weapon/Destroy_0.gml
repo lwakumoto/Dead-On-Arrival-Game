@@ -1,5 +1,5 @@
-/// @description Destroy the lists to avoid memory leaks
-
+/// @description Insert description here
+// You can write your code in this editor
 var num_weapons = 8;
 var num_calibers = 7; 
 

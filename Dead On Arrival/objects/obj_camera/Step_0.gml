@@ -12,7 +12,7 @@ var cam_hh = cam_h*.5;
 	//var _y = clamp(obj_player.y-view_height/2,0,room_width - view_height);
 //	camera_set_view_pos(view,_x,_y);
 
-if (follow != noone){
+if (follow != noone && instance_exists(follow)){
 	//xTo = follow.x;
 	//yTo = follow.y;
 	xTo = clamp(follow.x - cam_w/2, 0,room_width - cam_ww);

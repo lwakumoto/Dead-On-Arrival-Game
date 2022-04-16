@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 
 // create an explosion and hurt players and enemies within its radius
-function scr_create_explosion(xx,yy,explosion_radius,explosion_damage, damage_fallof){
+function scr_create_explosion(xx,yy,explosion_radius,explosion_damage, damage_fallof = 0){
 	
 	var _damage_done = 0
 	scr_create_explosion_particle(xx,yy,explosion_radius)
@@ -16,7 +16,7 @@ function scr_create_explosion(xx,yy,explosion_radius,explosion_damage, damage_fa
 				var _distance_from_explosion = point_distance(_entity.x,_entity.y,xx,yy)
 				_damage_done = abs(-damage_fallof * power(_distance_from_explosion,2) + explosion_damage) // damage is subject to damage fallof
 				if (_entity.hp <= _damage_done){
-					scr_enemy_die(xx,yy,_entity,true)	
+					scr_enemy_die(_entity.x,_entity.y,_entity,true,_entity.coin_type)	
 				}
 				else{
 					scr_enemy_hurt(_entity,_damage_done)

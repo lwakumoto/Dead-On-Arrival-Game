@@ -18,4 +18,6 @@ attack_animation = spr_enemy_animal_attack
 attack_func = scr_enemy_attack()
 damage = irandom_range(1,1.5)
 move_spd = random_range(8.5,10)
-value = 150
+value = 15
+coin_type = 1
+bias = 20

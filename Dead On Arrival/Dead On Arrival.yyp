@@ -158,6 +158,7 @@
     {"id":{"name":"spr_enemy_boomer","path":"sprites/spr_enemy_boomer/spr_enemy_boomer.yy",},"order":2,},
     {"id":{"name":"spr_explosion_center","path":"sprites/spr_explosion_center/spr_explosion_center.yy",},"order":6,},
     {"id":{"name":"spr_weapon_smg_mp5k_outline","path":"sprites/spr_weapon_smg_mp5k_outline/spr_weapon_smg_mp5k_outline.yy",},"order":4,},
+    {"id":{"name":"scr_player_kill","path":"scripts/scr_player_kill/scr_player_kill.yy",},"order":8,},
     {"id":{"name":"obj_enemy_parent","path":"objects/obj_enemy_parent/obj_enemy_parent.yy",},"order":0,},
     {"id":{"name":"scr_player_hurt","path":"scripts/scr_player_hurt/scr_player_hurt.yy",},"order":3,},
     {"id":{"name":"spr_buy_menu_uu102","path":"sprites/spr_buy_menu_uu102/spr_buy_menu_uu102.yy",},"order":3,},

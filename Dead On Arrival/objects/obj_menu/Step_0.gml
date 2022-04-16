@@ -2,7 +2,7 @@
 // You can write your code in this editor
 var toggle = keyboard_check_pressed(vk_space)
 
-if (toggle){
+if (toggle && !global.playerIsDead){
 	menu_active = !menu_active	
 	selected_item = 0 // reset selection
 	

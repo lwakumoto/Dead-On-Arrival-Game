@@ -3,6 +3,7 @@
 
 // return the appropriate
 function scr_enemy_attack(){
+	if (!global.playerIsDead){
 	// the attack function the regular enemy will use
 	attack_function_normal = function(dmg){
 		
@@ -20,7 +21,7 @@ function scr_enemy_attack(){
 	// the attack function the boomer will use
 	attack_function_boomer = function(dmg){
 		
-		scr_create_explosion(x,y,125,dmg,.006)
+		scr_create_explosion(x,y,300,dmg, .003)
 		
 	}
 	
@@ -33,6 +34,9 @@ function scr_enemy_attack(){
 		projectile.dmg = dmg
 	}
 	
+	attack_function_empty = function(dmg){
+		
+	}
 	switch (object_index){ // return the appropriate function
 		case obj_enemy:
 			return attack_function_normal
@@ -53,6 +57,10 @@ function scr_enemy_attack(){
 		case obj_enemy_spitter:
 			return attack_function_spitter
 			break;
+		default: 
+			return attack_function_empty
+			break;
+	}
 	}
 }
 

@@ -24,6 +24,12 @@ if (position_meeting(x + horiz_vel,y,obj_obstacle)){
 
 var speed_modifier = player_weapon.weapon_weight
 
+
+if (place_meeting(x,y,obj_enemy_parent)){
+	speed_modifier *= 0.5
+}
+
+
 x += horiz_vel * speed_modifier;
 y += vertic_vel * speed_modifier;
 
@@ -55,15 +61,19 @@ if ((change_weapon_forward || change_weapon_backward) && player_weapon.canShoot)
 }
 #endregion
 
-if (curr_hp < max_hp){
+// regenerating health
+if (curr_hp < max_hp){ 
 	curr_hp += regen_health_rate / room_speed
 	curr_hp = min(curr_hp,max_hp)
 }
 
-if (keyboard_check_pressed(vk_enter)){
-	scr_player_hurt(id,irandom_range(20,50))
-}
 
 }
+
+
+if (curr_hp <= 0){ // kill the player if they get to a low enough health
+	scr_player_kill()
+}
+
 
 

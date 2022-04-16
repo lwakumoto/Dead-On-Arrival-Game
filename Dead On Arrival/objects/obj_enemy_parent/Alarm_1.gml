@@ -1,3 +1,6 @@
 /// @description Play attack function
 
-attack_func(damage)
+if(!global.playerIsDead){
+	attack_func(damage)
+}
+

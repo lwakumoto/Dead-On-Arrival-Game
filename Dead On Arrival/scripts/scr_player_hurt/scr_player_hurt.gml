@@ -8,7 +8,7 @@ function scr_player_hurt(player_id, damage){
 	
 	// spawn blood
 	repeat(max(min(ceil(damage)/5,10),1)){
-		var pellet = instance_create_layer(x,y,"Instances",obj_blood_pellet);
+		var pellet = instance_create_layer(player_id.x,player_id.y,"Instances",obj_blood_pellet);
 		pellet.direction = random_range(0,359)
 		pellet.image_angle = pellet.direction
 	}

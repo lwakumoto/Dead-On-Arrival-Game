@@ -1,6 +1,6 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function scr_enemy_die(x_origin,y_origin,enemy,by_explosion){
+function scr_enemy_die(x_origin,y_origin,enemy,by_explosion,coin_type){
 	if (!by_explosion){ // if the death was caused by an explosion, we want to spawn a blood smear and gibs instead of a regular corpse
 		var corpse = instance_create_layer(enemy.x,enemy.y,"Corpses",obj_corpse);
 		corpse.sprite_index = enemy.corpse_sprite
@@ -10,7 +10,7 @@ function scr_enemy_die(x_origin,y_origin,enemy,by_explosion){
 		instance_destroy(enemy)
 		audio_play_sound(so_zombie_death, 1, false);
 		if (!was_spawned){
-		scr_drop_money(x_origin,y_origin,enemy.value) // only drop money if they aren't killed by an explosion or if it wasn't spawned by a car
+		scr_drop_money(x_origin,y_origin,enemy.value,enemy.coin_type) // only drop money if they aren't killed by an explosion or if it wasn't spawned by a car
 		}
 	}
 	else{
@@ -25,6 +25,7 @@ function scr_enemy_die(x_origin,y_origin,enemy,by_explosion){
 			pellet.image_angle = -_direction
 		}
 		instance_destroy(enemy)
+		scr_drop_money(x_origin,y_origin,enemy.value,enemy.coin_type)
 	}
 
 }

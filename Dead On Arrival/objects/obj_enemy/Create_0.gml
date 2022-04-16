@@ -15,4 +15,5 @@ attack_animation = spr_enemy_regular_attack
 attack_func = scr_enemy_attack()
 damage = irandom_range(1,3)
 move_spd = random_range(3.2,3.8)
-value = 50
+value = 15
+coin_type = 0
