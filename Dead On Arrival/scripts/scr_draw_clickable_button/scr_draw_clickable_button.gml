@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 
 // draw a clickable button with the text centered
-function scr_draw_clickable_button(xx, yy, string, font, horizontal_padding, vertical_padding, onClick = noone){
+function scr_draw_clickable_button(xx, yy, string, font, horizontal_padding, vertical_padding, onClick = noone, onHover = noone){
 	
 
 
@@ -22,6 +22,7 @@ function scr_draw_clickable_button(xx, yy, string, font, horizontal_padding, ver
 			draw_set_color(c_yellow)	
 			window_set_cursor(cr_handpoint)	
 			hover = true
+			
 	}
 	
 	draw_sprite_ext(spr_buy_menu_button,image_index,xx - button_width/2,yy,

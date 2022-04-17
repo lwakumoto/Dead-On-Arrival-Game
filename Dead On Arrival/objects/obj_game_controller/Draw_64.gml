@@ -18,7 +18,7 @@
 		draw_text_transformed(global.camera_width/2,global.camera_height/2,death_text,dead_text_size,dead_text_size,0)
 		draw_set_font(fnt_health)
 		
-		if (dead_text_size <= 1.5){
+		if (dead_text_size <= 1.1){
 			draw_text(global.camera_width/2, global.camera_height/2  + string_height("Hello") + 25,	"Press R to Restart")
 		}
 		

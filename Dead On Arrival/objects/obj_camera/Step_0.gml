@@ -31,11 +31,4 @@ global.camera_shake += (0 - global.camera_shake)/25;
 var vm = matrix_build_lookat(x,y,-10,x,y,0,0,1,0);
 camera_set_view_mat(global.camera,vm);
 
-if (keyboard_check(vk_shift) && instance_exists(obj_enemy_parent)){
-	follow = obj_enemy_parent
-	show_debug_message(follow)
-	
-} else{
-	follow = obj_player	
-}
 

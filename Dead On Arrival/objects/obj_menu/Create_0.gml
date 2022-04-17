@@ -14,17 +14,28 @@ op_border_width = 100; // width of the clickable box
 op_border_height = 8; // height of the clickable box
 op_space = 32; // space between each text
 
-
+menu_item = array_create(2,[])
 menu_item = array_create(global.num_weapons, "")
 
-menu_item[0] = weapon.DEAGLE
-menu_item[1] = weapon.MP5K
-menu_item[2] = weapon.SPAS
-menu_item[3] = weapon.MK18
-menu_item[4] = weapon.G3A1
-menu_item[5] = weapon.STONER
-menu_item[6] = weapon.INTERVENTION
-menu_item[7] = weapon.BASTARD
+menu_item[0][0] = weapon.DEAGLE
+menu_item[0][1] = weapon.MP5K
+menu_item[0][2] = weapon.SPAS
+menu_item[0][3] = weapon.MK18
+menu_item[0][4] = weapon.G3A1
+menu_item[0][5] = weapon.STONER
+menu_item[0][6] = weapon.INTERVENTION
+menu_item[0][7] = weapon.BASTARD
+
+menu_item[1][0] = weapon.STONER
+menu_item[1][1] = weapon.DEAGLE
+menu_item[1][2] = weapon.HI_POINT
+menu_item[1][3] = weapon.DEAGLE
+menu_item[1][4] = weapon.G3A1
+menu_item[1][5] = weapon.STONER
+menu_item[1][6] = weapon.INTERVENTION
+menu_item[1][7] = weapon.BASTARD
+
+curr_menu = 0
 
 /*
 for (var i = 0; i < array_length(menu_item); i ++){

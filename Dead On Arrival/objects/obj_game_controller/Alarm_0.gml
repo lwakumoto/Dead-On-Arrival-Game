@@ -5,7 +5,7 @@ repeat(irandom_range(5,8)*curr_wave){
 	var rand_y = random_range(0,2000)
 	
 	while (collision_circle(rand_x,rand_y,50,obj_obstacle,true,true)
-	|| collision_circle(rand_x,rand_y,100,obj_player,true,true)){
+	|| collision_circle(rand_x,rand_y,250,obj_player,true,true)){
 		var rand_x = random_range(0,room_width)
 		var rand_y = random_range(0,2000)	
 	}	

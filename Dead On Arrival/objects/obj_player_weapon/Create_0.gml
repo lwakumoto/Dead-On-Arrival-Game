@@ -39,7 +39,8 @@ enum weapon {
 	SPAS,
 	MP5K,
 	INTERVENTION,
-	BASTARD
+	BASTARD,
+	HI_POINT,
 }
 
 enum weaponCategory {
@@ -76,7 +77,7 @@ enum weaponType {
 
 // Create weapon array that will store the stats of each weapon, each weapon is represented as an array of maps
 // Each map corresponds to a stat of that weapon.
-global.num_weapons = 8;
+global.num_weapons = 9;
 weapons[global.num_weapons - 1] = noone // the weapons array that will store the stats for each weapon
 
 
@@ -134,7 +135,7 @@ weapons[weapon.G3A1][? "caliber"] = caliberType._r762
 weapons[weapon.G3A1][? "spread"] = 0.3
 weapons[weapon.G3A1][? "range"] = 1000 
 weapons[weapon.G3A1][? "fire_sound"] = so_gunire
-weapons[weapon.G3A1][? "wep_cost"] = 2500
+weapons[weapon.G3A1][? "wep_cost"] = 6000
 weapons[weapon.G3A1][? "wep_silhouette"] = spr_weapon_battle_g3_silhouette
 
 weapons[weapon.STONER][? "wep_id"] = 2;
@@ -194,15 +195,15 @@ weapons[weapon.SPAS][? "mag_capacity"] = 8
 weapons[weapon.SPAS][? "wep_weight"] = 0.9
 weapons[weapon.SPAS][? "reserve_ammo"] = 16
 weapons[weapon.SPAS][? "fire_type"] = fireType.SEMIAUTO
-weapons[weapon.SPAS][? "fire_delay"] = 0.2 
-weapons[weapon.SPAS][? "reload_time"] = 0.25 
+weapons[weapon.SPAS][? "fire_delay"] = 0.4
+weapons[weapon.SPAS][? "reload_time"] = 0.3
 weapons[weapon.SPAS][? "reload_type"] = 1
 weapons[weapon.SPAS][? "caliber"] = caliberType._r12GAUGE
 weapons[weapon.SPAS][? "spread"] = 15
 weapons[weapon.SPAS][? "range"] = 555
 weapons[weapon.SPAS][? "fire_sound"] = so_shotgun_fire
 weapons[weapon.SPAS][? "reload_sound"] = so_shotgun_reload
-weapons[weapon.SPAS][? "wep_cost"] = 1500
+weapons[weapon.SPAS][? "wep_cost"] = 3000
 weapons[weapon.SPAS][? "wep_silhouette"] = spr_weapon_shotgun_spas_silhouette
 
 weapons[weapon.MP5K][? "wep_id"] = 5;
@@ -235,11 +236,11 @@ weapons[weapon.INTERVENTION][? "wep_sprite"] = spr_weapon_sniper_intervention
 weapons[weapon.INTERVENTION][? "wep_reload"] = spr_weapon_sniper_intervention_reload
 weapons[weapon.INTERVENTION][? "wep_icon"] = spr_weapon_sniper_intervention_colored
 weapons[weapon.INTERVENTION][? "wep_offset"] = 0
-weapons[weapon.INTERVENTION][? "wep_weight"] = .7
+weapons[weapon.INTERVENTION][? "wep_weight"] = .8
 weapons[weapon.INTERVENTION][? "mag_capacity"] = 5
 weapons[weapon.INTERVENTION][? "reserve_ammo"] = 10
 weapons[weapon.INTERVENTION][? "fire_type"] = fireType.BOLT
-weapons[weapon.INTERVENTION][? "fire_delay"] = 1
+weapons[weapon.INTERVENTION][? "fire_delay"] = .8
 weapons[weapon.INTERVENTION][? "reload_time"] = 2.5 
 weapons[weapon.INTERVENTION][? "reload_type"] = 0
 weapons[weapon.INTERVENTION][? "caliber"] = caliberType._r408
@@ -269,6 +270,27 @@ weapons[weapon.BASTARD][? "range"] = 10
 weapons[weapon.BASTARD][? "fire_sound"] = so_sword
 weapons[weapon.BASTARD][? "wep_cost"] = 99999999
 weapons[weapon.BASTARD][? "wep_silhouette"] = spr_weapon_melee_bastard_silhouette
+
+weapons[weapon.HI_POINT][? "wep_id"] = 8
+weapons[weapon.HI_POINT][? "wep_type"] = weaponType.FIREARM
+weapons[weapon.HI_POINT][? "wep_category"] = weaponCategory.PISTOL
+weapons[weapon.HI_POINT][? "wep_name"] = "C-9"
+weapons[weapon.HI_POINT][? "wep_sprite"] = spr_weapon_pistol_deagle
+weapons[weapon.HI_POINT][? "wep_icon"] = spr_weapon_pistol_c9_colored
+weapons[weapon.HI_POINT][? "wep_offset"] = 25
+weapons[weapon.HI_POINT][? "mag_capacity"] = 15
+weapons[weapon.HI_POINT][? "wep_weight"] = 1
+weapons[weapon.HI_POINT][? "reserve_ammo"] = 30
+weapons[weapon.HI_POINT][? "fire_type"] = fireType.SEMIAUTO
+weapons[weapon.HI_POINT][? "fire_delay"] = 0.2
+weapons[weapon.HI_POINT][? "reload_time"] = 1.3
+weapons[weapon.HI_POINT][? "reload_type"] = 0
+weapons[weapon.HI_POINT][? "caliber"] = caliberType._r9x19
+weapons[weapon.HI_POINT][? "spread"] = 5
+weapons[weapon.HI_POINT][? "range"] = 500
+weapons[weapon.HI_POINT][? "fire_sound"] = so_deagle_fire
+weapons[weapon.HI_POINT][? "wep_cost"] = 0
+weapons[weapon.HI_POINT][? "wep_silhouette"] = spr_weapon_pistol_c9_sillhouette
 
 #endregion
 

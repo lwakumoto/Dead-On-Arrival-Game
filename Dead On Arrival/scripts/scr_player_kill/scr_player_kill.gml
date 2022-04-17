@@ -4,6 +4,8 @@ function scr_player_kill(){
 	with (instance_create_layer(x,y,"Corpses",obj_corpse)){
 		sprite_index = spr_player_corpse
 		image_angle = random(360)
+		image_xscale = 1.5
+		image_yscale = image_xscale
 	}
 	// spawn blood
 	repeat(25){

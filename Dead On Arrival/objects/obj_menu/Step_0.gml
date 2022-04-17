@@ -24,11 +24,10 @@ if (toggle && !global.playerIsDead){
 
 
 // check if the player clicked on an item
-if (mouse_check_button_pressed(mb_left)){
-	if (hovering != -1){
-		
-		selected_item = hovering	
-	}
+if (mouse_check_button_pressed(mb_right)){
+	selected_item = 0
+	curr_menu = !curr_menu
+	
 }
 
 if (keyboard_check(vk_up))  op_border_height ++	
