@@ -5,6 +5,8 @@ global.camera_width = view_wport[0];
 global.camera_height = view_hport[0];
 global.camera = camera_create();
 
+global.camera_shake = 0
+
 
 
 var vm = matrix_build_lookat(x,y,-10,x,y,0,0,1,0);

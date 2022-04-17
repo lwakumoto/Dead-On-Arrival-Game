@@ -112,7 +112,7 @@ weapons[weapon.MK18][? "caliber"] = caliberType._r556 // the caliber the weapon 
 weapons[weapon.MK18][? "spread"] = 1.5 // the spread of the weapon (in degrees)
 weapons[weapon.MK18][? "range"] = 1000 // how far the bullet will go before despawning
 weapons[weapon.MK18][? "fire_sound"] = so_gunire
-weapons[weapon.MK18][? "wep_cost"] = 1000 // the cost of purchase
+weapons[weapon.MK18][? "wep_cost"] = 4000 // the cost of purchase
 weapons[weapon.MK18][? "wep_silhouette"] = spr_weapon_assault_mk18_silhouette
 
 weapons[weapon.G3A1][? "wep_id"] = 1;

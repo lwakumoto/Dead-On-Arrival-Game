@@ -21,6 +21,14 @@ if (pause_key){
 		instance_create_layer(0,0,"Game_Objects",obj_pause)	
 }
 
+if (global.playerIsDead){
+	display_dead_text = true	
+}
+
+if (keyboard_check_pressed(ord("R")) && global.playerIsDead){
+	scr_restart()
+}
+
 
 /*
 if (mouse_check_button_pressed(mb_left)){

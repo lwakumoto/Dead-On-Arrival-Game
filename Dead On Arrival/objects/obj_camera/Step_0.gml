@@ -22,8 +22,11 @@ if (follow != noone && instance_exists(follow)){
 
 
 
-x = clamp(x, global.camera_width/2, room_width-(global.camera_width/2));
-y = clamp(y, global.camera_height/2, room_height-(global.camera_height/2));
+x = clamp(x + random_range(-global.camera_shake,global.camera_shake), global.camera_width/2, room_width-(global.camera_width/2));
+y = clamp(y + random_range(-global.camera_shake,global.camera_shake), global.camera_height/2, room_height-(global.camera_height/2));
+
+// reduce camera shake
+global.camera_shake += (0 - global.camera_shake)/25;
 
 var vm = matrix_build_lookat(x,y,-10,x,y,0,0,1,0);
 camera_set_view_mat(global.camera,vm);

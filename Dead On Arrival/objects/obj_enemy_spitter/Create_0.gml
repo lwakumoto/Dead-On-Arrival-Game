@@ -17,7 +17,7 @@ attack_delay = .5
 
 
 attack_func = scr_enemy_attack()
-damage = 20
+damage = 45
 move_spd = random_range(4.5,5)
 value = 14
 coin_type = 1

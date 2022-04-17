@@ -80,6 +80,9 @@ if (((fire && ammunition[weapon_id][0] > 0 && canShoot)
 		
 		//scr_fire_weapon(x,y,direction)
 		ammunition[weapon_id][0] -- // remove ammo from magazine
+		
+		// shake the camera a bit
+		global.camera_shake = 2.5
 	}
 	
 	
@@ -88,6 +91,8 @@ if (((fire && ammunition[weapon_id][0] > 0 && canShoot)
 if (curr_burst <= 0 || ammunition[weapon_id][0] <= 0){
 	bursting = false	
 }
+
+
 #endregion
 
 
@@ -96,6 +101,9 @@ if (curr_burst <= 0 || ammunition[weapon_id][0] <= 0){
 // allow the player to reload
 #region // reloading
 var reload = keyboard_check_pressed(ord("R"))
+if (fire && (ammunition[weapon_id][0] == 0)){
+	reload = true	
+}
 if (reload && !reloading && ammunition[weapon_id][0] < magazine_capacity + 1 && ammunition[weapon_id][1] > 0 && canShoot){
 	reloading = true
 	image_index = 0

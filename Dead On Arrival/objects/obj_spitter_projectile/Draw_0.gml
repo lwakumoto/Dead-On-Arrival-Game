@@ -1,5 +1,5 @@
 /// @description Insert description here
 // You can write your code in this editor
-image_blend = c_green
+image_blend = c_red
 draw_self()
 image_blend = c_white

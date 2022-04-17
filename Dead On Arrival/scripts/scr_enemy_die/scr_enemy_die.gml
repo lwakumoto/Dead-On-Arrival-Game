@@ -1,6 +1,7 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function scr_enemy_die(x_origin,y_origin,enemy,by_explosion,coin_type){
+	
 	if (!by_explosion){ // if the death was caused by an explosion, we want to spawn a blood smear and gibs instead of a regular corpse
 		var corpse = instance_create_layer(enemy.x,enemy.y,"Corpses",obj_corpse);
 		corpse.sprite_index = enemy.corpse_sprite
@@ -27,5 +28,6 @@ function scr_enemy_die(x_origin,y_origin,enemy,by_explosion,coin_type){
 		instance_destroy(enemy)
 		scr_drop_money(x_origin,y_origin,enemy.value,enemy.coin_type)
 	}
+	global.totalKills ++
 
 }

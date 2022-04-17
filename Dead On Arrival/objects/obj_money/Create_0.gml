@@ -2,4 +2,5 @@
 // You can write your code in this editor
 value = 0
 
-collect_radius = 150;
+collect_radius = 250;
+coin_spd = 10

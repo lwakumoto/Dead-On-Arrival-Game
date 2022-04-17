@@ -3,7 +3,7 @@
 
 var pause_key = keyboard_check_pressed(vk_escape)
 
-if (pause_key){
+if (pause_key && !instance_exists(obj_pause_instructions)){
 	if (!instance_exists(obj_pause)){
 		instance_create_layer(0,0,"Game_Objects",obj_pause)	
 	} else{
