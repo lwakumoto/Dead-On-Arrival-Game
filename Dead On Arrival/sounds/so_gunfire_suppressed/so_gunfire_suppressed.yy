@@ -14,8 +14,8 @@
   "soundFile": "so_gunfire_suppressed.mp3",
   "duration": 1.619592,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "Gun Sounds",
+    "path": "folders/Sounds/Gun Sounds.yy",
   },
   "resourceVersion": "1.0",
   "name": "so_gunfire_suppressed",

@@ -14,8 +14,8 @@
   "soundFile": "so_dry_fire.wav",
   "duration": 1.074637,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "Gun Sounds",
+    "path": "folders/Sounds/Gun Sounds.yy",
   },
   "resourceVersion": "1.0",
   "name": "so_dry_fire",

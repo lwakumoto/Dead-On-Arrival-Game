@@ -14,8 +14,8 @@
   "soundFile": "so_shotgun_fire.wav",
   "duration": 1.7422,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "Gun Sounds",
+    "path": "folders/Sounds/Gun Sounds.yy",
   },
   "resourceVersion": "1.0",
   "name": "so_shotgun_fire",
