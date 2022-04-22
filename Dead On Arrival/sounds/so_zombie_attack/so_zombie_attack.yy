@@ -11,8 +11,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "so_zombie_attack",
-  "duration": 0.0,
+  "soundFile": "so_zombie_attack.mp3",
+  "duration": 1.152,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
