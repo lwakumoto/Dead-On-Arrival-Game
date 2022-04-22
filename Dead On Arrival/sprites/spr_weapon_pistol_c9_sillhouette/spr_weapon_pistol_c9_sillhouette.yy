@@ -25,8 +25,8 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"c4efd766-8076-40d0-8806-e486b3b65be6","path":"sprites/spr_weapon_pistol_c9_sillhouette/spr_weapon_pistol_c9_sillhouette.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c4efd766-8076-40d0-8806-e486b3b65be6","path":"sprites/spr_weapon_pistol_c9_sillhouette/spr_weapon_pistol_c9_sillhouette.yy",},"LayerId":{"name":"38704b1a-890e-47c1-b106-0f4e7923b2f2","path":"sprites/spr_weapon_pistol_c9_sillhouette/spr_weapon_pistol_c9_sillhouette.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"c4efd766-8076-40d0-8806-e486b3b65be6","path":"sprites/spr_weapon_pistol_c9_sillhouette/spr_weapon_pistol_c9_sillhouette.yy",},"LayerId":{"name":"95f5f5a5-e248-4430-9973-363521121e66","path":"sprites/spr_weapon_pistol_c9_sillhouette/spr_weapon_pistol_c9_sillhouette.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"c4efd766-8076-40d0-8806-e486b3b65be6","path":"sprites/spr_weapon_pistol_c9_sillhouette/spr_weapon_pistol_c9_sillhouette.yy",},"LayerId":{"name":"38704b1a-890e-47c1-b106-0f4e7923b2f2","path":"sprites/spr_weapon_pistol_c9_sillhouette/spr_weapon_pistol_c9_sillhouette.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"spr_weapon_pistol_c9_sillhouette","path":"sprites/spr_weapon_pistol_c9_sillhouette/spr_weapon_pistol_c9_sillhouette.yy",},"resourceVersion":"1.0","name":"c4efd766-8076-40d0-8806-e486b3b65be6","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
