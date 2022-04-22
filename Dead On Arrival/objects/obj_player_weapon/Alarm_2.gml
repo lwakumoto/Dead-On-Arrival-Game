@@ -8,7 +8,7 @@ if (reloading){
 
 
 	
-	if (ammunition[weapon_id][0] < magazine_capacity ){
+	if (ammunition[weapon_id][0] < magazine_capacity  && ammunition[weapon_id][1] > 0){
 		
 		if (weapon_reload_sound != undefined){
 			audio_play_sound(weapon_reload_sound,1,false)
@@ -19,6 +19,7 @@ if (reloading){
 	}
 	else{
 		reloading = false	
+		image_speed = 0
 	}
 
 }
