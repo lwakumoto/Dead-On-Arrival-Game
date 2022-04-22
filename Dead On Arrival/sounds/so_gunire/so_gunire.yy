@@ -14,8 +14,8 @@
   "soundFile": "so_gunire.wav",
   "duration": 0.799932,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "Gun Sounds",
+    "path": "folders/Sounds/Gun Sounds.yy",
   },
   "resourceVersion": "1.0",
   "name": "so_gunire",

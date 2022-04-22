@@ -11,14 +11,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "so_spent_casing.mp3",
-  "duration": 1.541224,
+  "soundFile": "so_sniper_fire.mp3",
+  "duration": 2.616,
   "parent": {
     "name": "Gun Sounds",
     "path": "folders/Sounds/Gun Sounds.yy",
   },
   "resourceVersion": "1.0",
-  "name": "so_spent_casing",
+  "name": "so_sniper_fire",
   "tags": [],
   "resourceType": "GMSound",
 }

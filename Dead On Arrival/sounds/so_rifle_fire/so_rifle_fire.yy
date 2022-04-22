@@ -11,14 +11,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "so_spent_casing.mp3",
-  "duration": 1.541224,
+  "soundFile": "so_rifle_fire.mp3",
+  "duration": 1.128,
   "parent": {
     "name": "Gun Sounds",
     "path": "folders/Sounds/Gun Sounds.yy",
   },
   "resourceVersion": "1.0",
-  "name": "so_spent_casing",
+  "name": "so_rifle_fire",
   "tags": [],
   "resourceType": "GMSound",
 }
