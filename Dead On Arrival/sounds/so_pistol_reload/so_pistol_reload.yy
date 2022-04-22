@@ -14,8 +14,8 @@
   "soundFile": "so_pistol_reload.wav",
   "duration": 0.351542,
   "parent": {
-    "name": "Gun Sounds",
-    "path": "folders/Sounds/Gun Sounds.yy",
+    "name": "Sounds",
+    "path": "folders/Sounds.yy",
   },
   "resourceVersion": "1.0",
   "name": "so_pistol_reload",

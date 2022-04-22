@@ -14,8 +14,8 @@
   "soundFile": "so_sword.wav",
   "duration": 0.479388,
   "parent": {
-    "name": "Gun Sounds",
-    "path": "folders/Sounds/Gun Sounds.yy",
+    "name": "Sounds",
+    "path": "folders/Sounds.yy",
   },
   "resourceVersion": "1.0",
   "name": "so_sword",

@@ -14,8 +14,8 @@
   "soundFile": "so_spent_casing.mp3",
   "duration": 1.541224,
   "parent": {
-    "name": "Gun Sounds",
-    "path": "folders/Sounds/Gun Sounds.yy",
+    "name": "Sounds",
+    "path": "folders/Sounds.yy",
   },
   "resourceVersion": "1.0",
   "name": "so_spent_casing",

@@ -1,6 +1,0 @@
-Sounds from pixabay:
-	so_rifle_fire
-	so_car_drive
-	so_sniper_fire
-	so_zombie_attack
-	

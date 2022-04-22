@@ -14,8 +14,8 @@
   "soundFile": "so_shotgun_reload.wav",
   "duration": 0.261451,
   "parent": {
-    "name": "Gun Sounds",
-    "path": "folders/Sounds/Gun Sounds.yy",
+    "name": "Sounds",
+    "path": "folders/Sounds.yy",
   },
   "resourceVersion": "1.0",
   "name": "so_shotgun_reload",
