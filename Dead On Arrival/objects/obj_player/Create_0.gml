@@ -7,7 +7,7 @@ player_weapon = instance_create_layer(x,y,"Instances",obj_player_weapon)
 player_weapon.owner = id
 weapon_inventory = ds_list_create()
 
-ds_list_add(weapon_inventory,weapon.DEAGLE)
+ds_list_add(weapon_inventory,weapon.HI_POINT)
 
 //ds_list_add(weapon_inventory,weapon.DEAGLE,weapon.STONER,weapon.G3A1,weapon.INTERVENTION,weapon.MK18,weapon.MP5K,weapon.SPAS)
 

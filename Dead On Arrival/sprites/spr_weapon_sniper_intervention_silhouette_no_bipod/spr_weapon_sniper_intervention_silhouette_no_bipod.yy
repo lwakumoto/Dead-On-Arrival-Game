@@ -71,8 +71,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "silhouettes",
-    "path": "folders/Sprites/UI/weapon icons/silhouettes.yy",
+    "name": "unused",
+    "path": "folders/Sprites/UI/weapon icons/silhouettes/unused.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_weapon_sniper_intervention_silhouette_no_bipod",

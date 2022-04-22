@@ -51,7 +51,8 @@ if (global.playerIsDead){
 		"If at first you don't succeed, \ndie and die again.",
 		"Wasted",
 		"Zombies: 1, You: " + string(global.totalKills),
-		"Cowabummer"]
+		"Cowabummer",
+		"MY FIGHT MONEY!"]
 		death_text = death_texts[irandom_range(0,array_length(death_texts) - 1)]	
 	}
 	#endregion
