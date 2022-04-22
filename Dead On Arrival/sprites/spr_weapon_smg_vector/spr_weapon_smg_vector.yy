@@ -25,24 +25,17 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"2837118c-806f-4dbb-b65b-bfbd3958497b","path":"sprites/spr_weapon_smg_vector/spr_weapon_smg_vector.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-<<<<<<< HEAD
         {"FrameId":{"name":"2837118c-806f-4dbb-b65b-bfbd3958497b","path":"sprites/spr_weapon_smg_vector/spr_weapon_smg_vector.yy",},"LayerId":{"name":"eb4459dc-6b0e-476e-ab90-41a346c51da1","path":"sprites/spr_weapon_smg_vector/spr_weapon_smg_vector.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"2837118c-806f-4dbb-b65b-bfbd3958497b","path":"sprites/spr_weapon_smg_vector/spr_weapon_smg_vector.yy",},"LayerId":{"name":"ac1997a5-1759-4f5f-aa50-1ceabec8bc2f","path":"sprites/spr_weapon_smg_vector/spr_weapon_smg_vector.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"2837118c-806f-4dbb-b65b-bfbd3958497b","path":"sprites/spr_weapon_smg_vector/spr_weapon_smg_vector.yy",},"LayerId":{"name":"28f1ee68-415a-45bf-b00a-eb8aeb7686c3","path":"sprites/spr_weapon_smg_vector/spr_weapon_smg_vector.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"2837118c-806f-4dbb-b65b-bfbd3958497b","path":"sprites/spr_weapon_smg_vector/spr_weapon_smg_vector.yy",},"LayerId":{"name":"1d4c1604-4206-4893-b6c0-f280a4cb81a8","path":"sprites/spr_weapon_smg_vector/spr_weapon_smg_vector.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-=======
-        {"FrameId":{"name":"2837118c-806f-4dbb-b65b-bfbd3958497b","path":"sprites/spr_weapon_smg_vector/spr_weapon_smg_vector.yy",},"LayerId":{"name":"1d4c1604-4206-4893-b6c0-f280a4cb81a8","path":"sprites/spr_weapon_smg_vector/spr_weapon_smg_vector.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"2837118c-806f-4dbb-b65b-bfbd3958497b","path":"sprites/spr_weapon_smg_vector/spr_weapon_smg_vector.yy",},"LayerId":{"name":"28f1ee68-415a-45bf-b00a-eb8aeb7686c3","path":"sprites/spr_weapon_smg_vector/spr_weapon_smg_vector.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"2837118c-806f-4dbb-b65b-bfbd3958497b","path":"sprites/spr_weapon_smg_vector/spr_weapon_smg_vector.yy",},"LayerId":{"name":"eb4459dc-6b0e-476e-ab90-41a346c51da1","path":"sprites/spr_weapon_smg_vector/spr_weapon_smg_vector.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"2837118c-806f-4dbb-b65b-bfbd3958497b","path":"sprites/spr_weapon_smg_vector/spr_weapon_smg_vector.yy",},"LayerId":{"name":"ac1997a5-1759-4f5f-aa50-1ceabec8bc2f","path":"sprites/spr_weapon_smg_vector/spr_weapon_smg_vector.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
->>>>>>> 1f5efe2 (Added several new weapons: M40, Beowulf, AK15, Ultimax, Vector, Terminator, Crowbar)
       ],"parent":{"name":"spr_weapon_smg_vector","path":"sprites/spr_weapon_smg_vector/spr_weapon_smg_vector.yy",},"resourceVersion":"1.0","name":"2837118c-806f-4dbb-b65b-bfbd3958497b","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_weapon_smg_vector","path":"sprites/spr_weapon_smg_vector/spr_weapon_smg_vector.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 30.0,
+    "playbackSpeed": 5.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
@@ -51,7 +44,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"8fa39cd1-eb54-4342-b3f4-78f90bb6355e","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2837118c-806f-4dbb-b65b-bfbd3958497b","path":"sprites/spr_weapon_smg_vector/spr_weapon_smg_vector.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"5bcdefd0-323b-451f-a832-21a069f21c3c","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2837118c-806f-4dbb-b65b-bfbd3958497b","path":"sprites/spr_weapon_smg_vector/spr_weapon_smg_vector.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
