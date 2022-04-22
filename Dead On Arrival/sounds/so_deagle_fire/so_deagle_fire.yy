@@ -14,8 +14,8 @@
   "soundFile": "so_deagle_fire.mp3",
   "duration": 3.744,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "Gun Sounds",
+    "path": "folders/Sounds/Gun Sounds.yy",
   },
   "resourceVersion": "1.0",
   "name": "so_deagle_fire",
