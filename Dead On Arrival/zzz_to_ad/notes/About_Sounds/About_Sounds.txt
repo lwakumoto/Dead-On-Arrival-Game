@@ -1,0 +1,5 @@
+Sounds from mixkit.co/freesoundeffects:
+so_player_hit
+so_zombie_hit
+so_zombie_death
+so_pistol_reload
