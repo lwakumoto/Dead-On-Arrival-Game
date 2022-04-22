@@ -10,6 +10,7 @@
     {"id":{"name":"spr_weapon_assault_ak15_colored","path":"sprites/spr_weapon_assault_ak15_colored/spr_weapon_assault_ak15_colored.yy",},"order":15,},
     {"id":{"name":"spr_weapon_battle_g3_outline","path":"sprites/spr_weapon_battle_g3_outline/spr_weapon_battle_g3_outline.yy",},"order":1,},
     {"id":{"name":"spr_weapon_sniper_m40_colored","path":"sprites/spr_weapon_sniper_m40_colored/spr_weapon_sniper_m40_colored.yy",},"order":11,},
+    {"id":{"name":"Note1","path":"notes/Note1/Note1.yy",},"order":0,},
     {"id":{"name":"spr_weapon_lmg_stoner","path":"sprites/spr_weapon_lmg_stoner/spr_weapon_lmg_stoner.yy",},"order":26,},
     {"id":{"name":"obj_enemy_boomer","path":"objects/obj_enemy_boomer/obj_enemy_boomer.yy",},"order":3,},
     {"id":{"name":"obj_gui","path":"objects/obj_gui/obj_gui.yy",},"order":4,},
