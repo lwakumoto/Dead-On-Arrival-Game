@@ -26,7 +26,7 @@ function scr_draw_weapon_icon(xx, yy, height){
 		
 		if (weapon_type = weaponType.FIREARM){
 			if (ammunition[weapon_id][0] > magazine_capacity){
-				var ammo_text = string(magazine_capacity) + " + " + string(magazine_capacity - ammunition[weapon_id][0]) + "\\" + string(ammunition[weapon_id][1])
+				var ammo_text = string(magazine_capacity) + " + 1" + "\\" + string(ammunition[weapon_id][1])
 			}
 			else{
 				var ammo_text = string(ammunition[weapon_id][0]) + "\\" + string(ammunition[weapon_id][1])

@@ -8,7 +8,7 @@ enum gameState {
 }
 
 global.currGameState = gameState.RUNNING
-global.playerMoney = 100000
+global.playerMoney = 0
 global.displayed_money = 0
 global.playerIsDead = false
 global.totalKills = 0
