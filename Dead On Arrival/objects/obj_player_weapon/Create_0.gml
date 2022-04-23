@@ -47,7 +47,8 @@ enum weapon {
 	ULTIMAX,
 	VECTOR,
 	CROWBAR,
-	TERMINATOR
+	TERMINATOR,
+	MINIGUN
 }
 
 enum weaponCategory {
@@ -58,7 +59,7 @@ enum weaponCategory {
 	PISTOL,
 	SHOTGUN,
 	SNIPER,
-	MELEE
+	MELEE,
 }
 
 enum caliberType {
@@ -88,7 +89,7 @@ enum weaponType {
 
 // Create weapon array that will store the stats of each weapon, each weapon is represented as an array of maps
 // Each map corresponds to a stat of that weapon.
-global.num_weapons = 16;
+global.num_weapons = 17;
 weapons[global.num_weapons - 1] = noone // the weapons array that will store the stats for each weapon
 
 
@@ -509,6 +510,30 @@ weapons[weapon.CROWBAR][? "wep_silhouette"] = spr_weapon_melee_crowbar_silhouett
 
 ammunition[weapon.CROWBAR][0] = weapons[weapon.CROWBAR][? "mag_capacity"] 
 ammunition[weapon.CROWBAR][1] = weapons[weapon.CROWBAR][? "reserve_ammo"] 
+
+weapons[weapon.MINIGUN][? "wep_id"] = weapon.MINIGUN
+weapons[weapon.MINIGUN][? "wep_type"] = weaponType.FIREARM
+weapons[weapon.MINIGUN][? "wep_category"] = weaponCategory.LMG
+weapons[weapon.MINIGUN][? "wep_name"] = "Minigun"
+weapons[weapon.MINIGUN][? "wep_sprite"] = spr_weapon_hmg_minigun_big
+weapons[weapon.MINIGUN][? "wep_icon"] = spr_weapon_hmg_minigun_colored
+weapons[weapon.MINIGUN][? "wep_offset"] = 15
+weapons[weapon.MINIGUN][? "mag_capacity"] = 1500
+weapons[weapon.MINIGUN][? "wep_weight"] = .4
+weapons[weapon.MINIGUN][? "reserve_ammo"] = 0
+weapons[weapon.MINIGUN][? "fire_type"] = fireType.FULLAUTO
+weapons[weapon.MINIGUN][? "fire_delay"] = 2/room_speed
+weapons[weapon.MINIGUN][? "reload_time"] = 1.0
+weapons[weapon.MINIGUN][? "reload_type"] = 0
+weapons[weapon.MINIGUN][? "caliber"] = caliberType._r762
+weapons[weapon.MINIGUN][? "spread"] = 15
+weapons[weapon.MINIGUN][? "range"] = 5000
+weapons[weapon.MINIGUN][? "fire_sound"] = so_gunire
+weapons[weapon.MINIGUN][? "wep_cost"] = 25000
+weapons[weapon.MINIGUN][? "wep_silhouette"] = spr_weapon_hmg_minigun_silhouette
+
+ammunition[weapon.MINIGUN][0] = weapons[weapon.MINIGUN][? "mag_capacity"] 
+ammunition[weapon.MINIGUN][1] = weapons[weapon.MINIGUN][? "reserve_ammo"] 
 
 
 #endregion

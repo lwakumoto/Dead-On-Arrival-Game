@@ -7,7 +7,7 @@ if (menu_active){
 	draw_sprite_ext(sprite_index,image_index,0,0,menu_width div sprite_width + 1, menu_height div sprite_height,0,c_white,1)
 
 	draw_set_valign(fa_center)
-	draw_set_valign(fa_center)
+	draw_set_halign(fa_center)
 	draw_set_font(fnt_Tier)
 	var tier_text = ""
 	switch(curr_menu){
@@ -25,7 +25,7 @@ if (menu_active){
 			break;
 	}
 	
-	draw_text(global.camera_width*(3/4),global.camera_height/8," < Q " + tier_text + " E >")
+	draw_text(global.camera_width*(3/4),global.camera_height/7," < Q     " + tier_text + "     E >")
 	
 	draw_set_color(c_white)
 

@@ -26,9 +26,11 @@ if (toggle && !global.playerIsDead){
 
 if (keyboard_check_pressed(ord("E"))){
 	curr_menu = (curr_menu + 1) % 3
+	selected_item = 0
 }
 if (keyboard_check_pressed(ord("Q"))){
 	curr_menu = (curr_menu - 1 + 3) % 3
+	selected_item = 0
 }
 
 if (keyboard_check(vk_up))  op_border_height ++	

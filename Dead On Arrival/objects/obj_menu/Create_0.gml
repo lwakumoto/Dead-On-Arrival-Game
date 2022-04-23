@@ -62,7 +62,7 @@ menu_item[1][5] = weapon.ULTIMAX
 menu_item[1][6] = weapon.INTERVENTION
 menu_item[1][7] = weapon.BASTARD
 
-menu_item[2][0] = weapon.BASTARD
+menu_item[2][0] = weapon.MINIGUN
 
 curr_menu = 0
 

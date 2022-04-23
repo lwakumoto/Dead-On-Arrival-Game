@@ -76,7 +76,7 @@ if (((fire && ammunition[weapon_id][0] > 0 && canShoot)
 		audio_play_sound(weapon_sound,1,false)
 
 		scr_fire_weapon(x, y,direction)	
-		alarm[3] =  image_number
+		alarm[3] =  1
 		
 		//scr_fire_weapon(x,y,direction)
 		ammunition[weapon_id][0] -- // remove ammo from magazine
