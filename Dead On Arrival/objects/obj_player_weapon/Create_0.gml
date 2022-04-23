@@ -128,6 +128,7 @@ weapons[weapon.MK18][? "range"] = 1000 // how far the bullet will go before desp
 weapons[weapon.MK18][? "fire_sound"] = so_rifle_fire
 weapons[weapon.MK18][? "wep_cost"] = 4000 // the cost of purchase
 weapons[weapon.MK18][? "wep_silhouette"] = spr_weapon_assault_mk18_silhouette
+weapons[weapon.MK18][? "wep_description"] = "A classic 5.56 rifle about as American as apple pie"
 
 ammunition[weapon.MK18][0] = weapons[weapon.MK18][? "mag_capacity"] // the current magazine for any weapon
 ammunition[weapon.MK18][1] = weapons[weapon.MK18][? "reserve_ammo"] // the reserve ammunition for any weapon
@@ -153,6 +154,7 @@ weapons[weapon.G3A1][? "range"] = 1000
 weapons[weapon.G3A1][? "fire_sound"] = so_gunire
 weapons[weapon.G3A1][? "wep_cost"] = 6000
 weapons[weapon.G3A1][? "wep_silhouette"] = spr_weapon_battle_g3_silhouette
+weapons[weapon.G3A1][? "wep_description"] = "This semi-auto rifle is chambered in the powerful 7.62x51mm round"
 
 ammunition[weapon.G3A1][0] = weapons[weapon.G3A1][? "mag_capacity"] 
 ammunition[weapon.G3A1][1] = weapons[weapon.G3A1][? "reserve_ammo"] 
@@ -178,6 +180,7 @@ weapons[weapon.STONER][? "range"] = 1000
 weapons[weapon.STONER][? "fire_sound"] = so_gunire
 weapons[weapon.STONER][? "wep_cost"] =6000
 weapons[weapon.STONER][? "wep_silhouette"] = spr_weapon_lmg_stoner_silhouette
+
 
 ammunition[weapon.STONER][0] = weapons[weapon.STONER][? "mag_capacity"] 
 ammunition[weapon.STONER][1] = weapons[weapon.STONER][? "reserve_ammo"] 
@@ -332,6 +335,7 @@ weapons[weapon.HI_POINT][? "range"] = 500
 weapons[weapon.HI_POINT][? "fire_sound"] = so_deagle_fire
 weapons[weapon.HI_POINT][? "wep_cost"] = 0
 weapons[weapon.HI_POINT][? "wep_silhouette"] = spr_weapon_pistol_c9_sillhouette
+weapons[weapon.HI_POINT][? "wep_description"] = "Cheap and reliable, just don't expect it to win any beauty contests"
 
 ammunition[weapon.HI_POINT][0] = weapons[weapon.HI_POINT][? "mag_capacity"] 
 ammunition[weapon.HI_POINT][1] = weapons[weapon.HI_POINT][? "reserve_ammo"] 
@@ -516,7 +520,7 @@ weapons[weapon.MINIGUN][? "wep_id"] = weapon.MINIGUN
 weapons[weapon.MINIGUN][? "wep_type"] = weaponType.FIREARM
 weapons[weapon.MINIGUN][? "wep_category"] = weaponCategory.LMG
 weapons[weapon.MINIGUN][? "wep_name"] = "Minigun"
-weapons[weapon.MINIGUN][? "wep_sprite"] = spr_weapon_hmg_minigun_big
+weapons[weapon.MINIGUN][? "wep_sprite"] = spr_weapon_hmg_minigun_big_alt
 weapons[weapon.MINIGUN][? "wep_icon"] = spr_weapon_hmg_minigun_colored
 weapons[weapon.MINIGUN][? "wep_offset"] = 15
 weapons[weapon.MINIGUN][? "mag_capacity"] = 2000

@@ -11,14 +11,29 @@ if (keyboard_check_pressed(ord("L"))){
 
 var pause_key = keyboard_check_pressed(vk_escape)
 
-if (instance_number(obj_enemy_parent) == 0 && global.currGameState != gameState.DOWNTIME){
+
+// check if there are no enemies left, if there aren't, wait a few seconds before spawning the next wave.
+if (global.enemiesLeft == 0 && global.currGameState != gameState.DOWNTIME){
 	alarm[0] = wave_delay
 	wave_delay_timer = wave_delay
 	global.prevgameState = global.currGameState
 	global.currGameState = gameState.DOWNTIME
-	with (instance_create_layer(0,0,"Instances", obj_text_slide)){
-		text_value = "Wave " + string(other.curr_wave) + " Completed"	
+	if (curr_wave != 0){
+		with (instance_create_layer(0,0,"Instances", obj_text_slide)){
+			text_value = "Wave " + string(other.curr_wave) + " Completed\n" 
+			+ string(other.max_waves - other.curr_wave) + " Waves Left"
+		}
 	}
+}
+
+// if there is a wave in progress, spawn enemies accoringly
+if (global.currGameState == gameState.RUNNING){
+		if ((instance_number(obj_enemy_parent) < max_enemies_spawn(curr_wave)) 
+		&& (instance_number(obj_enemy_parent) < global.enemiesLeft)){
+			if (alarm[1] == -1){
+				alarm[1] = spawn_delay	
+			}
+		}
 }
 
 

@@ -29,5 +29,6 @@ function scr_enemy_die(x_origin,y_origin,enemy,by_explosion,coin_type){
 		scr_drop_money(x_origin,y_origin,enemy.value,enemy.coin_type)
 	}
 	global.totalKills ++
+	global.enemiesLeft --
 
 }

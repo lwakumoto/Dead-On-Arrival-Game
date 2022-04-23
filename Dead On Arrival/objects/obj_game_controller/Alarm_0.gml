@@ -1,11 +1,11 @@
-/// @description Spawn enemies
+/// @description Progress wave
 
 global.prevgameState = global.currGameState
 global.currGameState = gameState.RUNNING;
 curr_wave ++;
-
-
-repeat(irandom_range(5,8)*curr_wave){
+global.enemiesLeft = enemies_per_wave_func(curr_wave)
+/*
+repeat(enemies_per_wave_func(curr_wave)){
 	var rand_x = random_range(0,room_width)
 	var rand_y = random_range(0,2000)
 	

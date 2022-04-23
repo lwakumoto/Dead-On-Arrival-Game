@@ -116,6 +116,15 @@ if (menu_active){
 	draw_text(10, offset + text_height*6, "Maneuverability: " + string(menu_item[curr_menu][selected_item][? "wep_weight"]));
 	//draw_healthbar(bar_offset_x,offset+text_height*6+bar_offset_y,bar_offset_x + 120,offset + text_height*7-bar_offset_y, ((menu_item[curr_menu][selected_item][? "wep_weight"] - .25)/1.00)*100,c_black,c_red,c_lime,0,true,true );
 #endregion	
+
+	// draw weapon description
+	draw_set_color(c_grey)
+	draw_set_alpha(0.5)
+	draw_rectangle(0,offset + text_height*7.5, 450, global.camera_height,false)
+
+	draw_set_color(c_white)
+	draw_set_alpha(1.0)
+	draw_text_ext(10,offset + text_height*8,string(menu_item[curr_menu][selected_item][? "wep_description"]),text_height, 440)
 	// Draw the weapon statistics and the buy button
 
 	if (selected_item != noone){
