@@ -9,8 +9,8 @@ if (instance_exists(obj_player)){
 	var player_id = instance_place(x,y,obj_player)
 	
 	if (player_id != noone){
+		scr_add_money()
 		audio_play_sound(coin_collect,1,false)
-		global.playerMoney += value;
 		instance_destroy(id)	
 	}
 }

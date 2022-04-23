@@ -63,7 +63,11 @@ if ((change_weapon_forward || change_weapon_backward) && player_weapon.canShoot)
 
 // regenerating health
 if (curr_hp < max_hp){ 
-	curr_hp += regen_health_rate / room_speed
+	if (global.currGameState == gameState.DOWNTIME){
+		curr_hp += (regen_health_rate/room_speed) * 10
+	}else if (global.currGameState == gameState.RUNNING){
+		curr_hp += regen_health_rate / room_speed
+	}
 	curr_hp = min(curr_hp,max_hp)
 }
 

@@ -4,3 +4,5 @@ so_zombie_hit
 so_zombie_death
 so_pistol_reload
 
+
+so_minigun_fire https://freesound.org/people/Marregheriti/sounds/266101/

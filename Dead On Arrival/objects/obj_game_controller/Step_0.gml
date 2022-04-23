@@ -13,6 +13,8 @@ var pause_key = keyboard_check_pressed(vk_escape)
 
 if (instance_number(obj_enemy_parent) == 0 && global.currGameState != gameState.DOWNTIME){
 	alarm[0] = wave_delay
+	wave_delay_timer = wave_delay
+	global.prevgameState = global.currGameState
 	global.currGameState = gameState.DOWNTIME
 	with (instance_create_layer(0,0,"Instances", obj_text_slide)){
 		text_value = "Wave " + string(other.curr_wave) + " Completed"	
@@ -38,7 +40,7 @@ if (global.playerIsDead){
 		"F",
 		"Well, this was expected",
 		"At least you took " + string(global.totalKills) + " \nto hell with you",
-		string(global.totalKills) + " zombies down, about a billion more to go",
+		string(global.totalKills) + " zombies down, \nabout a billion more to go",
 		"Jeez, you made quite a mess",
 		"Do you want a band-aid?",
 		"We call this a difficulty tweak!",
@@ -68,6 +70,10 @@ if (keyboard_check_pressed(ord("R")) && global.playerIsDead){
 if (!window_has_focus()){
 	instance_create_layer(0,0,"Game_Objects",obj_pause)	
 }
+
+wave_delay_timer --;
+
+
 
 /*
 if (mouse_check_button_pressed(mb_left)){

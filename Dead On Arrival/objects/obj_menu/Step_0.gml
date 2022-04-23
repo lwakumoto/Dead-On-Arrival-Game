@@ -7,14 +7,22 @@ if (toggle && !global.playerIsDead){
 	selected_item = 0 // reset selection
 	
 	if (menu_active){ // deactivate all objects except the controller, the player, and the player weapon
+		global.prevGameState = global.currGameState
 		global.currGameState = gameState.PAUSED
+		
+
+		
 		instance_deactivate_all(true)
 		instance_activate_object(obj_player)
 		instance_activate_object(obj_player_weapon)
 		instance_activate_object(obj_gui)
+		
+
+
 	}
 	else{
-		global.currGameState = gameState.RUNNING	
+		global.currGameState = global.prevGameState
+		global.prevGameState = gameState.PAUSED
 		instance_activate_all()
 	}
 	
@@ -22,16 +30,17 @@ if (toggle && !global.playerIsDead){
 	
 }
 
-
-
-if (keyboard_check_pressed(ord("E"))){
-	curr_menu = (curr_menu + 1) % 3
-	selected_item = 0
+if (menu_active){
+		if (keyboard_check_pressed(ord("E"))){
+			curr_menu = (curr_menu + 1) % 3
+			selected_item = 0
+		}
+		if (keyboard_check_pressed(ord("Q"))){
+			curr_menu = (curr_menu - 1 + 3) % 3
+			selected_item = 0
+		}
 }
-if (keyboard_check_pressed(ord("Q"))){
-	curr_menu = (curr_menu - 1 + 3) % 3
-	selected_item = 0
-}
+
 
 if (keyboard_check(vk_up))  op_border_height ++	
 if (keyboard_check(vk_down)) op_border_height --

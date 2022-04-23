@@ -1,5 +1,5 @@
 /// @description Initialize the different particles we will be using
-global.particle_system = part_system_create_layer("Floor",true);
+global.particle_system = part_system_create_layer("Corpses",true);
 global.explosion_system = part_system_create_layer("Instances",true);
 
 

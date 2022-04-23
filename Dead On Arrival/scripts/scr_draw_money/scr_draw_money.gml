@@ -3,8 +3,15 @@
 function scr_draw_money(){
 	draw_set_color(c_white)
 	draw_set_font(fnt_health)
+	
+	var curr_money_str = scr_money_format(global.displayed_money )
+	var money_to_add_str = ""
+	
+	if (global.moneyToAdd != 0){
+		money_to_add_str = "  +  " + scr_money_format(global.moneyToAdd)	
+	}
 
-	draw_text(10,10,"Funds: " + scr_money_format(global.displayed_money ))
+	draw_text(10,10,"Funds: " + curr_money_str + money_to_add_str)
 
 
 
