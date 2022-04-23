@@ -1,5 +1,9 @@
 /// @description Spawn enemies
 
+
+global.currGameState = gameState.RUNNING;
+curr_wave ++;
+
 repeat(irandom_range(5,8)*curr_wave){
 	var rand_x = random_range(0,room_width)
 	var rand_y = random_range(0,2000)

@@ -3,7 +3,7 @@
 
 // Player Movement (to be worked on)
 
-if (global.currGameState == gameState.RUNNING){
+if (global.currGameState != gameState.PAUSED){
 
 #region // movement
 var right_pressed = keyboard_check(ord("D"));

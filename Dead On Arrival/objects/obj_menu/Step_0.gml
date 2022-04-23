@@ -23,11 +23,12 @@ if (toggle && !global.playerIsDead){
 }
 
 
-// check if the player clicked on an item
-if (mouse_check_button_pressed(mb_right)){
-	selected_item = 0
-	curr_menu = !curr_menu
-	
+
+if (keyboard_check_pressed(ord("E"))){
+	curr_menu = (curr_menu + 1) % 3
+}
+if (keyboard_check_pressed(ord("Q"))){
+	curr_menu = (curr_menu - 1 + 3) % 3
 }
 
 if (keyboard_check(vk_up))  op_border_height ++	

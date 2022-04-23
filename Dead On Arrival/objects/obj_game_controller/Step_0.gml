@@ -11,9 +11,12 @@ if (keyboard_check_pressed(ord("L"))){
 
 var pause_key = keyboard_check_pressed(vk_escape)
 
-if (instance_number(obj_enemy_parent) == 0){
-	alarm[0] = wave_delay = 10 * room_speed
-	curr_wave ++
+if (instance_number(obj_enemy_parent) == 0 && global.currGameState != gameState.DOWNTIME){
+	alarm[0] = wave_delay
+	global.currGameState = gameState.DOWNTIME
+	with (instance_create_layer(0,0,"Instances", obj_text_slide)){
+		text_value = "Wave " + string(other.curr_wave) + " Completed"	
+	}
 }
 
 

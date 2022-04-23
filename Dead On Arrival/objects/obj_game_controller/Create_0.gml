@@ -4,7 +4,7 @@ randomize()
 enum gameState {
 	PAUSED,
 	RUNNING,
-	CALM
+	DOWNTIME
 }
 
 global.currGameState = gameState.RUNNING
@@ -27,7 +27,7 @@ money_increment = 10
 
 
 curr_wave = 0
-wave_delay = 10 * room_speed
+wave_delay = 3 * room_speed
 
 
 

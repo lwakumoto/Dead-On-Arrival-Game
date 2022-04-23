@@ -6,6 +6,29 @@ if (menu_active){
 
 	draw_sprite_ext(sprite_index,image_index,0,0,menu_width div sprite_width + 1, menu_height div sprite_height,0,c_white,1)
 
+	draw_set_valign(fa_center)
+	draw_set_valign(fa_center)
+	draw_set_font(fnt_Tier)
+	var tier_text = ""
+	switch(curr_menu){
+		case 0:
+			draw_set_color(c_white)
+			tier_text = "Tier I"
+			break;
+		case 1:
+			tier_text = "Tier II"
+			draw_set_color(c_blue)
+			break;
+		case 2:
+			tier_text = "Tier III"
+			draw_set_color(c_orange)
+			break;
+	}
+	
+	draw_text(global.camera_width*(3/4),global.camera_height/8," < Q " + tier_text + " E >")
+	
+	draw_set_color(c_white)
+
 	draw_set_font(fnt_menu)
 	draw_set_valign(fa_top)
 	draw_set_halign(fa_left)
@@ -22,7 +45,7 @@ if (menu_active){
 	#region // draw weapon buttons
 	for (var i = 0; i < array_length(menu_item[curr_menu]); i ++){
 		var weapon_name = menu_item[curr_menu][i][? "wep_name"]
-		var button_start_y = global.camera_height/8
+		var button_start_y = global.camera_height/3
 		var button_height = string_height("Test") + 25
 		var padding = 10
 		curr_selected_weapon = i
@@ -61,34 +84,37 @@ if (menu_active){
 	var bar_offset_x = 180;
 	var bar_offset_y = 20;
 	var damage = obj_player_weapon.calibers[menu_item[curr_menu][selected_item][? "caliber"]][? "damage"];
+	var damage_str = string(damage)
 	if (obj_player_weapon.calibers[menu_item[curr_menu][selected_item][? "caliber"]][? "number_of_shot"] > 1){
 		damage *= obj_player_weapon.calibers[menu_item[curr_menu][selected_item][? "caliber"]][? "number_of_shot"]/2 
+		damage_str = damage_str + "x" + string(obj_player_weapon.calibers[menu_item[curr_menu][selected_item][? "caliber"]][? "number_of_shot"])
+		
 	}
 	
 	var penetration = obj_player_weapon.calibers[menu_item[curr_menu][selected_item][? "caliber"]][? "penetration"];
 	
 	var text_height = string_height("test");
 	
-	draw_text(10, offset, "Damage: ");
-	draw_healthbar(bar_offset_x,offset + bar_offset_y,bar_offset_x + 120,offset+text_height-bar_offset_y, (damage/30)*100,c_black,c_red,c_lime,0,true,true );
+	draw_text(10, offset, "Damage: " + damage_str);
+	//draw_healthbar(bar_offset_x,offset + bar_offset_y,bar_offset_x + 120,offset+text_height-bar_offset_y, (damage/30)*100,c_black,c_red,c_lime,0,true,true );
 	
-	draw_text(10, offset + text_height, "Penetration: ");
-	draw_healthbar(bar_offset_x,offset+text_height+bar_offset_y,bar_offset_x + 120,offset+text_height*2-bar_offset_y, (penetration/4)*100,c_black,c_red,c_lime,0,true,true );
+	draw_text(10, offset + text_height, "Penetration: " + string(penetration));
+	//draw_healthbar(bar_offset_x,offset+text_height+bar_offset_y,bar_offset_x + 120,offset+text_height*2-bar_offset_y, (penetration/4)*100,c_black,c_red,c_lime,0,true,true );
 	
-	draw_text(10, offset + text_height*2, "Fire Rate: ");
-	draw_healthbar(bar_offset_x,offset+text_height*2+bar_offset_y,bar_offset_x + 120,offset+text_height*3-bar_offset_y, (1/menu_item[curr_menu][selected_item][? "fire_delay"]/15)*100,c_black,c_red,c_lime,0,true,true );
+	draw_text(10, offset + text_height*2, "Fire Rate: " + string(room_speed/menu_item[curr_menu][selected_item][? "fire_delay"]));
+	//draw_healthbar(bar_offset_x,offset+text_height*2+bar_offset_y,bar_offset_x + 120,offset+text_height*3-bar_offset_y, (1/menu_item[curr_menu][selected_item][? "fire_delay"]/15)*100,c_black,c_red,c_lime,0,true,true );
 	
-	draw_text(10, offset + text_height*3, "Accuracy: "  );
-	draw_healthbar(bar_offset_x,offset+text_height*3+bar_offset_y,bar_offset_x + 120,offset + text_height*4-bar_offset_y, (1/menu_item[curr_menu][selected_item][? "spread"]/3.5)*100,c_black,c_red,c_lime,0,true,true );
+	draw_text(10, offset + text_height*3, "Spread: " + string(menu_item[curr_menu][selected_item][? "spread"]) );
+	//draw_healthbar(bar_offset_x,offset+text_height*3+bar_offset_y,bar_offset_x + 120,offset + text_height*4-bar_offset_y, (1/menu_item[curr_menu][selected_item][? "spread"]/3.5)*100,c_black,c_red,c_lime,0,true,true );
 	
-	draw_text(10, offset + text_height*4, "Reload Time: ");
-	draw_healthbar(bar_offset_x,offset+text_height*4+bar_offset_y,bar_offset_x + 120,offset + text_height*5-bar_offset_y, (1/menu_item[curr_menu][selected_item][? "reload_time"]/1.5)*100,c_black,c_red,c_lime,0,true,true );
+	draw_text(10, offset + text_height*4, "Reload Time: " + string(menu_item[curr_menu][selected_item][? "reload_time"]));
+	//draw_healthbar(bar_offset_x,offset+text_height*4+bar_offset_y,bar_offset_x + 120,offset + text_height*5-bar_offset_y, (1/menu_item[curr_menu][selected_item][? "reload_time"]/1.5)*100,c_black,c_red,c_lime,0,true,true );
 	
-	draw_text(10, offset + text_height*5, "Magazine Size: ");
-	draw_healthbar(bar_offset_x,offset+text_height*5+bar_offset_y,bar_offset_x + 120,offset + text_height*6-bar_offset_y, (menu_item[curr_menu][selected_item][? "mag_capacity"]/50)*100,c_black,c_red,c_lime,0,true,true );
+	draw_text(10, offset + text_height*5, "Magazine Size: " + string(menu_item[curr_menu][selected_item][? "mag_capacity"]));
+	//draw_healthbar(bar_offset_x,offset+text_height*5+bar_offset_y,bar_offset_x + 120,offset + text_height*6-bar_offset_y, (menu_item[curr_menu][selected_item][? "mag_capacity"]/50)*100,c_black,c_red,c_lime,0,true,true );
 	
-	draw_text(10, offset + text_height*6, "Maneuverability: ");
-	draw_healthbar(bar_offset_x,offset+text_height*6+bar_offset_y,bar_offset_x + 120,offset + text_height*7-bar_offset_y, ((menu_item[curr_menu][selected_item][? "wep_weight"] - .25)/1.00)*100,c_black,c_red,c_lime,0,true,true );
+	draw_text(10, offset + text_height*6, "Maneuverability: " + string(menu_item[curr_menu][selected_item][? "wep_weight"]));
+	//draw_healthbar(bar_offset_x,offset+text_height*6+bar_offset_y,bar_offset_x + 120,offset + text_height*7-bar_offset_y, ((menu_item[curr_menu][selected_item][? "wep_weight"] - .25)/1.00)*100,c_black,c_red,c_lime,0,true,true );
 #endregion	
 	// Draw the weapon statistics and the buy button
 

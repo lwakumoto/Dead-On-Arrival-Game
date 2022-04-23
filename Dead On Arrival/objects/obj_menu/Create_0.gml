@@ -42,6 +42,7 @@ INTERVENTION
 BASTARD
 
 */
+
 #endregion
 menu_item[0][0] = weapon.HI_POINT
 menu_item[0][1] = weapon.MP5K
@@ -60,6 +61,8 @@ menu_item[1][4] = weapon.BEOWULF
 menu_item[1][5] = weapon.ULTIMAX
 menu_item[1][6] = weapon.INTERVENTION
 menu_item[1][7] = weapon.BASTARD
+
+menu_item[2][0] = weapon.BASTARD
 
 curr_menu = 0
 

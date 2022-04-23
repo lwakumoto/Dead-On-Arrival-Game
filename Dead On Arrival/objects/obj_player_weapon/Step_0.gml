@@ -1,7 +1,7 @@
 /// @description Allow the player to fire and reload their weapons
 
 // correctly position the firearm
-if (global.currGameState == gameState.RUNNING){
+if (global.currGameState != gameState.PAUSED){
 if (owner != noone){
 	if (right_side){
 		var offset = 15
