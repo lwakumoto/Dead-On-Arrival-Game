@@ -16,6 +16,7 @@ var pause_key = keyboard_check_pressed(vk_escape)
 if (global.enemiesLeft == 0 && global.currGameState != gameState.DOWNTIME){
 	alarm[0] = wave_delay
 	wave_delay_timer = wave_delay
+
 	global.prevgameState = global.currGameState
 	global.currGameState = gameState.DOWNTIME
 	if (curr_wave != 0){
@@ -28,12 +29,17 @@ if (global.enemiesLeft == 0 && global.currGameState != gameState.DOWNTIME){
 
 // if there is a wave in progress, spawn enemies accoringly
 if (global.currGameState == gameState.RUNNING){
+	
+	repeat(max(curr_wave div 3 + irandom_range(-1,1),1)){
+		
 		if ((instance_number(obj_enemy_parent) < max_enemies_spawn(curr_wave)) 
-		&& (instance_number(obj_enemy_parent) < global.enemiesLeft)){
+		&& (instance_number(obj_enemy_parent) < global.enemiesLeft) 
+		&& wave_progress > 0){
 			if (alarm[1] == -1){
 				alarm[1] = spawn_delay	
 			}
 		}
+	}
 }
 
 

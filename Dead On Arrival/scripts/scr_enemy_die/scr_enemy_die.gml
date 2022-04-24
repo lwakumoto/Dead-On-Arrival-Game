@@ -9,7 +9,9 @@ function scr_enemy_die(x_origin,y_origin,enemy,by_explosion,coin_type){
 		corpse.image_xscale = image_xscale
 		corpse.image_yscale = image_yscale
 		instance_destroy(enemy)
-		audio_play_sound(so_zombie_death, 1, false);
+		audio_sound_pitch(enemy.death_sound,random_range(0.8,1.2))
+		audio_play_sound(enemy.death_sound, 1, false);
+		
 		if (!was_spawned){
 		scr_drop_money(x_origin,y_origin,enemy.value,enemy.coin_type) // only drop money if they aren't killed by an explosion or if it wasn't spawned by a car
 		}

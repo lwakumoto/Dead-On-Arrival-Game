@@ -16,11 +16,13 @@ function scr_enemy_attack(){
 		|| place_meeting(x,y,obj_player)){
 			scr_player_hurt(obj_player,dmg)
 		}
+		audio_play_sound(so_zombie_attack,1,0)
 	}
 	
 	// the attack function the boomer will use
 	attack_function_boomer = function(dmg){
-		
+		audio_sound_pitch(so_explosion,random_range(.8,1.2))
+		audio_play_sound_on(myEmitter,so_explosion,0,3);
 		scr_create_explosion(x,y,300,dmg, .003)
 		
 	}

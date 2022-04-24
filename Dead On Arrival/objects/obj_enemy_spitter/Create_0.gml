@@ -7,9 +7,9 @@ event_inherited();
 max_hp = 50
 hp = max_hp
 
-corpse_sprite = spr_enemy_spitter_corpse
-attack_animation = spr_enemy_spitter_attack
-idle_sprite = spr_enemy_spitter
+corpse_sprite = spr_enemy_spitter_corpse_alt
+attack_animation = spr_enemy_spitter_attack_alt
+idle_sprite = spr_enemy_spitter_alt
 
 alert_dist = 5000
 attack_dis = 250

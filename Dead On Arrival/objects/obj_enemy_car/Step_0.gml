@@ -27,4 +27,7 @@ if (hp <= 0){
 	scr_enemy_die(x,y,id,false)	
 }
 
+// move the emitter so it follows the car
+audio_emitter_position(myEmitter, x, y, 0)
+
 

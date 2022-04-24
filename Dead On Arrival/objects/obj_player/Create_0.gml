@@ -24,3 +24,10 @@ curr_hp = max_hp
 regen_health_rate = 5 // health regenerated per second
 
 player_spd = 5
+
+
+// create audio emitter for 3D sounds
+audio_listener_set_position(0,x,y,0);
+audio_listener_set_orientation(0,0,1,0,0,0,1);
+
+mainEmitter = audio_emitter_create()

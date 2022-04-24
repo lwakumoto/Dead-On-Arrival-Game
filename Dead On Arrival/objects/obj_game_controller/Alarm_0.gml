@@ -3,7 +3,9 @@
 global.prevgameState = global.currGameState
 global.currGameState = gameState.RUNNING;
 curr_wave ++;
+
 global.enemiesLeft = enemies_per_wave_func(curr_wave)
+wave_progress = global.enemiesLeft
 /*
 repeat(enemies_per_wave_func(curr_wave)){
 	var rand_x = random_range(0,room_width)

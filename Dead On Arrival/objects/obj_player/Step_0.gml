@@ -1,7 +1,12 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+// audio emitters, make the listener follow the player
+audio_listener_set_position(0,x,y,0);
+audio_emitter_position(mainEmitter,x,y,0);
+
 // Player Movement (to be worked on)
+
 
 if (global.currGameState != gameState.PAUSED){
 

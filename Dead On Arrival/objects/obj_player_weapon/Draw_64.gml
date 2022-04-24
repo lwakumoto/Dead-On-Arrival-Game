@@ -3,6 +3,15 @@
 // draw the weapon icon
 scr_draw_weapon_icon(0,global.camera_height - 175,175)
 
+if (ammunition[weapon_id][0] <= 0 && ammunition[weapon_id][1] <= 0){
+	draw_set_font(fnt_pause)
+	draw_set_halign(fa_center)
+	draw_set_valign(fa_center)
+	draw_text(global.camera_width/2,global.camera_height*(3/4),"You are out of Ammo! \n Press SPACE to buy more from the shop!")
+	draw_set_halign(fa_left)
+	draw_set_valign(fa_top)
+}
+
 /*
 var scale_factor = 0.25
 var icon_biggest_width = sprite_get_width(spr_weapon_sniper_intervention_silhouette)

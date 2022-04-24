@@ -6,3 +6,9 @@ so_pistol_reload
 
 
 so_minigun_fire https://freesound.org/people/Marregheriti/sounds/266101/
+so_car_honk https://freesound.org/people/mkoenig/sounds/81173/
+so_bomb https://freesound.org/people/PITCHEDsenses/sounds/488810/
+so_explosion https://freesound.org/people/tommccann/sounds/235968/
+
+so_dog_hurt https://freesound.org/people/n_audioman/sounds/325477/
+so_metal_impact https://freesound.org/people/ForTheHorde68/sounds/407349/

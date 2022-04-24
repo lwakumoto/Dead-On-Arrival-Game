@@ -42,4 +42,8 @@ coin_type = 0
 value = 10 // how much money they drop when killed
 
 
+hurt_sound = so_zombie_hit
+death_sound = so_zombie_death
+
+
 

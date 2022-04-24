@@ -18,3 +18,20 @@ image_yscale = image_xscale
 
 value = 15
 coin_type = 2
+
+
+
+myEmitter = 0;
+fallStart = 500;
+maxDist = 1000;
+useSound = so_car_drive
+
+
+myEmitter = audio_emitter_create();	
+audio_falloff_set_model(audio_falloff_exponent_distance);
+audio_emitter_falloff(myEmitter,fallStart,maxDist,1);
+audio_play_sound_on(myEmitter,useSound,1,2);
+audio_play_sound(so_car_honk,4,0);
+
+hurt_sound = so_metal_impact
+death_sound = so_explosion

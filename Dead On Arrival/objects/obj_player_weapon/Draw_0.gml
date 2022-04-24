@@ -27,7 +27,16 @@ if (!reloading){
 	else{
 		var offset = -15	
 	}
-	draw_sprite(spr_crosshair,0,mouse_x + lengthdir_x(offset,owner.direction - 90), mouse_y + lengthdir_y(offset,owner.direction - 90))
+	
+	var crosshair = noone
+	
+	if (ammunition[weapon_id][0] > 0){
+		crosshair = spr_crosshair	
+	} else{
+		crosshair = spr_out_of_ammo	
+	}
+	
+	draw_sprite(crosshair,0,mouse_x + lengthdir_x(offset,owner.direction - 90), mouse_y + lengthdir_y(offset,owner.direction - 90))
 	if (instance_exists(obj_reload_wheel)){
 		instance_destroy(obj_reload_wheel)	
 	}

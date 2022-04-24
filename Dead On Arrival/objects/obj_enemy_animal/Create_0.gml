@@ -24,3 +24,6 @@ coin_type = 1
 bias = 20
 
 calc_path_delay = 1;
+
+hurt_sound = so_dog_hurt
+death_sound = so_dog_death
