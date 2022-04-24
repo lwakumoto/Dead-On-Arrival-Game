@@ -12,3 +12,6 @@ so_explosion https://freesound.org/people/tommccann/sounds/235968/
 
 so_dog_hurt https://freesound.org/people/n_audioman/sounds/325477/
 so_metal_impact https://freesound.org/people/ForTheHorde68/sounds/407349/
+so_footstep_leaves https://freesound.org/people/InspectorJ/sounds/347850/
+so_footstep_concrete https://freesound.org/people/florianreichelt/sounds/459964/
+so_footstep_conrete2 https://freesound.org/people/patchytherat/sounds/535051/

@@ -34,6 +34,21 @@ if (place_meeting(x,y,obj_enemy_parent)){
 	speed_modifier *= 0.5
 }
 
+if (horiz_vel != 0 || vertic_vel != 0){
+	curr_walk_timer --;	
+}
+
+floor_type = instance_place(x,y,obj_sound_par)
+
+if (floor_type != noone){
+	if (curr_walk_timer <= 0){
+		audio_sound_pitch(floor_type.walk_sound, random_range(.8,1.2))
+		curr_walk_timer = walk_timer
+		audio_play_sound(floor_type.walk_sound,1,false)
+	}
+}
+
+
 
 x += horiz_vel * speed_modifier;
 y += vertic_vel * speed_modifier;
@@ -83,6 +98,5 @@ if (curr_hp < max_hp){
 if (curr_hp <= 0){ // kill the player if they get to a low enough health
 	scr_player_kill()
 }
-
 
 

@@ -30,4 +30,7 @@ player_spd = 5
 audio_listener_set_position(0,x,y,0);
 audio_listener_set_orientation(0,0,1,0,0,0,1);
 
+walk_timer = 20
+curr_walk_timer = walk_timer
+
 mainEmitter = audio_emitter_create()
