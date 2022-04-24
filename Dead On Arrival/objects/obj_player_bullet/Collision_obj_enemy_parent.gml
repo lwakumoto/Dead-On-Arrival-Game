@@ -6,6 +6,6 @@ if (ds_list_find_index(enemies_hit,other) == -1){
 	ds_list_add(enemies_hit,other)
 	scr_bullet_hit(id,other)
 	
-	damage *= 0.95 // decrease damage slightly
+	//damage *= 0.95 // decrease damage slightly
 	damage = ceil(damage)
 }

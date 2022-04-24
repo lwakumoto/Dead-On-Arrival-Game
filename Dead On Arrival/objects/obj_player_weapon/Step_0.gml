@@ -23,7 +23,7 @@ if (owner != noone){
 
 // allow the player to fire if they click and they have ammunition
 #region // firing
-if (fire_type == fireType.FULLAUTO){
+if (fire_type == fireType.FULLAUTO && ammunition[weapon_id][0] != 0){
 	var fire = mouse_check_button(mb_left)
 }
 else{
@@ -51,6 +51,10 @@ if (fire && canShoot) { // make it impossible to fire while already bursting
 		fire = false	
 	}
 }
+}
+
+if (fire && ammunition[weapon_id][0] <= 0 && canShoot){
+	audio_play_sound(so_dry_fire,1,false)	
 }
 
 if (((fire && ammunition[weapon_id][0] > 0 && canShoot)

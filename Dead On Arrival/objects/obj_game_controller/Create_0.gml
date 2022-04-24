@@ -9,7 +9,7 @@ enum gameState {
 
 global.currGameState = gameState.RUNNING
 global.prevGameState = noone
-global.playerMoney = 290340239
+global.playerMoney = 0
 global.displayed_money = 0
 global.moneyToAdd = 0
 global.moneyToAddTimer = 0;
@@ -48,7 +48,7 @@ max_waves = 15
 
 curr_wave = 0
 wave_delay = 5 * room_speed
-spawn_delay = 1 * room_speed
+spawn_delay = .75 * room_speed
 wave_delay_timer = wave_delay
 
 
