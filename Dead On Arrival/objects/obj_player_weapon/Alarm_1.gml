@@ -17,3 +17,5 @@ if (reloading){
 	image_index = 0
 	
 }
+
+

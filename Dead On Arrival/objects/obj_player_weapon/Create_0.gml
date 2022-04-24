@@ -69,12 +69,13 @@ enum caliberType {
 	_r12GAUGE = 3,
 	_r9x19 = 4,
 	_r408 = 5,
-	_mm = 6,
+	_mmCROWBAR = 6,
 	_r45 = 7,
 	_r762x39,
 	_rbeowulf,
 	_r308,
-	_r20GAUGE
+	_r20GAUGE,
+	_mmBASTARD
 }
 
 var num_calibers = 6
@@ -92,13 +93,12 @@ enum weaponType {
 // Each map corresponds to a stat of that weapon.
 global.num_weapons = 17;
 weapons[global.num_weapons - 1] = noone // the weapons array that will store the stats for each weapon
-
+global.weapon_kills = array_create(global.num_weapons)
 
 
 for (var i = 0; i < global.num_weapons; i ++){
 	weapons[i] = ds_map_create()
 }
-
 
 
 
@@ -126,6 +126,7 @@ weapons[weapon.MK18][? "caliber"] = caliberType._r556 // the caliber the weapon 
 weapons[weapon.MK18][? "spread"] = 1.5 // the spread of the weapon (in degrees)
 weapons[weapon.MK18][? "range"] = 1000 // how far the bullet will go before despawning
 weapons[weapon.MK18][? "fire_sound"] = so_rifle_fire
+weapons[weapon.MK18][? "reload_sound"] = so_rifle_reload2
 weapons[weapon.MK18][? "wep_cost"] = 2500 // the cost of purchase
 weapons[weapon.MK18][? "wep_silhouette"] = spr_weapon_assault_mk18_silhouette
 weapons[weapon.MK18][? "wep_description"] = "A classic 5.56 rifle about as American as apple pie"
@@ -152,6 +153,7 @@ weapons[weapon.G3A1][? "caliber"] = caliberType._r762
 weapons[weapon.G3A1][? "spread"] = 0.3
 weapons[weapon.G3A1][? "range"] = 1000 
 weapons[weapon.G3A1][? "fire_sound"] = so_gunire
+weapons[weapon.G3A1][? "reload_sound"] = so_rifle_reload1
 weapons[weapon.G3A1][? "wep_cost"] = 3500
 weapons[weapon.G3A1][? "wep_silhouette"] = spr_weapon_battle_g3_silhouette
 weapons[weapon.G3A1][? "wep_description"] = "This semi-auto rifle is chambered in the powerful 7.62x51mm round"
@@ -178,8 +180,10 @@ weapons[weapon.STONER][? "caliber"] = caliberType._r556
 weapons[weapon.STONER][? "spread"] = 2
 weapons[weapon.STONER][? "range"] = 1000 
 weapons[weapon.STONER][? "fire_sound"] = so_gunire
+weapons[weapon.STONER][? "reload_sound"] = so_machinegun_reload
 weapons[weapon.STONER][? "wep_cost"] =5000
 weapons[weapon.STONER][? "wep_silhouette"] = spr_weapon_lmg_stoner_silhouette
+weapons[weapon.STONER][? "wep_description"] = "Not THAT kind of stoner..."
 
 
 ammunition[weapon.STONER][0] = weapons[weapon.STONER][? "mag_capacity"] 
@@ -207,6 +211,7 @@ weapons[weapon.DEAGLE][? "fire_sound"] = so_deagle_fire
 weapons[weapon.DEAGLE][? "reload_sound"] = so_pistol_reload
 weapons[weapon.DEAGLE][? "wep_cost"] = 1500
 weapons[weapon.DEAGLE][? "wep_silhouette"] = spr_weapon_pistol_deagle_silhouette
+weapons[weapon.DEAGLE][? "wep_description"] = "Who cares about practicality, when you've got a giant gun that shoots giant bullets?"
 
 ammunition[weapon.DEAGLE][0] = weapons[weapon.DEAGLE][? "mag_capacity"] 
 ammunition[weapon.DEAGLE][1] = weapons[weapon.DEAGLE][? "reserve_ammo"] 
@@ -233,6 +238,7 @@ weapons[weapon.SPAS][? "fire_sound"] = so_shotgun_fire
 weapons[weapon.SPAS][? "reload_sound"] = so_shotgun_reload
 weapons[weapon.SPAS][? "wep_cost"] = 3000
 weapons[weapon.SPAS][? "wep_silhouette"] = spr_weapon_shotgun_spas_silhouette
+weapons[weapon.SPAS][? "wep_description"] = "A verstile semi-automatic shotgun that will leave those zombies dead in no time"
 
 ammunition[weapon.SPAS][0] = weapons[weapon.SPAS][? "mag_capacity"] 
 ammunition[weapon.SPAS][1] = weapons[weapon.SPAS][? "reserve_ammo"] 
@@ -256,8 +262,10 @@ weapons[weapon.MP5K][? "caliber"] = caliberType._r9x19
 weapons[weapon.MP5K][? "spread"] = 0.5 
 weapons[weapon.MP5K][? "range"] = 1000
 weapons[weapon.MP5K][? "fire_sound"] = so_gunire
+weapons[weapon.MP5K][? "reload_sound"] = so_rifle_reload1
 weapons[weapon.MP5K][? "wep_cost"] = 1000
 weapons[weapon.MP5K][? "wep_silhouette"] = spr_weapon_smg_mp5k_silhouette
+weapons[weapon.MP5K][? "wep_description"] = "Burst-fire carnage in a fist-sized package"
 
 ammunition[weapon.MP5K][0] = weapons[weapon.MP5K][? "mag_capacity"] 
 ammunition[weapon.MP5K][1] = weapons[weapon.MP5K][? "reserve_ammo"] 
@@ -282,8 +290,10 @@ weapons[weapon.INTERVENTION][? "caliber"] = caliberType._r408
 weapons[weapon.INTERVENTION][? "spread"] = 0.1
 weapons[weapon.INTERVENTION][? "range"] = 1000
 weapons[weapon.INTERVENTION][? "fire_sound"] = so_sniper_fire
+weapons[weapon.INTERVENTION][? "reload_sound"] = so_rifle_reload1
 weapons[weapon.INTERVENTION][? "wep_cost"] = 4000
 weapons[weapon.INTERVENTION][? "wep_silhouette"] = spr_weapon_sniper_intervention_silhouette33
+weapons[weapon.INTERVENTION][? "wep_description"] = "This anti-materiel rifle is for when you want to kill the target several miles away from you, and the target behind them, and the target behind them, and the..."
 
 ammunition[weapon.INTERVENTION][0] = weapons[weapon.INTERVENTION][? "mag_capacity"] 
 ammunition[weapon.INTERVENTION][1] = weapons[weapon.INTERVENTION][? "reserve_ammo"] 
@@ -297,18 +307,19 @@ weapons[weapon.BASTARD][? "wep_sprite"] = spr_weapon_melee_bastard
 weapons[weapon.BASTARD][? "wep_icon"] = spr_weapon_melee_bastard_colored
 weapons[weapon.BASTARD][? "wep_offset"] = 20
 weapons[weapon.BASTARD][? "mag_capacity"] = 999999
-weapons[weapon.BASTARD][? "wep_weight"] = 1.1
+weapons[weapon.BASTARD][? "wep_weight"] = .8
 weapons[weapon.BASTARD][? "reserve_ammo"] = 0
 weapons[weapon.BASTARD][? "fire_type"] = fireType.BOLT
-weapons[weapon.BASTARD][? "fire_delay"] = 0.5 
+weapons[weapon.BASTARD][? "fire_delay"] = 2
 weapons[weapon.BASTARD][? "reload_time"] = 1 
 weapons[weapon.BASTARD][? "reload_type"] = 0
-weapons[weapon.BASTARD][? "caliber"] = caliberType._mm
+weapons[weapon.BASTARD][? "caliber"] = caliberType._mmBASTARD
 weapons[weapon.BASTARD][? "spread"] = 0.01
-weapons[weapon.BASTARD][? "range"] = 10
+weapons[weapon.BASTARD][? "range"] = 20
 weapons[weapon.BASTARD][? "fire_sound"] = so_sword
-weapons[weapon.BASTARD][? "wep_cost"] = 2000
+weapons[weapon.BASTARD][? "wep_cost"] = 5000
 weapons[weapon.BASTARD][? "wep_silhouette"] = spr_weapon_melee_bastard_silhouette
+weapons[weapon.BASTARD][? "wep_description"] = "It's a giant freakin' sword, do I really need to explain?"
 
 ammunition[weapon.BASTARD][0] = weapons[weapon.BASTARD][? "mag_capacity"] 
 ammunition[weapon.BASTARD][1] = weapons[weapon.BASTARD][? "reserve_ammo"] 
@@ -333,6 +344,7 @@ weapons[weapon.HI_POINT][? "caliber"] = caliberType._r9x19
 weapons[weapon.HI_POINT][? "spread"] = 5
 weapons[weapon.HI_POINT][? "range"] = 500
 weapons[weapon.HI_POINT][? "fire_sound"] = so_deagle_fire
+weapons[weapon.HI_POINT][? "reload_sound"] = so_pistol_reload
 weapons[weapon.HI_POINT][? "wep_cost"] = 0
 weapons[weapon.HI_POINT][? "wep_silhouette"] = spr_weapon_pistol_c9_sillhouette
 weapons[weapon.HI_POINT][? "wep_description"] = "Cheap and reliable, just don't expect it to win any beauty contests"
@@ -359,8 +371,10 @@ weapons[weapon.VECTOR][? "caliber"] = caliberType._r45
 weapons[weapon.VECTOR][? "spread"] = 5
 weapons[weapon.VECTOR][? "range"] = 5000
 weapons[weapon.VECTOR][? "fire_sound"] = so_gunfire_suppressed
+weapons[weapon.VECTOR][? "reload_sound"] = so_rifle_reload2
 weapons[weapon.VECTOR][? "wep_cost"] = 4500
 weapons[weapon.VECTOR][? "wep_silhouette"] = spr_weapon_smg_vector_silhouette
+weapons[weapon.VECTOR][? "wep_description"] = "This smg looks like it came straight out of a sci-fi show"
 
 ammunition[weapon.VECTOR][0] = weapons[weapon.VECTOR][? "mag_capacity"] 
 ammunition[weapon.VECTOR][1] = weapons[weapon.VECTOR][? "reserve_ammo"] 
@@ -384,8 +398,10 @@ weapons[weapon.AK15][? "caliber"] = caliberType._r762x39
 weapons[weapon.AK15][? "spread"] = 2
 weapons[weapon.AK15][? "range"] = 500
 weapons[weapon.AK15][? "fire_sound"] = so_rifle_fire
+weapons[weapon.AK15][? "reload_sound"] = so_rifle_reload1
 weapons[weapon.AK15][? "wep_cost"] = 6500
 weapons[weapon.AK15][? "wep_silhouette"] = spr_weapon_assault_ak15_silhouette
+weapons[weapon.AK15][? "wep_description"] = "A Russian 7.62 weapon in the Kalishinikov family of rifles"
 
 ammunition[weapon.AK15][0] = weapons[weapon.AK15][? "mag_capacity"] 
 ammunition[weapon.AK15][1] = weapons[weapon.AK15][? "reserve_ammo"] 
@@ -409,8 +425,10 @@ weapons[weapon.BEOWULF][? "caliber"] = caliberType._rbeowulf
 weapons[weapon.BEOWULF][? "spread"] = 1
 weapons[weapon.BEOWULF][? "range"] = 500
 weapons[weapon.BEOWULF][? "fire_sound"] = so_gunire
+weapons[weapon.BEOWULF][? "reload_sound"] = so_rifle_reload2
 weapons[weapon.BEOWULF][? "wep_cost"] = 8000
 weapons[weapon.BEOWULF][? "wep_silhouette"] = spr_weapon_battle_beowulf_silhouette
+weapons[weapon.BEOWULF][? "wep_description"] = "A rifle that fires an impractically (and awesomely) large and powerful round"
 
 ammunition[weapon.BEOWULF][0] = weapons[weapon.BEOWULF][? "mag_capacity"] 
 ammunition[weapon.BEOWULF][1] = weapons[weapon.BEOWULF][? "reserve_ammo"] 
@@ -434,8 +452,10 @@ weapons[weapon.ULTIMAX][? "caliber"] = caliberType._r556
 weapons[weapon.ULTIMAX][? "spread"] = 5
 weapons[weapon.ULTIMAX][? "range"] = 5000
 weapons[weapon.ULTIMAX][? "fire_sound"] = so_gunire
+weapons[weapon.ULTIMAX][? "reload_sound"] = so_machinegun_reload
 weapons[weapon.ULTIMAX][? "wep_cost"] = 10000
 weapons[weapon.ULTIMAX][? "wep_silhouette"] = spr_weapon_lmg_ultimax_sillhouette
+weapons[weapon.ULTIMAX][? "wep_description"] = "A high-capacity machine gun with an innovative recoil system"
 
 ammunition[weapon.ULTIMAX][0] = weapons[weapon.ULTIMAX][? "mag_capacity"] 
 ammunition[weapon.ULTIMAX][1] = weapons[weapon.ULTIMAX][? "reserve_ammo"] 
@@ -459,8 +479,10 @@ weapons[weapon.TERMINATOR][? "caliber"] = caliberType._r20GAUGE
 weapons[weapon.TERMINATOR][? "spread"] = 25
 weapons[weapon.TERMINATOR][? "range"] = 500
 weapons[weapon.TERMINATOR][? "fire_sound"] = so_shotgun_fire
+weapons[weapon.TERMINATOR][? "reload_sound"] = so_shotgun_reload
 weapons[weapon.TERMINATOR][? "wep_cost"] = 500
 weapons[weapon.TERMINATOR][? "wep_silhouette"] = spr_weapon_shotgun_terminator_sillhouette
+weapons[weapon.TERMINATOR][? "wep_description"] = "This \"shotgun\" has earned the dubious honor of being the worst shotgun ever made, which it has most certainly earned"
 
 ammunition[weapon.TERMINATOR][0] = weapons[weapon.TERMINATOR][? "mag_capacity"] 
 ammunition[weapon.TERMINATOR][1] = weapons[weapon.TERMINATOR][? "reserve_ammo"] 
@@ -486,8 +508,10 @@ weapons[weapon.M40][? "caliber"] = caliberType._r308
 weapons[weapon.M40][? "spread"] = 0.1
 weapons[weapon.M40][? "range"] = 5000
 weapons[weapon.M40][? "fire_sound"] = so_sniper_fire
+weapons[weapon.M40][? "reload_sound"] = so_sniper_load
 weapons[weapon.M40][? "wep_cost"] = 2000
 weapons[weapon.M40][? "wep_silhouette"] = spr_weapon_sniper_m40_silhouette
+weapons[weapon.M40][? "wep_description"] = "Powerful, accurate, versatile, if it's good enough for the Marines, it's good enough for you"
 
 ammunition[weapon.M40][0] = weapons[weapon.M40][? "mag_capacity"] 
 ammunition[weapon.M40][1] = weapons[weapon.M40][? "reserve_ammo"] 
@@ -500,18 +524,19 @@ weapons[weapon.CROWBAR][? "wep_sprite"] = spr_weapon_melee_crowbar
 weapons[weapon.CROWBAR][? "wep_icon"] = spr_weapon_melee_crowbar_colored
 weapons[weapon.CROWBAR][? "wep_offset"] = 20
 weapons[weapon.CROWBAR][? "mag_capacity"] = 999999
-weapons[weapon.CROWBAR][? "wep_weight"] = 1.1
+weapons[weapon.CROWBAR][? "wep_weight"] = .9
 weapons[weapon.CROWBAR][? "reserve_ammo"] = 0
 weapons[weapon.CROWBAR][? "fire_type"] = fireType.BOLT
-weapons[weapon.CROWBAR][? "fire_delay"] = 0.5 
+weapons[weapon.CROWBAR][? "fire_delay"] = 1
 weapons[weapon.CROWBAR][? "reload_time"] = 1 
 weapons[weapon.CROWBAR][? "reload_type"] = 0
-weapons[weapon.CROWBAR][? "caliber"] = caliberType._mm
+weapons[weapon.CROWBAR][? "caliber"] = caliberType._mmCROWBAR
 weapons[weapon.CROWBAR][? "spread"] = 0.01
 weapons[weapon.CROWBAR][? "range"] = 10
 weapons[weapon.CROWBAR][? "fire_sound"] = so_sword
-weapons[weapon.CROWBAR][? "wep_cost"] = 1000
+weapons[weapon.CROWBAR][? "wep_cost"] = 3000
 weapons[weapon.CROWBAR][? "wep_silhouette"] = spr_weapon_melee_crowbar_silhouette
+weapons[weapon.CROWBAR][? "wep_description"] = "The right man in the wrong place can make all the difference in the world"
 
 ammunition[weapon.CROWBAR][0] = weapons[weapon.CROWBAR][? "mag_capacity"] 
 ammunition[weapon.CROWBAR][1] = weapons[weapon.CROWBAR][? "reserve_ammo"] 
@@ -536,6 +561,7 @@ weapons[weapon.MINIGUN][? "range"] = 5000
 weapons[weapon.MINIGUN][? "fire_sound"] = so_minigun_fire
 weapons[weapon.MINIGUN][? "wep_cost"] = 25000
 weapons[weapon.MINIGUN][? "wep_silhouette"] = spr_weapon_hmg_minigun_silhouette
+weapons[weapon.MINIGUN][? "wep_description"] = "Serves 60 servings of red-hot lead a second"
 
 ammunition[weapon.MINIGUN][0] = weapons[weapon.MINIGUN][? "mag_capacity"] 
 ammunition[weapon.MINIGUN][1] = weapons[weapon.MINIGUN][? "reserve_ammo"] 
@@ -558,7 +584,7 @@ for (var i = 0; i < global.num_weapons; i ++){// initialize the magazines and re
 /*
 	*---------------* INITIALIZE CALIBER STATISTICS *---------------*
 */
-var num_calibers = 12; // the number of unique calibers
+var num_calibers = 13; // the number of unique calibers
 calibers[num_calibers - 1] = noone
 
 for (var i = 0; i < num_calibers; i ++){
@@ -652,14 +678,23 @@ calibers[caliberType._r408][? "speed"] = 50
 calibers[caliberType._r408][? "number_of_shot"] = 1
 calibers[caliberType._r408][? "cost_per_shot"] = 30
 
-calibers[caliberType._mm][? "cal_name"] = ""
-calibers[caliberType._mm][? "cal_sprite"] = spr_player_bullet_magical_melee_ammo
-calibers[caliberType._mm][? "casing_sprite"] = 0
-calibers[caliberType._mm][? "damage"] = 50
-calibers[caliberType._mm][? "penetration"] = 999
-calibers[caliberType._mm][? "speed"] = 25
-calibers[caliberType._mm][? "number_of_shot"] = 1
-calibers[caliberType._mm][? "cost_per_shot"] = 0
+calibers[caliberType._mmCROWBAR][? "cal_name"] = ""
+calibers[caliberType._mmCROWBAR][? "cal_sprite"] = spr_player_bullet_magical_melee_ammo
+calibers[caliberType._mmCROWBAR][? "casing_sprite"] = 0
+calibers[caliberType._mmCROWBAR][? "damage"] = 30
+calibers[caliberType._mmCROWBAR][? "penetration"] = 999
+calibers[caliberType._mmCROWBAR][? "speed"] = 25
+calibers[caliberType._mmCROWBAR][? "number_of_shot"] = 1
+calibers[caliberType._mmCROWBAR][? "cost_per_shot"] = 0
+
+calibers[caliberType._mmBASTARD][? "cal_name"] = ""
+calibers[caliberType._mmBASTARD][? "cal_sprite"] = spr_player_bullet_magical_melee_ammo
+calibers[caliberType._mmBASTARD][? "casing_sprite"] = 0
+calibers[caliberType._mmBASTARD][? "damage"] = 60
+calibers[caliberType._mmBASTARD][? "penetration"] = 999
+calibers[caliberType._mmBASTARD][? "speed"] = 25
+calibers[caliberType._mmBASTARD][? "number_of_shot"] = 1
+calibers[caliberType._mmBASTARD][? "cost_per_shot"] = 0
 
 calibers[caliberType._rbeowulf][? "cal_name"] = ".50 Beowulf"
 calibers[caliberType._rbeowulf][? "cal_sprite"] = spr_player_bullet_full_powered

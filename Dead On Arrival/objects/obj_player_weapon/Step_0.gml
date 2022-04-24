@@ -61,7 +61,9 @@ if (((fire && ammunition[weapon_id][0] > 0 && canShoot)
 	|| (canShoot && bursting && curr_burst > 0 && ammunition[weapon_id][0] > 0))
 	&& !gun_obstructed){
 	image_speed = 1
-	sprite_set_speed(sprite_index, (sprite_get_number(sprite_index))/fire_delay, spritespeed_framespersecond);
+	if (weapon_type != weaponType.MELEE){
+		sprite_set_speed(sprite_index, (sprite_get_number(sprite_index))/fire_delay, spritespeed_framespersecond);
+	}
 	if (reloading){
 		reloading = false // firing cancels the reload
 		image_index = 0

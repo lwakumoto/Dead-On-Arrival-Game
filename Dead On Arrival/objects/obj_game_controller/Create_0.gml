@@ -7,15 +7,23 @@ enum gameState {
 	DOWNTIME
 }
 
+audio_play_sound(so_ambience,1,true)
+
 global.currGameState = gameState.RUNNING
 global.prevGameState = noone
-global.playerMoney = 100000
+global.playerMoney = 0
 global.displayed_money = 0
 global.moneyToAdd = 0
 global.moneyToAddTimer = 0;
 global.playerIsDead = false
 global.totalKills = 0
 global.enemiesLeft = 0
+
+
+global.favoriteWeapon = new favoriteWeapon(
+		"",
+		spr_weapon_assault_ak15_colored,
+		0)	
 
 
 

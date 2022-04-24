@@ -17,11 +17,11 @@
 
 		draw_set_font(fnt_game_over)
 		
-		draw_text_transformed(global.camera_width/2,global.camera_height/2,death_text,dead_text_size,dead_text_size,0)
+		draw_text_transformed(global.camera_width/2,global.camera_height*(5/8),death_text,dead_text_size,dead_text_size,0)
 		draw_set_font(fnt_health)
 		
 		if (dead_text_size <= 1.1){
-			draw_text(global.camera_width/2, global.camera_height/2  + string_height("Hello") + 25,	"Press R to Restart")
+			draw_text(global.camera_width/2, global.camera_height*(5/8)  + string_height("Hello") + 25,	"Press R to Restart")
 		}
 		
 	
@@ -40,5 +40,20 @@
 	draw_set_halign(fa_left)
 	
 	draw_text(10,20 + string_width("H"),"Kills: " + string(global.totalKills))
+	
+	if (global.playerIsDead){
+		
+	var width = global.camera_width/5
+	scr_draw_icon(global.camera_width*(1/2) - (width + 50),
+	0,
+	global.camera_width/5,
+	global.favoriteWeapon.icon)	
+	draw_text(global.camera_width*(1/2) - (width + 50), width, "Favorite Weapon: " + global.favoriteWeapon.name)
+	draw_set_halign(fa_right)
+	var  string_temp = "Kills: " + string(global.favoriteWeapon.kills)
+	draw_text(global.camera_width*(1/2) + (width + 40) - string_width(string_temp), width, string_temp)
+	draw_set_halign(fa_left)
+	}
+	
 	
 

@@ -15,3 +15,10 @@ so_metal_impact https://freesound.org/people/ForTheHorde68/sounds/407349/
 so_footstep_leaves https://freesound.org/people/InspectorJ/sounds/347850/
 so_footstep_concrete https://freesound.org/people/florianreichelt/sounds/459964/
 so_footstep_conrete2 https://freesound.org/people/patchytherat/sounds/535051/
+so_sniper_load https://freesound.org/people/AugustSandberg/sounds/508747/
+so_rifle_reload1 https://freesound.org/people/GFL7/sounds/276963/
+so_rifle_reload2 https://freesound.org/people/GFL7/sounds/276964/
+so_machinegun_reload https://freesound.org/people/ken788/sounds/386777/
+so_sniper_fire_bolt https://freesound.org/people/GFL7/sounds/276956/
+so_ambience https://freesound.org/people/klankbeeld/sounds/607116/
+so_ominous  https://freesound.org/people/mderr/sounds/403184/

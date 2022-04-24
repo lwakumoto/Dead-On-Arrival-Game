@@ -15,6 +15,10 @@ function scr_enemy_die(x_origin,y_origin,enemy,by_explosion,coin_type){
 		if (!was_spawned){
 		scr_drop_money(x_origin,y_origin,enemy.value,enemy.coin_type) // only drop money if they aren't killed by an explosion or if it wasn't spawned by a car
 		}
+		if (instance_exists(obj_player_weapon)){
+			global.weapon_kills[obj_player_weapon.weapon_id] ++	
+			//show_debug_message("Another kill for " + string(obj_player_weapon.weapon_id) + "For a total of " + string(global.weapon_kills[obj_player_weapon.weapon_id]))
+		}
 	}
 	else{
 		var _direction = point_direction(enemy.x,enemy.y,x_origin,y_origin)

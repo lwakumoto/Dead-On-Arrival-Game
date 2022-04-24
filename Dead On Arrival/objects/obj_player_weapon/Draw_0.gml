@@ -11,9 +11,12 @@ else{ // if the player is reloading, play the reloading animation
 }
 
 
-draw_set_alpha(0.6)
-scr_draw_laser(x + lengthdir_x(sprite_width/2,image_angle) ,y + lengthdir_y(sprite_width/2,image_angle)
+draw_set_alpha(0.7)
+if (weapon_type != weaponType.MELEE){
+	scr_draw_laser(x + lengthdir_x(sprite_width/2,image_angle) ,y + lengthdir_y(sprite_width/2,image_angle)
 				,image_angle,5000,c_green)
+}
+
 draw_set_alpha(1.0)
 
 

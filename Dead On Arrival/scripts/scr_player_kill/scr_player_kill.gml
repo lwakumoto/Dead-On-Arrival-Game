@@ -14,8 +14,28 @@ function scr_player_kill(){
 		pellet.direction = rand_dir;
 		pellet.image_angle = rand_dir;
 	}
+	
+favWeaponStruct = function(favoriteName, favoriteIcon,favoriteKills) constructor
+{
+	name = favoriteName
+	icon = favoriteIcon
+	kills = favoriteKills
+}
+
+	if (instance_exists(obj_player_weapon)){
+		delete global.favoriteWeapon
+		global.favoriteWeapon = new favWeaponStruct(
+		obj_player_weapon.weapons[scr_array_max_index(global.weapon_kills)][? "wep_name"],
+		obj_player_weapon.weapons[scr_array_max_index(global.weapon_kills)][? "wep_icon"],
+		global.weapon_kills[scr_array_max_index(global.weapon_kills)])	
+	}
+	
 	instance_deactivate_object(obj_player)
 	instance_deactivate_object(obj_player_weapon)
+	show_debug_message(global.favoriteWeapon.name)
+		show_debug_message(global.favoriteWeapon.kills)
+	
 	global.playerIsDead = true
+
 
 }
