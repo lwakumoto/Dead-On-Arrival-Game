@@ -30,7 +30,11 @@ repeat(1){
 		enemy_type = obj_enemy_boomer
 	}
 	else{
-		enemy_type = obj_enemy_car
+		if (curr_wave >= 5){ // only spawn cars on waves 5+
+			enemy_type = obj_enemy_car
+		} else{
+			enemy_type = obj_enemy	
+		}
 	}
 	wave_progress --
 	instance_create_layer(rand_x,rand_y,"Enemies",enemy_type)

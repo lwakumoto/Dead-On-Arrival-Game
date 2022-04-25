@@ -26,6 +26,21 @@
 		
 	
 		
+	
+		
+	}
+	if (global.currGameState = gameState.WON){
+		win_text_size += (1 - win_text_size)/25;
+		win_text_size = max(win_text_size,1)
+		
+		draw_set_font(fnt_game_over)
+		
+		draw_text_transformed(global.camera_width/2,global.camera_height*(5/8),win_text,win_text_size,win_text_size,0)
+		draw_set_font(fnt_health)
+		
+		if (dead_text_size <= 1.1){
+			draw_text(global.camera_width/2, global.camera_height*(5/8)  + string_height("Hello") + 25,	"Press R to Play Again")
+		}
 		
 		
 	}
@@ -41,7 +56,7 @@
 	
 	draw_text(10,20 + string_width("H"),"Kills: " + string(global.totalKills))
 	
-	if (global.playerIsDead){
+	if (global.playerIsDead || global.currGameState = gameState.WON){
 		
 	var width = global.camera_width/5
 	scr_draw_icon(global.camera_width*(1/2) - (width + 50),

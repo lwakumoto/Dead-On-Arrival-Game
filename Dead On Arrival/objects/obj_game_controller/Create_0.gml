@@ -4,7 +4,8 @@ randomize()
 enum gameState {
 	PAUSED,
 	RUNNING,
-	DOWNTIME
+	DOWNTIME,
+	WON
 }
 
 audio_play_sound(so_ambience,1,true)
@@ -41,11 +42,14 @@ dead_text_size = 10
 death_text = ""
 #endregion
 
+win_text_size = 10
+win_text = "Congratulations, You Won!"
+
 show_debug_message("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
 money_increment = 10
 
 enemies_per_wave_func = function(wave_num){
-	return ceil(power(wave_num,2) + wave_num*random_range(2,4) + random_range(5,10))
+	return ceil(power(wave_num,2.2) + wave_num*random_range(5,8) + random_range(5,10))
 }
 
 
@@ -54,7 +58,7 @@ max_enemies_spawn = function(wave_num){
 }
 wave_progress = 0
 
-max_waves = 15
+max_waves = 10
 
 
 

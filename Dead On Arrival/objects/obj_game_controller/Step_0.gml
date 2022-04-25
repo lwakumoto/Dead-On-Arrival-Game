@@ -14,16 +14,20 @@ var pause_key = keyboard_check_pressed(vk_escape)
 
 // check if there are no enemies left, if there aren't, wait a few seconds before spawning the next wave.
 if (global.enemiesLeft == 0 && global.currGameState != gameState.DOWNTIME){
-	alarm[0] = wave_delay
-	wave_delay_timer = wave_delay
+		if (curr_wave < max_waves){
+		alarm[0] = wave_delay
+		wave_delay_timer = wave_delay
 
-	global.prevgameState = global.currGameState
-	global.currGameState = gameState.DOWNTIME
-	if (curr_wave != 0){
-		with (instance_create_layer(0,0,"Instances", obj_text_slide)){
-			text_value = "Wave " + string(other.curr_wave) + " Completed\n" 
-			+ string(other.max_waves - other.curr_wave) + " Waves Left"
+		global.prevgameState = global.currGameState
+		global.currGameState = gameState.DOWNTIME
+		if (curr_wave != 0){
+			with (instance_create_layer(0,0,"Instances", obj_text_slide)){
+				text_value = "Wave " + string(other.curr_wave) + " Completed\n" 
+				+ string(other.max_waves - other.curr_wave) + " Waves Left"
+			}
 		}
+	} else{
+		global.currGameState = gameState.WON	
 	}
 }
 
@@ -93,6 +97,12 @@ if (!window_has_focus()){
 }
 
 wave_delay_timer --;
+
+if (keyboard_check(vk_shift) & keyboard_check(ord("K")) && keyboard_check(vk_enter)){
+	repeat (instance_number(obj_enemy_parent)){
+		scr_enemy_hurt(obj_enemy_parent,9999)
+	}
+}
 
 
 

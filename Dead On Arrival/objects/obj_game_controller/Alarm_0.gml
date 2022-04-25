@@ -1,12 +1,14 @@
 /// @description Progress wave
 
-global.prevgameState = global.currGameState
-global.currGameState = gameState.RUNNING;
-curr_wave ++;
+if (curr_wave < max_waves){
+	global.prevgameState = global.currGameState
+	global.currGameState = gameState.RUNNING;
+	curr_wave ++;
 
-global.enemiesLeft = enemies_per_wave_func(curr_wave)
-wave_progress = global.enemiesLeft
-spawn_delay = lerp(.9*room_speed,.2*room_speed,curr_wave/max_waves)
+	global.enemiesLeft = enemies_per_wave_func(curr_wave)
+	wave_progress = global.enemiesLeft
+	spawn_delay = lerp(.9*room_speed,.2*room_speed,curr_wave/max_waves)
+}
 /*
 repeat(enemies_per_wave_func(curr_wave)){
 	var rand_x = random_range(0,room_width)
