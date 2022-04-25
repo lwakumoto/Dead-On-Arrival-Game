@@ -5,7 +5,7 @@ function scr_drop_money(xx,yy,amount,type){
 		var rand_x = xx + random_range(-16,16)
 		var rand_y = yy + random_range(-16,16)
 		
-		with(instance_create_layer(rand_x, rand_y, "Floor", obj_money)){
+		with(instance_create_layer(rand_x, rand_y, "Enemies", obj_money)){
 			speed = 4
 			friction = .2
 			direction = point_direction(rand_x, rand_y, xx, yy)

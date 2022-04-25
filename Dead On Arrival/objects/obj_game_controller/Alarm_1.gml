@@ -2,16 +2,9 @@
 var rand_x = random_range(0,room_width)
 var rand_y = random_range(0,2000)
 
-var num_to_spawn = max((curr_wave div 4) + irandom_range(-1,1),1)
-if (num_to_spawn + instance_number(obj_enemy_parent) > global.enemiesLeft){
-	num_to_spawn = global.enemiesLeft	
-}
-if (num_to_spawn + instance_number(obj_enemy_parent) > max_enemies_spawn(curr_wave)){
-	num_to_spawn =  num_to_spawn - max_enemies_spawn(curr_wave)
-}
 
 	
-repeat(num_to_spawn){
+repeat(1){
 	while (collision_circle(rand_x,rand_y,50,obj_obstacle,true,true)
 	|| collision_circle(rand_x,rand_y,250,obj_player,true,true)){
 		var rand_x = random_range(0,room_width)

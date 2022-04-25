@@ -19,11 +19,18 @@ global.playerIsDead = false
 global.totalKills = 0
 global.enemiesLeft = 0
 
+favWeaponStruct = function(favoriteName, favoriteIcon,favoriteKills) constructor
+{
+	name = favoriteName
+	icon = favoriteIcon
+	kills = favoriteKills
+}
 
-global.favoriteWeapon = new favoriteWeapon(
+
+global.favoriteWeapon = new favWeaponStruct(
 		"",
 		spr_weapon_assault_ak15_colored,
-		0)	
+		weapon.HI_POINT)	
 
 
 

@@ -4,6 +4,7 @@ var toggle = keyboard_check_pressed(vk_space)
 
 if (toggle && !global.playerIsDead){
 	menu_active = !menu_active	
+	audio_stop_sound(so_ambience);
 	selected_item = 0 // reset selection
 	
 	if (menu_active){ // deactivate all objects except the controller, the player, and the player weapon
@@ -21,6 +22,7 @@ if (toggle && !global.playerIsDead){
 
 	}
 	else{
+		audio_play_sound(so_ambience,1,true)
 		global.currGameState = global.prevGameState
 		global.prevGameState = gameState.PAUSED
 		instance_activate_all()

@@ -4,3 +4,4 @@ value = 0
 
 collect_radius = 250;
 coin_spd = 10
+image_speed = 0
