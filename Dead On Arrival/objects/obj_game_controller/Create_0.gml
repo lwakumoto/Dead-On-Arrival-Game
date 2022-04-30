@@ -64,7 +64,7 @@ max_waves = 10
 
 
 
-curr_wave = 9
+curr_wave = 0
 wave_delay = 5 * room_speed
 spawn_delay = .65 * room_speed
 wave_delay_timer = wave_delay
