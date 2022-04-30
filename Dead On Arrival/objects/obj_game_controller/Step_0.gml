@@ -104,6 +104,14 @@ if (keyboard_check(vk_shift) & keyboard_check(ord("K")) && keyboard_check(vk_ent
 	}
 }
 
+if (keyboard_check(vk_shift)){
+	if (keyboard_check(ord("M"))){
+		repeat(100){
+			instance_create_layer(obj_player.x,obj_player.y,"Instances",obj_money)	
+		}
+	}
+}
+
 
 
 /*

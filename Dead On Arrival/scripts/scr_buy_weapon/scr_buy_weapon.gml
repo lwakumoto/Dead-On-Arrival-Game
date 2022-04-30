@@ -3,11 +3,21 @@
 function scr_buy_weapon(wep_id, cost){
 	if (instance_exists(obj_player) && instance_exists(obj_player_weapon)){
 		
+
+		
 		 // check if the player already has the weapon to afford duplicates and if they cann afford it
 		if (!scr_player_has_weapon(wep_id)){
 			if (scr_drain_money(cost)){
 				ds_list_add(obj_player.weapon_inventory,wep_id)
-			}
+				
+				with (obj_player_weapon){
+					scr_change_weapon(wep_id)
+				}
+				with (obj_player){
+					current_weapon = ds_list_size(weapon_inventory) - 1
+				}
+				
+			}			
 		}
 	}
 	else{

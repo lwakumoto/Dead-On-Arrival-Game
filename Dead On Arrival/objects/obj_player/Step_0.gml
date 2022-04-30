@@ -62,8 +62,8 @@ image_angle = direction
 
 // Handle weapon changing
 #region // changing weapons
-var change_weapon_forward = keyboard_check_pressed(ord("E"))
-var change_weapon_backward = keyboard_check_pressed(ord("Q"))
+var change_weapon_forward = keyboard_check_pressed(ord("E")) || mouse_wheel_up()
+var change_weapon_backward = keyboard_check_pressed(ord("Q")) || mouse_wheel_down()
 
 if ((change_weapon_forward || change_weapon_backward) && player_weapon.canShoot){
 	if (change_weapon_forward) current_weapon = (current_weapon + 1) % ds_list_size(weapon_inventory)
