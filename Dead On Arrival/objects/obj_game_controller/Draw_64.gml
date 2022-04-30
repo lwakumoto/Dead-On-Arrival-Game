@@ -58,6 +58,27 @@
 	
 	if (global.playerIsDead || global.currGameState = gameState.WON){
 		
+		favWeaponStruct = function(favoriteName, favoriteIcon,favoriteKills) constructor
+		{
+			name = favoriteName
+			icon = favoriteIcon
+			kills = favoriteKills
+		}
+
+	if (instance_exists(obj_player_weapon)){
+		delete global.favoriteWeapon
+		global.favoriteWeapon = new favWeaponStruct(
+		obj_player_weapon.weapons[scr_array_max_index(global.weapon_kills)][? "wep_name"],
+		obj_player_weapon.weapons[scr_array_max_index(global.weapon_kills)][? "wep_icon"],
+		global.weapon_kills[scr_array_max_index(global.weapon_kills)])	
+	}
+	
+		
+		
+		
+		
+		
+		
 	var width = global.camera_width/5
 	scr_draw_icon(global.camera_width*(1/2) - (width + 50),
 	0,
@@ -71,4 +92,14 @@
 	}
 	
 	
+	
 
+
+// toggle slow-motion 
+if (keyboard_check(vk_shift) && keyboard_check_pressed(ord("T"))){
+	if (room_speed == 60){
+		room_speed = 30	
+	}else {
+		room_speed = 60	
+	}
+}

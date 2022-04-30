@@ -37,6 +37,6 @@ if (place_meeting(x, y - casing_vel[1] * spd,obj_obstacle)){
 
 }
 
-
+image_alpha = lerp(0.3,1,height/max_height)
 image_xscale = lerp(0.8,1,height/max_height)
 image_yscale = image_xscale

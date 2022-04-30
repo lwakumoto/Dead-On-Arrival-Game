@@ -3,6 +3,9 @@
 x += (xTo - x)/25;
 y += (yTo - y)/25;
 
+
+
+
 var cam_w = camera_get_view_width(id)
 var cam_ww = cam_w*.5;
 

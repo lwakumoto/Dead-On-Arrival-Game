@@ -82,7 +82,7 @@ if ((change_weapon_forward || change_weapon_backward) && player_weapon.canShoot)
 #endregion
 
 // regenerating health
-if (curr_hp < max_hp){ 
+if (curr_hp <= max_hp){ 
 	if (global.currGameState == gameState.DOWNTIME){
 		curr_hp += (regen_health_rate/room_speed) * 10
 	}else if (global.currGameState == gameState.RUNNING){

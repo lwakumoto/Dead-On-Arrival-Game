@@ -236,7 +236,7 @@ weapons[weapon.SPAS][? "spread"] = 15
 weapons[weapon.SPAS][? "range"] = 555
 weapons[weapon.SPAS][? "fire_sound"] = so_shotgun_fire
 weapons[weapon.SPAS][? "reload_sound"] = so_shotgun_reload
-weapons[weapon.SPAS][? "wep_cost"] = 3000
+weapons[weapon.SPAS][? "wep_cost"] = 5000
 weapons[weapon.SPAS][? "wep_silhouette"] = spr_weapon_shotgun_spas_silhouette
 weapons[weapon.SPAS][? "wep_description"] = "A verstile semi-automatic shotgun that will leave those zombies dead in no time"
 

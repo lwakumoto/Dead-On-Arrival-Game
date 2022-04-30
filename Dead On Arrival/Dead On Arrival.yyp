@@ -153,6 +153,7 @@
     {"id":{"name":"spr_weapon_battle_beowulf","path":"sprites/spr_weapon_battle_beowulf/spr_weapon_battle_beowulf.yy",},"order":29,},
     {"id":{"name":"spr_player_bullet_anti_materiel","path":"sprites/spr_player_bullet_anti_materiel/spr_player_bullet_anti_materiel.yy",},"order":5,},
     {"id":{"name":"spr_enemy_boomer_corpse","path":"sprites/spr_enemy_boomer_corpse/spr_enemy_boomer_corpse.yy",},"order":19,},
+    {"id":{"name":"fullscreen","path":"objects/fullscreen/fullscreen.yy",},"order":5,},
     {"id":{"name":"spr_weapon_assault_mk18","path":"sprites/spr_weapon_assault_mk18/spr_weapon_assault_mk18.yy",},"order":12,},
     {"id":{"name":"spr_player_bullet_full_powered","path":"sprites/spr_player_bullet_full_powered/spr_player_bullet_full_powered.yy",},"order":2,},
     {"id":{"name":"About_Sounds","path":"notes/About_Sounds/About_Sounds.yy",},"order":1,},
@@ -302,7 +303,7 @@
     {"name":"Windows","path":"options/windows/options_windows.yy",},
     {"name":"operagx","path":"options/operagx/options_operagx.yy",},
   ],
-  "defaultScriptType": 1,
+  "isDnDProject": false,
   "isEcma": false,
   "configs": {
     "name": "Default",
@@ -362,11 +363,11 @@
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},
   ],
   "TextureGroups": [
-    {"isScaled":true,"compressFormat":"bz2","autocrop":true,"border":2,"mipsToGenerate":0,"groupParent":null,"targets":-1,"resourceVersion":"1.3","name":"Default","resourceType":"GMTextureGroup",},
+    {"isScaled":true,"autocrop":true,"border":2,"mipsToGenerate":0,"groupParent":null,"targets":-1,"resourceVersion":"1.3","name":"Default","resourceType":"GMTextureGroup",},
   ],
   "IncludedFiles": [],
   "MetaData": {
-    "IDEVersion": "2022.3.0.625",
+    "IDEVersion": "2022.2.0.614",
   },
   "resourceVersion": "1.5",
   "name": "Dead On Arrival",

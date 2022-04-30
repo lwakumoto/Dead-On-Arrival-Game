@@ -35,7 +35,6 @@ global.favoriteWeapon = new favWeaponStruct(
 
 
 
-
 #region // deathText
 display_dead_text = false // wether to display the death message or not
 dead_text_size = 10
@@ -65,7 +64,7 @@ max_waves = 10
 
 
 
-curr_wave = 0
+curr_wave = 9
 wave_delay = 5 * room_speed
 spawn_delay = .65 * room_speed
 wave_delay_timer = wave_delay

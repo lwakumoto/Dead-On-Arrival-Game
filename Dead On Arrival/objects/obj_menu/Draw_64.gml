@@ -66,16 +66,19 @@ if (menu_active){
 
 	
 	var offset = 50
+	show_debug_message("SELECTED ITEM VALUE" + string(selected_item))
+	show_debug_message("LENGTH OF MENU ITEM CURR MENU" + string(min(selected_item,array_length(menu_item[curr_menu])) - 1))
+	 selected_menu_item = menu_item[curr_menu][min(selected_item,array_length(menu_item[curr_menu]) - 1)]
 	
 	// draw the icon of the selected item
 	if (selected_item != noone){
 
-		if (!scr_player_has_weapon(menu_item[curr_menu][selected_item][? "wep_id"])){
-			scr_draw_icon(10,offset,global.camera_width/4,menu_item[curr_menu][selected_item][? "wep_silhouette"])
+		if (!scr_player_has_weapon(selected_menu_item[? "wep_id"])){
+			scr_draw_icon(10,offset,global.camera_width/4,selected_menu_item[? "wep_silhouette"])
 		} else{
-			scr_draw_icon(10,offset,global.camera_width/4,menu_item[curr_menu][selected_item][? "wep_icon"])
+			scr_draw_icon(10,offset,global.camera_width/4,selected_menu_item[? "wep_icon"])
 		}
-		draw_text(offset,offset,menu_item[curr_menu][selected_item][? "wep_name"])
+		draw_text(offset,offset,selected_menu_item[? "wep_name"])
 
 		
 	}
@@ -83,15 +86,15 @@ if (menu_active){
 	offset += global.camera_width/4 + 25;
 	var bar_offset_x = 180;
 	var bar_offset_y = 20;
-	var damage = obj_player_weapon.calibers[menu_item[curr_menu][selected_item][? "caliber"]][? "damage"];
+	var damage = obj_player_weapon.calibers[selected_menu_item[? "caliber"]][? "damage"];
 	var damage_str = string(damage)
-	if (obj_player_weapon.calibers[menu_item[curr_menu][selected_item][? "caliber"]][? "number_of_shot"] > 1){
-		damage *= obj_player_weapon.calibers[menu_item[curr_menu][selected_item][? "caliber"]][? "number_of_shot"]/2 
-		damage_str = damage_str + "x" + string(obj_player_weapon.calibers[menu_item[curr_menu][selected_item][? "caliber"]][? "number_of_shot"])
+	if (obj_player_weapon.calibers[selected_menu_item[? "caliber"]][? "number_of_shot"] > 1){
+		damage *= obj_player_weapon.calibers[selected_menu_item[? "caliber"]][? "number_of_shot"]/2 
+		damage_str = damage_str + "x" + string(obj_player_weapon.calibers[selected_menu_item[? "caliber"]][? "number_of_shot"])
 		
 	}
 	
-	var penetration = obj_player_weapon.calibers[menu_item[curr_menu][selected_item][? "caliber"]][? "penetration"];
+	var penetration = obj_player_weapon.calibers[selected_menu_item[? "caliber"]][? "penetration"];
 	
 	var text_height = string_height("test");
 	
@@ -101,20 +104,20 @@ if (menu_active){
 	draw_text(10, offset + text_height, "Penetration: " + string(penetration));
 	//draw_healthbar(bar_offset_x,offset+text_height+bar_offset_y,bar_offset_x + 120,offset+text_height*2-bar_offset_y, (penetration/4)*100,c_black,c_red,c_lime,0,true,true );
 	
-	draw_text(10, offset + text_height*2, "Fire Rate: " + string(room_speed/menu_item[curr_menu][selected_item][? "fire_delay"]));
-	//draw_healthbar(bar_offset_x,offset+text_height*2+bar_offset_y,bar_offset_x + 120,offset+text_height*3-bar_offset_y, (1/menu_item[curr_menu][selected_item][? "fire_delay"]/15)*100,c_black,c_red,c_lime,0,true,true );
+	draw_text(10, offset + text_height*2, "Fire Rate: " + string(room_speed/selected_menu_item[? "fire_delay"]));
+	//draw_healthbar(bar_offset_x,offset+text_height*2+bar_offset_y,bar_offset_x + 120,offset+text_height*3-bar_offset_y, (1/selected_menu_item[? "fire_delay"]/15)*100,c_black,c_red,c_lime,0,true,true );
 	
-	draw_text(10, offset + text_height*3, "Spread: " + string(menu_item[curr_menu][selected_item][? "spread"]) );
-	//draw_healthbar(bar_offset_x,offset+text_height*3+bar_offset_y,bar_offset_x + 120,offset + text_height*4-bar_offset_y, (1/menu_item[curr_menu][selected_item][? "spread"]/3.5)*100,c_black,c_red,c_lime,0,true,true );
+	draw_text(10, offset + text_height*3, "Spread: " + string(selected_menu_item[? "spread"]) );
+	//draw_healthbar(bar_offset_x,offset+text_height*3+bar_offset_y,bar_offset_x + 120,offset + text_height*4-bar_offset_y, (1/selected_menu_item[? "spread"]/3.5)*100,c_black,c_red,c_lime,0,true,true );
 	
-	draw_text(10, offset + text_height*4, "Reload Time: " + string(menu_item[curr_menu][selected_item][? "reload_time"]));
-	//draw_healthbar(bar_offset_x,offset+text_height*4+bar_offset_y,bar_offset_x + 120,offset + text_height*5-bar_offset_y, (1/menu_item[curr_menu][selected_item][? "reload_time"]/1.5)*100,c_black,c_red,c_lime,0,true,true );
+	draw_text(10, offset + text_height*4, "Reload Time: " + string(selected_menu_item[? "reload_time"]));
+	//draw_healthbar(bar_offset_x,offset+text_height*4+bar_offset_y,bar_offset_x + 120,offset + text_height*5-bar_offset_y, (1/selected_menu_item[? "reload_time"]/1.5)*100,c_black,c_red,c_lime,0,true,true );
 	
-	draw_text(10, offset + text_height*5, "Magazine Size: " + string(menu_item[curr_menu][selected_item][? "mag_capacity"]));
-	//draw_healthbar(bar_offset_x,offset+text_height*5+bar_offset_y,bar_offset_x + 120,offset + text_height*6-bar_offset_y, (menu_item[curr_menu][selected_item][? "mag_capacity"]/50)*100,c_black,c_red,c_lime,0,true,true );
+	draw_text(10, offset + text_height*5, "Magazine Size: " + string(selected_menu_item[? "mag_capacity"]));
+	//draw_healthbar(bar_offset_x,offset+text_height*5+bar_offset_y,bar_offset_x + 120,offset + text_height*6-bar_offset_y, (selected_menu_item[? "mag_capacity"]/50)*100,c_black,c_red,c_lime,0,true,true );
 	
-	draw_text(10, offset + text_height*6, "Maneuverability: " + string(menu_item[curr_menu][selected_item][? "wep_weight"]));
-	//draw_healthbar(bar_offset_x,offset+text_height*6+bar_offset_y,bar_offset_x + 120,offset + text_height*7-bar_offset_y, ((menu_item[curr_menu][selected_item][? "wep_weight"] - .25)/1.00)*100,c_black,c_red,c_lime,0,true,true );
+	draw_text(10, offset + text_height*6, "Maneuverability: " + string(selected_menu_item[? "wep_weight"]));
+	//draw_healthbar(bar_offset_x,offset+text_height*6+bar_offset_y,bar_offset_x + 120,offset + text_height*7-bar_offset_y, ((selected_menu_item[? "wep_weight"] - .25)/1.00)*100,c_black,c_red,c_lime,0,true,true );
 #endregion	
 
 	// draw weapon description
@@ -124,32 +127,32 @@ if (menu_active){
 
 	draw_set_color(c_white)
 	draw_set_alpha(1.0)
-	draw_text_ext(10,offset + text_height*8,string(menu_item[curr_menu][selected_item][? "wep_description"]),text_height, 440)
+	draw_text_ext(10,offset + text_height*8,string(selected_menu_item[? "wep_description"]),text_height, 440)
 	// Draw the weapon statistics and the buy button
 
 	if (selected_item != noone){
-		if (!scr_player_has_weapon(menu_item[curr_menu][selected_item][? "wep_id"])){ // If the player already has the weapon, sell ammo instead
+		if (!scr_player_has_weapon(selected_menu_item[? "wep_id"])){ // If the player already has the weapon, sell ammo instead
 			
 			
-			draw_text_transformed(global.camera_width/3,offset, "Cost: " + scr_money_format(menu_item[curr_menu][selected_item][? "wep_cost"]) , 1.5,1.5,0)
+			draw_text_transformed(global.camera_width/3,offset, "Cost: " + scr_money_format(selected_menu_item[? "wep_cost"]) , 1.5,1.5,0)
 
 			draw_set_color(c_white)
 			
 			scr_draw_clickable_button(global.camera_width*(2/5),global.camera_height*(3/5),"BUY", fnt_menu, 32, 16, function(){
-				scr_buy_weapon(menu_item[curr_menu][selected_item], menu_item[curr_menu][selected_item][? "wep_cost"])})
+				scr_buy_weapon(selected_menu_item, selected_menu_item[? "wep_cost"])})
 				
 		} else{
-			var mag_size = menu_item[curr_menu][selected_item][? "mag_capacity"]
-			var mag_cost = obj_player_weapon.calibers[menu_item[curr_menu][selected_item][? "caliber"]][? "cost_per_shot"] * mag_size
+			var mag_size = selected_menu_item[? "mag_capacity"]
+			var mag_cost = obj_player_weapon.calibers[selected_menu_item[? "caliber"]][? "cost_per_shot"] * mag_size
 			
 			draw_text_transformed(global.camera_width/3,offset, "1 magazine: " + scr_money_format(mag_cost) , 1.5,1.5,0)
 			
 			scr_draw_clickable_button(global.camera_width*(2/5),offset + text_height + 32,"BUY AMMO", fnt_menu, 32, 16, function(){
-				var mag_size = menu_item[curr_menu][selected_item][? "mag_capacity"]
-				var mag_cost = obj_player_weapon.calibers[menu_item[curr_menu][selected_item][? "caliber"]][? "cost_per_shot"] * mag_size
+				var mag_size = selected_menu_item[? "mag_capacity"]
+				var mag_cost = obj_player_weapon.calibers[selected_menu_item[? "caliber"]][? "cost_per_shot"] * mag_size
 
 				if (scr_drain_money(mag_cost)){
-					obj_player_weapon.ammunition[menu_item[curr_menu][selected_item]][1] += mag_size
+					obj_player_weapon.ammunition[selected_menu_item][1] += mag_size
 				}
 					
 				
@@ -158,11 +161,11 @@ if (menu_active){
 			draw_text_transformed(global.camera_width/3,offset + (text_height + 32)*2, "3 magazines: " + scr_money_format(mag_cost*3) , 1.5,1.5,0)
 			
 			scr_draw_clickable_button(global.camera_width*(2/5),offset + (text_height + 32)*3,"BUY AMMO", fnt_menu, 32, 16, function(){
-				var mag_size = menu_item[curr_menu][selected_item][? "mag_capacity"]
-				var mag_cost = obj_player_weapon.calibers[menu_item[curr_menu][selected_item][? "caliber"]][? "cost_per_shot"] * mag_size
+				var mag_size = selected_menu_item[? "mag_capacity"]
+				var mag_cost = obj_player_weapon.calibers[selected_menu_item[? "caliber"]][? "cost_per_shot"] * mag_size
 
 				if (scr_drain_money(mag_cost*3)){
-					obj_player_weapon.ammunition[menu_item[curr_menu][selected_item]][1] += mag_size*3
+					obj_player_weapon.ammunition[selected_menu_item][1] += mag_size*3
 				}
 	
 				
@@ -170,10 +173,10 @@ if (menu_active){
 			draw_text_transformed(global.camera_width/3,offset + (text_height + 32)*4, "5 magazines: " + scr_money_format(mag_cost*5) , 1.5,1.5,0)
 			
 			scr_draw_clickable_button(global.camera_width*(2/5),offset + (text_height + 32)*5,"BUY AMMO", fnt_menu, 32, 16, function(){
-				var mag_size = menu_item[curr_menu][selected_item][? "mag_capacity"]
-				var mag_cost = obj_player_weapon.calibers[menu_item[curr_menu][selected_item][? "caliber"]][? "cost_per_shot"] * mag_size
+				var mag_size = selected_menu_item[? "mag_capacity"]
+				var mag_cost = obj_player_weapon.calibers[selected_menu_item[? "caliber"]][? "cost_per_shot"] * mag_size
 				if (scr_drain_money(mag_cost*5)){
-					obj_player_weapon.ammunition[menu_item[curr_menu][selected_item]][1] += mag_size*5
+					obj_player_weapon.ammunition[selected_menu_item][1] += mag_size*5
 				}
 				
 				
@@ -185,6 +188,6 @@ if (menu_active){
 else{ 
 	window_set_cursor(cr_none)	
 	hovering = -1
-	selected_item = 0
+	//selected_item = 0
 }
 
